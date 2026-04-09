@@ -16,3 +16,4 @@ sessions/
 
 # Build output (can rebuild)
 frontend/dist/
+frontend/README.md
