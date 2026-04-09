@@ -7,3 +7,12 @@ pdf_pages/
 # Python
 __pycache__/
 *.pyc
+
+# Node
+frontend/node_modules/
+
+# Session data (runtime)
+sessions/
+
+# Build output (can rebuild)
+frontend/dist/
