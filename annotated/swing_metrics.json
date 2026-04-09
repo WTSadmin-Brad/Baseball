@@ -1,0 +1,90 @@
+[
+  {
+    "phase": "1 - Stance / Setup",
+    "back_elbow_angle": 29.183514873654683,
+    "front_elbow_angle": 80.99534223760936,
+    "front_knee_angle": 172.23392532631766,
+    "back_knee_angle": 139.11704053911052,
+    "spine_tilt": 5.779485825155907,
+    "hip_line_angle": -176.71075732150817,
+    "shoulder_line_angle": 174.5596679689945,
+    "hip_shoulder_separation": 8.729574709497342
+  },
+  {
+    "phase": "2 - Early Load",
+    "back_elbow_angle": 62.47536324640241,
+    "front_elbow_angle": 97.98280538060352,
+    "front_knee_angle": 115.49954785201514,
+    "back_knee_angle": 128.83391692763138,
+    "spine_tilt": 18.604965473802313,
+    "hip_line_angle": -175.42607874009914,
+    "shoulder_line_angle": 163.40189560713895,
+    "hip_shoulder_separation": 21.17202565276193
+  },
+  {
+    "phase": "3 - Load / Stride",
+    "back_elbow_angle": 84.28532276675071,
+    "front_elbow_angle": 105.65184994480346,
+    "front_knee_angle": 131.28039366438026,
+    "back_knee_angle": 128.39282206442056,
+    "spine_tilt": 23.612951188815284,
+    "hip_line_angle": -170.81116392264124,
+    "shoulder_line_angle": 169.44819049380772,
+    "hip_shoulder_separation": 19.740645583550986
+  },
+  {
+    "phase": "4 - Launch Position",
+    "back_elbow_angle": 113.12393321071886,
+    "front_elbow_angle": 106.58940647403018,
+    "front_knee_angle": 173.62159066385718,
+    "back_knee_angle": 135.41749044778743,
+    "spine_tilt": 25.784806694477616,
+    "hip_line_angle": -166.13031356149497,
+    "shoulder_line_angle": -173.50065372034544,
+    "hip_shoulder_separation": 7.370340158850468
+  },
+  {
+    "phase": "5 - Swing Initiation",
+    "back_elbow_angle": 60.929102389751876,
+    "front_elbow_angle": 129.98564478671483,
+    "front_knee_angle": 160.44224031232082,
+    "back_knee_angle": 176.27344033253968,
+    "spine_tilt": 16.722813043652767,
+    "hip_line_angle": -173.6598082540901,
+    "shoulder_line_angle": -164.18862906986155,
+    "hip_shoulder_separation": 9.47117918422856
+  },
+  {
+    "phase": "6 - Connection / Approach",
+    "back_elbow_angle": 156.97032243499862,
+    "front_elbow_angle": 130.29031928347572,
+    "front_knee_angle": 169.64557220176715,
+    "back_knee_angle": 120.1387339954343,
+    "spine_tilt": 4.27793755534711,
+    "hip_line_angle": -177.99044618697886,
+    "shoulder_line_angle": -165.17352002964432,
+    "hip_shoulder_separation": 12.816926157334535
+  },
+  {
+    "phase": "7 - Contact / Extension",
+    "back_elbow_angle": 144.7816118865037,
+    "front_elbow_angle": 167.18182212706304,
+    "front_knee_angle": 174.83087106563582,
+    "back_knee_angle": 130.30672891931061,
+    "spine_tilt": 2.129853202265453,
+    "hip_line_angle": -175.46222749209338,
+    "shoulder_line_angle": -131.698134325565,
+    "hip_shoulder_separation": 43.76409316652837
+  },
+  {
+    "phase": "8 - Follow-Through / Finish",
+    "back_elbow_angle": 135.3556622711323,
+    "front_elbow_angle": 177.09985166812663,
+    "front_knee_angle": 174.67167695738436,
+    "back_knee_angle": 135.68646036305026,
+    "spine_tilt": 8.783115356117767,
+    "hip_line_angle": -171.99527114270717,
+    "shoulder_line_angle": -118.33913203589589,
+    "hip_shoulder_separation": 53.65613910681128
+  }
+]

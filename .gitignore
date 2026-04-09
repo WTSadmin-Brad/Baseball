@@ -1,0 +1,9 @@
+# MediaPipe model files (large binaries)
+*.task
+
+# Temporary PDF page extractions
+pdf_pages/
+
+# Python
+__pycache__/
+*.pyc
