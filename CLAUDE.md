@@ -1,100 +1,129 @@
-# Swing Analysis App
+# Baseball Swing Analysis — AI Coaching App
 
-Youth baseball swing analysis tool with automatic pose detection, interactive marker editing, and swing metrics tracking.
+## Behavioral Rules
 
-## Architecture
+Don't assume. Don't hide confusion. Surface tradeoffs.
 
-**Backend** — FastAPI (Python) at `backend/`
-- `main.py` — REST API: image/video upload, pose detection, landmark editing, session management, serves built frontend
-- `pose_engine.py` — MediaPipe Pose (heavy model) landmark detection, angle/rotation metric computation, annotated frame rendering
-- `video_extract.py` — OpenCV video frame extraction + thumbnails
+Before implementing anything:
+- State your assumptions explicitly. If uncertain, ask.
+- If multiple interpretations exist, present them — don't pick silently.
+- If a simpler approach exists, say so. Push back when warranted.
+- If something is unclear, stop. Name what's confusing. Ask.
+
+Minimum code that solves the problem. Nothing speculative.
+- No features beyond what was asked.
+- No abstractions for single-use code.
+- No "flexibility" or "configurability" that wasn't requested.
+- No error handling for impossible scenarios.
+- If you write 200 lines and it could be 50, rewrite it.
+
+Touch only what you must. Clean up only your own mess.
+- Don't "improve" adjacent code, comments, or formatting.
+- Don't refactor things that aren't broken.
+- Match existing style, even if you'd do it differently.
+- Every changed line should trace directly to the request.
+
+Define success criteria. Loop until verified.
+- Transform vague tasks into verifiable goals before starting.
+- For multi-step tasks, state a brief plan with checkpoints.
+- Strong success criteria let you work independently. Weak criteria require clarification — ask for it.
+
+**These rules are working if:** fewer unnecessary changes in diffs, fewer rewrites due to overcomplplication, and clarifying questions come before implementation rather than after mistakes.
+
+---
+
+## Project Phase: Research & Pre-Planning
+
+**We are NOT building production code right now.** We are in an extensive research phase to design the best possible AI-powered baseball coaching app before writing a single line of production code.
+
+### What This Project Is
+A youth baseball swing analysis tool being rethought from the ground up. The current app (Phases 1-4, ~2,200 lines) is a working prototype with MediaPipe pose detection, interactive markers, and metrics visualization. It may be thrown away entirely. The goal is to build something that provides MLB-level feedback and analysis accessible to every serious player and coach, using nothing more than a phone camera.
+
+### Who It's For
+- Primary: A youth travel ball coach tracking his step-son's multi-year development
+- Secondary: The travel ball team's coaching staff
+- Aspirational: Every travel ball parent, private instructor, and serious player
+
+### The Decision Framework
+Build the best possible tool for personal use first. If it's genuinely great, the product question answers itself later. Don't cut corners on analysis quality. Don't over-engineer infrastructure.
+
+---
+
+## Research Documents
+
+All research artifacts live in `research/`. Read these before starting any research task:
+
+| Document | Purpose |
+|----------|---------|
+| `research/01-current-state.md` | Complete inventory of the existing app — what's built, what's reusable |
+| `research/02-vision-and-path.md` | Vision, user context, core philosophy, what success looks like |
+| `research/03-landscape-analysis.md` | Competitors, open source ecosystem, Ryan Gunther's work, 10 feature ideas |
+| `research/04-research-plan.md` | **Start here for task assignments.** Phased plan with specific deliverables. |
+
+Research outputs go in `research/artifacts/`. Each artifact should be a self-contained document that another agent or session can read without needing prior conversation context.
+
+---
+
+## Domain Knowledge
+
+### Swing Mechanics
+See `.claude/rules/swing-mechanics.md` for detailed phase-by-phase mechanics compiled from coaching research PDFs. Key concepts:
+- 8-phase swing sequence: Stance → Load → Launch → Swing → Connection → Contact → Finish
+- "Tornado effect": ground-up sequencing (feet → hips → core → shoulders → hands)
+- 7 tracked metrics: hip-shoulder separation, hip/shoulder rotation, elbow angles, knee angles, spine tilt
+
+### Reference Materials (repo root)
+- `9U Hitting Guide.pdf` (27 pages) — comprehensive hitting mechanics, drills, coaching philosophy
+- `Assessment Form.pdf` (10 pages) — structured player evaluation checklist
+- `Hitting Checklist.pdf` (10 pages) — phase-by-phase mechanics with coaching tips and drills
+
+### Key External Resources
+- [Driveline OpenBiomechanics](https://github.com/drivelineresearch/openbiomechanics) — largest open-source elite motion capture dataset (100 pitchers, 98 hitters)
+- [pybaseball](https://github.com/jldbc/pybaseball) — Python library for Statcast, Baseball Reference, FanGraphs data
+- [RyanGunther](https://github.com/RyanGunther) — MSc thesis on swing biomechanics, dimensionality reduction, SAM2 pipelines
+- [Driveline: Bat Tracking & CV](https://www.drivelinebaseball.com/2025/02/bat-tracking-computer-vision-and-the-next-frontier/) — single-camera 3D bat reconstruction research
+
+---
+
+## Existing App (Reference Only)
+
+The current prototype lives in `backend/` and `frontend/`. It is reference material, not the codebase we're building on. Key details for context:
+
+**Backend** — FastAPI (Python)
+- `main.py` — REST API: upload, pose detection, landmark editing, session management
+- `pose_engine.py` — MediaPipe Pose (heavy model), metrics computation, annotated rendering
+- `video_extract.py` — OpenCV video frame extraction
 - `models.py` — Pydantic schemas
 
-**Frontend** — React + Vite at `frontend/`
-- `FrameViewer.jsx` — Main viewer with three modes: Annotated (server-rendered overlays), Markers (Canvas with draggable landmarks), Original
-- `FrameCarousel.jsx` — Thumbnail strip navigation across swing phases
-- `MetricsPanel.jsx` — Color-coded angle readouts per frame
-- `MetricsChart.jsx` — Recharts line chart of metrics across all phases
-- `UploadPanel.jsx` — Drag-and-drop for images or video
-- `VideoFrameSelector.jsx` — Pick key frames from uploaded video
+**Frontend** — React + Vite
+- `FrameViewer.jsx` — Three-mode viewer (Annotated/Markers/Original) with Canvas drag editing
+- `FrameCarousel.jsx`, `MetricsPanel.jsx`, `MetricsChart.jsx`, `UploadPanel.jsx`, `VideoFrameSelector.jsx`
 - `useSession.js` — Hook managing all API calls and session state
 
-**Original CLI** — `swing_analysis.py` (kept as reference, standalone script that processes 8 JPEGs)
+**CLI** — `swing_analysis.py` (standalone reference script)
 
-## How to Run
+**Tech stack:** FastAPI, MediaPipe, OpenCV, React 19, Recharts, Vite
+**Storage:** File-based sessions (JSON), no database
+**Model:** MediaPipe Pose Landmarker Heavy (`pose_landmarker_heavy.task`, 30MB, downloaded separately)
 
-```bash
-# One-time setup
-pip install -r requirements.txt
-cd frontend && npm install && npx vite build && cd ..
-# Download pose model (30MB) if missing:
-python3 -c "import urllib.request; urllib.request.urlretrieve('https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_heavy/float16/latest/pose_landmarker_heavy.task', 'pose_landmarker_heavy.task')"
+---
 
-# Production (single server)
-uvicorn backend.main:app --port 8000
+## Agent Coordination
 
-# Dev (hot reload)
-# Terminal 1: uvicorn backend.main:app --reload --port 8000
-# Terminal 2: cd frontend && npm run dev   (localhost:5173, proxies /api to :8000)
-```
+When working as part of a research team:
 
-## Key Technical Decisions
+### Writing Research Artifacts
+- Each artifact is a standalone markdown file in `research/artifacts/`
+- Start with a one-paragraph summary of what was found and why it matters
+- Include sources with URLs for everything cited
+- End with a "Implications for Our Project" section — connect findings back to what we're building
+- Be opinionated. "X is better than Y because Z" is more useful than "X and Y both have pros and cons"
 
-- **MediaPipe Pose (heavy model)** over lighter models — accuracy matters more than speed for static image analysis
-- **FastAPI** — async, built-in OpenAPI docs, clean file upload handling, Python ecosystem matches pose engine
-- **React + Vite** over vanilla JS — feature set warrants components (Canvas interactions, state for marker positions, charts, undo/redo)
-- **Recharts** for metrics visualization
-- **File-based sessions** under `sessions/` — no database needed for local single-user tool
-- **Normalized landmark coordinates** [0,1] stored in session state — pixel conversion happens at render time
+### What NOT To Do During Research
+- Don't write production code. Jupyter notebooks and throwaway scripts for proof-of-concepts are fine.
+- Don't make architecture decisions prematurely. Document options and tradeoffs; decisions come in Phase 4.
+- Don't install dependencies into the existing app.
+- Don't modify files in `backend/` or `frontend/`.
 
-## Swing Phase Framework
-
-8-frame sequence mapped to swing phases. See @.claude/rules/swing-mechanics.md for detailed mechanics.
-
-| Frame | Phase | Key Checkpoints |
-|-------|-------|----------------|
-| 1 | Stance / Setup | Athletic position, grip, balance, bat angle |
-| 2 | Early Load | Rhythm, weight shift back, hands working back |
-| 3 | Load / Stride | Coil into back hip, small step forward |
-| 4 | Launch Position | Front foot landed, hands back, balanced, ready |
-| 5 | Swing Initiation | Hips fire first (lower half leads), core engagement |
-| 6 | Connection / Approach | Bat path inside the ball, back elbow slots, staying connected |
-| 7 | Contact / Extension | Palm up/palm down, extension through ball, contact point |
-| 8 | Follow-Through / Finish | Balanced finish, chin on back shoulder |
-
-## Tracked Metrics
-
-- **Hip-Shoulder Separation** — difference between hip and shoulder rotation angles (measures sequencing / "tornado effect")
-- **Hip/Shoulder Line Angles** — rotation from horizontal
-- **Back/Front Elbow Angles** — connection, slot, lead arm extension
-- **Front/Back Knee Angles** — front side firmness, back leg drive
-- **Spine Tilt** — posture maintenance through swing
-
-## Color Palette (consistent across backend rendering and frontend Canvas)
-
-- Cyan `#00c8ff` — Shoulders
-- Orange `#ff6400` — Hips
-- White `#ffffff` — Spine/posture
-- Green `#64ff00` / `#00ff64` — Front/back arms
-- Yellow `#ffe600` / `#e6c800` — Front/back legs
-
-## Current Status
-
-**Completed (Phases 1-4):**
-- CLI pose analysis script with annotated output
-- FastAPI backend with full REST API
-- React frontend: upload, frame viewer, marker editing, metrics panel, charts, video upload + frame selection
-
-**Pending (Phases 5-7):**
-- Phase 5: Drawing & annotation tools (freehand lines, arrows, angle tool, text)
-- Phase 6: Side-by-side comparison view (two frames or two sessions)
-- Phase 7: PDF report export
-
-## Research Docs
-
-Three PDF research docs in repo root (image-based PDFs):
-- `9U Hitting Guide.pdf` (27 pages) — comprehensive hitting mechanics, drills, coaching philosophy
-- `Assessment Form.pdf` (10 pages) — structured player evaluation: grip, stance, load, stride, connection, bat path, contact, finish, balance
-- `Hitting Checklist.pdf` (10 pages) — phase-by-phase mechanics checklist with coaching tips and drills
-
-Key concepts from docs referenced in @.claude/rules/swing-mechanics.md
+### Artifact Quality Bar
+Every research artifact should pass this test: "If a senior engineer read only this document, could they make an informed decision about the topic?" If not, it needs more depth or clearer conclusions.
