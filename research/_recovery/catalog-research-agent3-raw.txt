@@ -1,0 +1,1851 @@
+
+================================================================================
+[0] CALL: Bash {"command": "ls /home/user/Baseball/research/artifacts/ 2>/dev/null || echo \"Di
+================================================================================
+(Bash completed with no output)
+
+================================================================================
+[1] CALL: ToolSearch select:WebSearch,WebFetch
+================================================================================
+ 
+
+================================================================================
+[2] CALL: WebSearch pybaseball python library github stars 2026
+================================================================================
+Web search results for query: "pybaseball python library github stars 2026"
+
+Links: [{"title":"GitHub - jldbc/pybaseball: Pull current and historical baseball statistics using Python (Statcast, Baseball Reference, FanGraphs) · GitHub","url":"https://github.com/jldbc/pybaseball"},{"title":"GitHub - schorrm/pybaseball: I'm maintaining the original repo now. please go to github.com/jldbc/pybaseball · GitHub","url":"https://github.com/schorrm/pybaseball"},{"title":"GitHub - timbroderick/pybaseball: Playing with baseball statistics and python · GitHub","url":"https://github.com/timbroderick/pybaseball"},{"title":"pyball | pyball - python library for obtaining baseball information","url":"https://gdifiore.github.io/pyball/"},{"title":"Introducing pybaseball: an Open Source Package for Baseball Data Analysis - James LeDoux’s Blog","url":"https://jamesrledoux.com/projects/open-source/introducing-pybaseball/"},{"title":"Stargazers · jldbc/pybaseball","url":"https://github.com/jldbc/pybaseball/stargazers"},{"title":"Releases · jldbc/pybaseball","url":"https://github.com/jldbc/pybaseball/releases"},{"title":"pybaseball/pybaseball/statcast.py at master · jldbc/pybaseball","url":"https://github.com/jldbc/pybaseball/blob/master/pybaseball/statcast.py"},{"title":"GitHub - Jensen-holm/pybaseball_live: python package for interacting with the MLB live baseball api","url":"https://github.com/Jensen-holm/pybaseball_live"},{"title":"GitHub - gdifiore/pyball: pyball - python library for obtaining baseball statistics · GitHub","url":"https://github.com/gdifiore/pyball"}]
+
+Based on the search results, I found information about the pybaseball Python library's GitHub stars. The pybaseball repository on GitHub has 1.6k stars.
+
+The pybaseball library is a Python package for pulling current and historical baseball statistics (Statcast, Baseball Reference, FanGraphs). The package was developed by James LeDoux and is maintained by Moshe Schorr.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[3] CALL: WebSearch MLB-YouTube dataset github activity recognition
+================================================================================
+Web search results for query: "MLB-YouTube dataset github activity recognition"
+
+Links: [{"title":"GitHub - piergiaj/mlb-youtube: MLB-YouTube dataset, code and models for fine-grained activity recognition (CVsports 2018) · GitHub","url":"https://github.com/piergiaj/mlb-youtube"},{"title":"mlb-youtube/README.md at master · piergiaj/mlb-youtube","url":"https://github.com/piergiaj/mlb-youtube/blob/master/README.md"},{"title":"GitHub - jwwoody/mlb-deeplearning","url":"https://github.com/jwwoody/mlb-deeplearning"},{"title":"[1804.03247] Fine-grained Activity Recognition in Baseball Videos","url":"https://ar5iv.labs.arxiv.org/html/1804.03247"},{"title":"extract_continuous_videos.py - piergiaj/mlb-youtube - GitHub","url":"https://github.com/piergiaj/mlb-youtube/blob/master/extract_continuous_videos.py"},{"title":"GitHub - Aakash-Tripathi/mlb-yt-dataset: ⚾ | MLB Baseball dataset","url":"https://github.com/Aakash-Tripathi/mlb-yt-dataset"},{"title":"File Finder · piergiaj/mlb-youtube","url":"https://github.com/piergiaj/mlb-youtube/find/master"},{"title":"MLB-YouTube Dataset","url":"https://paperswithcode.com/dataset/mlb-youtube-dataset"},{"title":"Fine-grained Activity Recognition in Baseball Videos","url":"https://arxiv.org/pdf/1804.03247"},{"title":"Papers with Code - Fine-grained Activity Recognition in Baseball Videos","url":"https://paperswithcode.com/paper/fine-grained-activity-recognition-in-baseball"}]
+
+Here are the search results for the MLB-YouTube dataset and activity recognition:
+
+## Overview
+
+The MLB-YouTube dataset is a new, large-scale dataset consisting of 20 baseball games from the 2017 MLB post-season available on YouTube with over 42 hours of video footage.
+
+## Dataset Components
+
+The dataset consists of two components: segmented videos for activity recognition and continuous videos for activity classification.
+
+**Segmented Videos:** The segmented video dataset consists of 4,290 video clips, with each clip annotated with various baseball activities such as swing, hit, ball, strike, foul, etc.
+
+**Continuous Videos:** The continuous video dataset consists of 2,128 1-2 minute long clips from the videos, with each frame of the clip densely annotated with the baseball activities that occur, resulting in a total of over 15,000 activity instances.
+
+## Dataset Challenges
+
+The dataset is quite challenging as it is created from TV broadcast baseball games where multiple different activities share the camera angle, and the motion/appearance difference between the various activities is quite small.
+
+## GitHub Repository
+
+The primary repository is available at **https://github.com/piergiaj/mlb-youtube** and contains source code, dataset and trained models.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[4] CALL: WebSearch drivelineresearch openbiomechanics github 2026
+================================================================================
+Web search results for query: "drivelineresearch openbiomechanics github 2026"
+
+Links: [{"title":"GitHub - drivelineresearch/openbiomechanics: The open source initiative for anonymized, elite-level athletic motion capture data. Run by Driveline Baseball. · GitHub","url":"https://github.com/drivelineresearch/openbiomechanics"},{"title":"openbiomechanics/additional_resources at main · drivelineresearch/openbiomechanics","url":"https://github.com/drivelineresearch/openbiomechanics/tree/main/additional_resources"},{"title":"GitHub - drivelineresearch/autoresearch-claude-code: Autonomous experiment loop skill for Claude Code — port of pi-autoresearch","url":"https://github.com/drivelineresearch/autoresearch-claude-code"},{"title":"The OpenBiomechanics Project – The open source initiative for anonymized, elite-level athletic motion capture data","url":"https://www.openbiomechanics.org/"},{"title":"Driveline Research and Development · GitHub","url":"https://github.com/drivelineresearch"},{"title":"openbiomechanics/baseball_pitching/README.md at main · drivelineresearch/openbiomechanics","url":"https://github.com/drivelineresearch/openbiomechanics/blob/main/baseball_pitching/README.md"},{"title":"GitHub - ezerfernandes/autoresearch: Autonomous experiment loop skill for Claude Code — port of pi-autoresearch","url":"https://github.com/ezerfernandes/autoresearch"},{"title":"The OpenBiomechanics Project: Driveline Goes Open Source - Driveline Baseball","url":"https://www.drivelinebaseball.com/2022/12/openbiomechanics-project/"},{"title":"Elite-Level Athletic Motion Capture Data on GitHub","url":"https://www.pinterest.com/pin/elitelevel-athletic-motion-capture-data-on-github--871235490396560505/"},{"title":"What Can Baseball Learn From Driveline's Open Source Biomechanics Data?","url":"https://barrelsandbytes.substack.com/p/what-can-baseball-learn-from-drivelines"}]
+
+Based on the search results, here's what I found about drivelineresearch openbiomechanics on GitHub:
+
+## The OpenBiomechanics Project
+
+The OpenBiomechanics Project is an initiative started by Driveline Baseball Research & Development to provide raw (in the form of cleaned C3D files) and processed (full signal + point of interest) sports biomechanics data to the general public.
+
+The open source initiative for anonymized, elite-level athletic motion capture data is run by Driveline Baseball. The project is hosted at: https://github.com/drivelineresearch/openbiomechanics
+
+## Recent Updates and Features
+
+Recent additions include a High Performance module and OBP Computer Vision (OBP-CV), with examples available in their GitHub repository.
+
+## Usage and Licensing
+
+OBP is free for educational use through December 31st, 2030 [updated February 2026]. OBP is free for individual research projects forever.
+
+This data cannot be used for commercial purposes, and any employee or contractor of a professional sports organization or financial analysis firm is forbidden to use the OpenBiomechanics Project data for any use whatsoever.
+
+## Related Projects
+
+An example using the Driveline OpenBiomechanics dataset with 19 algorithms predicted fastball velocity from biomechanical data, with 22 autonomous experiments achieving an R² improvement from 0.44 to 0.78 (+78%), predicting a new player's velocity within ~2 mph from biomechanics alone.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[5] CALL: WebSearch PitcherMotion github pose tracking baseball statcast
+================================================================================
+Web search results for query: "PitcherMotion github pose tracking baseball statcast"
+
+Links: [{"title":"GitHub - PitchingBot/PitcherMotion: Pose tracking data for baseball pitchers","url":"https://github.com/PitchingBot/PitcherMotion"},{"title":"Using AI with MLB Video to Detect Changes in Mechanics | Malter Analytics","url":"https://malteranalytics.github.io/mlb-openpose/"},{"title":"PitchingBot (Cameron Grove) · GitHub","url":"https://github.com/PitchingBot"},{"title":"Using Statcast Pitch Data • baseballr","url":"https://billpetti.github.io/baseballr/articles/using_statcast_pitch_data.html"},{"title":"2021 SABR Analytics: Watch highlights from the MLB Statcast Player Pose Tracking and Visualization panel – Society for American Baseball Research","url":"https://sabr.org/latest/2021-sabr-analytics-watch-highlights-from-the-mlb-statcast-player-pose-tracking-and-visualization-panel/"},{"title":"GitHub - rj7002/MLBVisualizer: Dashboard to view hits and pitches from MLB games in 3D using Statcast data","url":"https://github.com/rj7002/MLBVisualizer"},{"title":"GitHub - CamilaCamacho/hitter_analysis: Analyzing the success rate of different pitch types for a given pitcher cluster within the determined strike zone for MLB hitters. · GitHub","url":"https://github.com/CamilaCamacho/hitter_analysis"},{"title":"Statcast 3D Pitch Visualizations | baseballsavant.com","url":"https://baseballsavant.mlb.com/visuals/pitch3d?player_id=477132"},{"title":"GitHub - pascalewalters/baseball-tracking · GitHub","url":"https://github.com/pascalewalters/baseball-tracking"},{"title":"statcast · GitHub Topics · GitHub","url":"https://github.com/topics/statcast"}]
+
+Based on the search results, here's what I found about PitcherMotion:
+
+## PitcherMotion Overview
+
+PitcherMotion is a GitHub repository containing pose tracking data for baseball pitchers, with the main data file being Pitcher_Motion_Data.csv, which is a csv file of about 500 MB.
+
+## Data Details
+
+The dataset includes a companion csv file which contains Statcast data corresponding to the pitches included in this dataset. Data was taken for pitchers/pitch types which had been thrown at least 5 times at Tropicana Field in the 2021 regular season, with 5 sample videos used for each pitch (the last thrown by each pitcher), as Tropicana field was used because it has a centerfield camera angle which is easy to work with.
+
+## Pose Tracking Methodology
+
+All pose detection was done using KAPAO, an algorithm implemented in python. Detection of the pitcher was done automatically based on their position in the frame, and synchronisation of the pitches was performed automatically by using the pitcher's leg lift.
+
+## Data Quality Flags
+
+The dataset includes two reliability flags: "no_missing_frames" indicates continuous pitcher observation, and "smooth_CoM_flag" indicates stable torso position to avoid detecting different players as the pitcher.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[6] CALL: WebSearch BaseballCV github computer vision baseball 2026
+================================================================================
+Web search results for query: "BaseballCV github computer vision baseball 2026"
+
+Links: [{"title":"baseballcv · PyPI","url":"https://pypi.org/project/baseballcv/"},{"title":"Releases · BaseballCV/BaseballCV","url":"https://github.com/dylandru/BaseballCV/releases"},{"title":"GitHub - natekbackman/Baseball-Cinematography: Using open source CV models to track, quantify, and analyze pitcher mechanics in Major League Baseball · GitHub","url":"https://github.com/natekbackman/Baseball-Cinematography"},{"title":"Home | BaseballCV Documentation","url":"https://dylandru.github.io/BaseballCV/"},{"title":"dylandru (Dylan Drummey) · GitHub","url":"https://github.com/dylandru"},{"title":"Dylan Drummey on X: \"@camarcano and I proudly present BaseballCV, a repo dedicated to easing the barriers to entry into Baseball &amp; Computer Vision by providing open-source related high-quality datasets and CV models. We're open to additional help, so feel free to reach out! https://t.co/Bw5LzJIM7H https://t.co/2wzXlvfZ7s\" / X","url":"https://x.com/DrummeyDylan/status/1830627430421111155"},{"title":"Datasets | BaseballCV Documentation","url":"https://baseballcv.com/datasets"},{"title":"Utilizing Single-Angle Broadcast Feeds and Computer Vision to Extract 3D MLB Biomechanical Data | Baseball Prospectus","url":"https://www.baseballprospectus.com/news/article/93823/prospectus-feature-utilizing-single-angle-broadcast-feeds-and-computer-vision-to-extract-3d-mlb-biomechanical-data/"},{"title":"Implement DETR Class for Alternative to YOLO Object Detection · BaseballCV/BaseballCV@1611e6c","url":"https://github.com/BaseballCV/BaseballCV/actions/runs/13059911390"},{"title":"BaseballCV/notebooks/model_fine_tuning.ipynb at main · dylandru/BaseballCV","url":"https://github.com/dylandru/BaseballCV/blob/main/notebooks/model_fine_tuning.ipynb"}]
+
+Based on the search results, here's what I found about BaseballCV:
+
+## Overview
+
+BaseballCV is a collection of tools and models designed to aid in the use of Computer Vision in baseball, providing access to high-quality datasets and computer vision models.
+
+## Purpose and Goals
+
+The goal is to provide access to high-quality datasets and computer vision models for baseball, and by sharing annotated data and model weights, to foster innovation in sports analytics and make it easier for developers to create tools that analyze baseball games.
+
+## Key Features
+
+The project offers:
+
+- Notebooks demonstrating applications such as pitcher, hitter, catcher detection, glove framing tracking, and model fine-tuning
+- Carefully curated datasets designed to support various analysis needs, from basic object detection to complex tracking tasks
+- Several Streamlit-based web apps for interacting with computer vision models and tools
+
+## Repository Details
+
+The repository can be cloned from Github at https://github.com/dylandru/BaseballCV, with required dependencies installed using poetry.
+
+## Current Status
+
+BaseballCV has announced a partnership with Prep Baseball, who has agreed to sponsor compute and provide data for public use.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[7] CALL: WebSearch anishreddy3 tf-openpose-baseball-pitcher github
+================================================================================
+Web search results for query: "anishreddy3 tf-openpose-baseball-pitcher github"
+
+Links: [{"title":"GitHub - anishreddy3/tf-openpose-baseball-pitcher: Real time Human Pose estimation using Tensorflow and OpenCV","url":"https://github.com/anishreddy3/tf-openpose-baseball-pitcher"},{"title":"tf-openpose-baseball-pitcher/run_webcam.py at master · anishreddy3/tf-openpose-baseball-pitcher","url":"https://github.com/anishreddy3/tf-openpose-baseball-pitcher/blob/master/run_webcam.py"},{"title":"openpose · GitHub Topics · GitHub","url":"https://github.com/topics/openpose?l=purebasic"},{"title":"GitHub - infocom-tpo/tf-openpose: Openpose from CMU implemented using Tensorflow with Custom Architecture for fast inference.","url":"https://github.com/infocom-tpo/tf-openpose"},{"title":"tf-openpose-baseball-pitcher","url":"http://cloud.tusaishared.com.cn/resources/detail.do?id=27602"},{"title":"GitHub - ZheC/tf-pose-estimation: Openpose from CMU implemented using Tensorflow with Custom Architecture for fast inference.","url":"https://github.com/ZheC/tf-pose-estimation"},{"title":"GitHub - PitchingBot/PitcherMotion: Pose tracking data for baseball pitchers","url":"https://github.com/PitchingBot/PitcherMotion"},{"title":"GitHub - BoomFan/openpose-tf: Deep Pose Estimation implemented using Tensorflow with Custom Architectures for fast inference.","url":"https://github.com/BoomFan/openpose-tf"},{"title":"GitHub - Coderx7/tf-openpose: Openpose from CMU implemented using Tensorflow with Custom Architecture for fast inference.","url":"https://github.com/Coderx7/tf-openpose"},{"title":"GitHub - hongsw/tf-openpose: Openpose from CMU implemented using Tensorflow with Custom Architecture for fast inference.","url":"https://github.com/hongsw/tf-openpose"}]
+
+Based on the search results, I found the repository you're looking for:
+
+The anishreddy3/tf-openpose-baseball-pitcher GitHub repository is a project for real-time human pose estimation using TensorFlow and OpenCV. The repository can be accessed at https://github.com/anishreddy3/tf-openpose-baseball-pitcher.
+
+To use the project, you need to install all dependencies for TensorFlow OpenPose and download model checkpoint with instructions from /models/graph/cmu/download.sh.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[8] CALL: WebSearch natekbackman Baseball-Cinematography github DTW pitcher mechanics
+================================================================================
+Web search results for query: "natekbackman Baseball-Cinematography github DTW pitcher mechanics"
+
+Links: [{"title":"GitHub - natekbackman/Baseball-Cinematography: Using open source CV models to track, quantify, and analyze pitcher mechanics in Major League Baseball · GitHub","url":"https://github.com/natekbackman/Baseball-Cinematography"},{"title":"natekbackman - Overview","url":"https://github.com/natekbackman"},{"title":"DVS X-Ray: Advanced Markerless Motion Capture for Pitching Analysis — DVS BASEBALL","url":"https://www.dvsbaseball.com/x-ray"},{"title":"Pitch-classifier model for professional pitchers utilizing 3D motion capture and machine learning algorithms - ScienceDirect","url":"https://www.sciencedirect.com/science/article/abs/pii/S0972978X23003598"},{"title":"Slow Motion Pitching Videos","url":"https://www.instagram.com/popular/slow-motion-pitching-videos/"},{"title":"Throwing Biomechanics - Physiopedia","url":"https://www.physio-pedia.com/Throwing_Biomechanics"},{"title":"3D Baseball Pitching Analysis - UF Sports Performance Center","url":"https://ufsportsperformance.com/3d-baseball-pitching-analysis"},{"title":"Baseball Pitching Mechanics: Step-By-Step Guide & Drills - GoRout","url":"https://gorout.com/baseball-pitching-mechanics/"},{"title":"The Clinician’s Guide to Baseball Pitching Biomechanics - PMC","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC9950989/"},{"title":"Open-source motion capture data of elite-level baseball pitchers on GitHub | Hacker News","url":"https://news.ycombinator.com/item?id=33981944"}]
+
+Based on the search results, here's what I found about the natekbackman Baseball-Cinematography GitHub project:
+
+## Project Overview
+
+The project leverages computer vision models from BaseballCV GitHub to track pitcher mechanics. The project utilizes Dynamic Time Warping, a method of time series analysis, to compare the mechanics of different pitchers.
+
+## Key Components
+
+The project combines two main technical approaches:
+
+1. **Computer Vision**: Open source CV models are used to track pitcher mechanics
+
+2. **Time Series Analysis**: Dynamic Time Warping is employed to compare the mechanics of different pitchers
+
+## Purpose
+
+The project aims to track, quantify, and analyze pitcher mechanics in Major League Baseball using open source CV models. Additionally, the work focuses on grouping pitchers into archetypes based on pitcher tendencies and grouping pitchers based on their role in the bullpen, and was worked on for the 2024 Diamond Dollars Case Competition hosted at the SABR Analytics Conference.
+
+The project demonstrates how modern computer vision and machine learning techniques can be applied to analyze and classify pitcher mechanics at the professional level.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[9] CALL: WebSearch Strojove-uceni pose estimation swing improvement github
+================================================================================
+Web search results for query: "Strojove-uceni pose estimation swing improvement github"
+
+Links: [{"title":"GitHub - Strojove-uceni/23206-final-pose-estimation-for-swing-improvement: 23206-final-pose-estimation-for-swing-improvement created by GitHub Classroom · GitHub","url":"https://github.com/Strojove-uceni/23206-final-pose-estimation-for-swing-improvement"},{"title":"GitHub - Strojove-uceni/2024-final-letadylka-prochazka-belohlavek: 2024-strojove-uceni-2-2024-final-Final created by GitHub Classroom","url":"https://github.com/Strojove-uceni/2024-final-letadylka-prochazka-belohlavek"},{"title":"GitHub - vprusa/VSB-SU: Strojove Uceni/Machine learning","url":"https://github.com/vprusa/VSB-SU"},{"title":"GitHub - Rybeau-University/COSC428Project: Golf Swing Analysis Using Pose Estimation","url":"https://github.com/Rybeau-University/COSC428Project"},{"title":"GitHub - Strojove-uceni/final-projects-ventilator-pressure-prediction: final-projects-ventilator-pressure-prediction created by GitHub Classroom","url":"https://github.com/Strojove-uceni/final-projects-ventilator-pressure-prediction"},{"title":"GitHub - Strojove-uceni/final-projects-real-estate: final-projects-real-estate created by GitHub Classroom","url":"https://github.com/Strojove-uceni/final-projects-real-estate"},{"title":"GitHub - HeleenaRobert/golf-swing-analysis: 🏌️ Golf swing analysis using MediaPipe Pose & OpenCV for motion tracking, posture evaluation, and performance improvement.","url":"https://github.com/HeleenaRobert/golf-swing-analysis"},{"title":"pose-estimation · GitHub Topics · GitHub","url":"https://github.com/topics/pose-estimation"},{"title":"GitHub - mezbahulkarim/Golf-Swing-Detection: Human Pose Estimation to Detect Golf Swings","url":"https://github.com/mezbahulkarim/Golf-Swing-Detection"},{"title":"human-pose-estimation · GitHub Topics · GitHub","url":"https://github.com/topics/human-pose-estimation"}]
+
+I found the repository you're looking for! The search returned results for the Golf Swing Analyzer project that uses MediaPipe for pose estimation to analyze and improve golf swing techniques.
+
+Here are the key findings:
+
+**Main Repository:**
+The primary result is the GitHub repository at: `https://github.com/Strojove-uceni/23206-final-pose-estimation-for-swing-improvement`
+
+**Project Details:**
+- The project uses the MediaPipe Pose Estimation model developed by Google for real-time pose tracking, capable of tracking 33 key points on the body
+- The system identifies critical angles and points in the golfer's swing and compares them to ideal standards
+- YOLO is also implemented as an alternative for pose estimation, though MediaPipe was found to offer more precise and detailed pose data for golf swing analysis
+
+**Limitations Noted:**
+While MediaPipe provides high-precision tracking, there's room for improvement in pose estimation accuracy when dealing with sports poses and sudden movements.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[10] CALL: WebSearch malteranalytics MLB OpenPose baseball github
+================================================================================
+Web search results for query: "malteranalytics MLB OpenPose baseball github"
+
+Links: [{"title":"Using AI with MLB Video to Detect Changes in Mechanics | Malter Analytics","url":"https://malteranalytics.github.io/mlb-openpose/"},{"title":"Home | Malter Analytics","url":"https://malteranalytics.github.io/"},{"title":"Categories | Malter Analytics","url":"https://malteranalytics.github.io/categories"},{"title":"About Us | Malter Analytics","url":"https://malteranalytics.github.io/about"},{"title":"GitHub - anishreddy3/tf-openpose-baseball-pitcher: Real time Human Pose estimation using Tensorflow and OpenCV","url":"https://github.com/anishreddy3/tf-openpose-baseball-pitcher"},{"title":"baseball · GitHub Topics · GitHub","url":"https://github.com/topics/baseball"},{"title":"Using Calculus to Derive MLB Division Probabilities | Malter Analytics","url":"https://malteranalytics.github.io/mlb-probabilities/"},{"title":"danmalter.github.io - Personal GitHub site for Danny Malter","url":"https://danmalter.github.io/r/2016/11/12/neuralnets.html"},{"title":"baseball-analytics · GitHub Topics · GitHub","url":"https://github.com/topics/baseball-analytics"},{"title":"GitHub - eric8395/baseball-analytics: Predicting MLB player salaries and team wins with machine learning regression models. · GitHub","url":"https://github.com/eric8395/baseball-analytics"}]
+
+Based on the search results, I found information about the Malter Analytics MLB OpenPose baseball project:
+
+The implementation uses MIT's open-source algorithm, OpenPose, combined with various data analysis and machine learning techniques. The project demonstrates how sample image and video data can be used to help MLB pitchers improve mechanics, prevent injuries, detect changes in arm movement throughout a game, and other use cases.
+
+OpenPose captures data for 25 keypoints of a human body, such as "Right Wrist", "Neck", and "Left Knee" for both still images and videos. For each image, the algorithm provides x-coordinates, y-coordinates, and confidence values (0-1) for each of the 25 keypoints.
+
+Some practical applications of this work include: measuring how closely one player's pitching or hitting mechanics are relative to another player by collecting data like angles of body parts and movement, with clustering algorithms that can measure similarity between two players' pitches or swings, potentially outputting comparisons like "Player A's swing is 80% similar to Mike Trout".
+
+The project is hosted on GitHub at the Malter Analytics account, with detailed documentation available on their website.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[11] CALL: WebSearch pascalewalters baseball-tracking github computer vision
+================================================================================
+Web search results for query: "pascalewalters baseball-tracking github computer vision"
+
+Links: [{"title":"GitHub - pascalewalters/baseball-tracking · GitHub","url":"https://github.com/pascalewalters/baseball-tracking"},{"title":"pascalewalters (Pascale Walters) · GitHub","url":"https://github.com/pascalewalters"},{"title":"baseball-tracking/README.md at master · pascalewalters/baseball-tracking","url":"https://github.com/pascalewalters/baseball-tracking/blob/master/README.md"},{"title":"about · pascale walters","url":"https://pascalewalters.github.io/about/"},{"title":"GitHub - Basket-Analytics/BasketTracking: Basketball 🏀 action tracking and understanding using classical computer vision approaches and deep learning.","url":"https://github.com/Basket-Analytics/BasketTracking"},{"title":"GitHub - jwwoody/mlb-deeplearning","url":"https://github.com/jwwoody/mlb-deeplearning"},{"title":"GitHub - roboflow/sports: computer vision and sports · GitHub","url":"https://github.com/roboflow/sports"},{"title":"GitHub - piergiaj/mlb-youtube: MLB-YouTube dataset, code and models for fine-grained activity recognition (CVsports 2018) · GitHub","url":"https://github.com/piergiaj/mlb-youtube"},{"title":"Computer Vision and Pitch Framing | Community Blog","url":"https://community.fangraphs.com/computer-vision-and-pitch-framing/"},{"title":"A TRACKING SYSTEM FOR BASEBALL GAME RECONSTRUCTION A PREPRINT Nina Wiedemann","url":"https://arxiv.org/pdf/2003.03856"}]
+
+Here are the search results for "pascalewalters baseball-tracking github computer vision":
+
+## Pascale Walters' Baseball Tracking Project
+
+Pascale Walters is a computer vision engineer and an MASc candidate in the Vision and Image Processing Lab at the University of Waterloo whose current research is around camera calibration and computer vision techniques for sports analytics.
+
+### Project Overview
+
+The baseball-tracking project uses a pre-trained YOLOv3 network (MS COCO dataset has a class for sports ball) because it is a small network that achieves good performance for detection.
+
+### Key Technical Details
+
+- **Ball Tracking**: The project assumes there is only one baseball in the video and defines the release point as the instant the bounding box of the baseball is above the player's bounding box.
+
+- **Interpolation**: The ball is missed in some detections, which are interpolated quadratically before the release point and linearly after the release point.
+
+- **Spin Analysis**: The spin axis is calculated by performing texture registration—a frame of the ball is warped to a frame of a ball in a later frame, using orthagonal projection and 3D rotation, and the best angle that represents this transformation is selected as the spin axis for the pitch.
+
+### Output
+
+The project generates a csv file of ball tracks with a column for the ball release point and produces a video with the bounding boxes of the ball, coloured blue if it is before the release point and yellow if it is after the release point.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[12] CALL: WebSearch MMPose RTMPose github stars license 2026
+================================================================================
+Web search results for query: "MMPose RTMPose github stars license 2026"
+
+Links: [{"title":"GitHub - open-mmlab/mmpose: OpenMMLab Pose Estimation Toolbox and Benchmark. · GitHub","url":"https://github.com/open-mmlab/mmpose"},{"title":"MMPose/RTMPose Github","url":"https://github.com/open-mmlab/mmpose/tree/main/projects/rtmpose"},{"title":"MMPose - OpenMMLab Pose Estimation Toolbox","url":"https://mmpose.com/"},{"title":"RTMPose: The All-In-One Real-time Pose Estimation Solution for Application and Research! | by OpenMMLab | Medium","url":"https://openmmlab.medium.com/rtmpose-the-all-in-one-real-time-pose-estimation-solution-for-application-and-research-6404f17cd52f"},{"title":"mmpose/projects/rtmpose at 1.x · open-mmlab/mmpose","url":"https://github.com/open-mmlab/mmpose/tree/1.x/projects/rtmpose"},{"title":"GitHub - Tau-J/rtmlib: RTMPose series (RTMPose, DWPose, RTMO, RTMW) without mmcv, mmpose, mmdet etc. · GitHub","url":"https://github.com/Tau-J/rtmlib"},{"title":"Releases · open-mmlab/mmpose","url":"https://github.com/open-mmlab/mmpose/releases"},{"title":"Add RTMPose: Real-Time Multi-Person Pose Estimation based on MMPose · Issue #31 · quic/ai-hub-models","url":"https://github.com/quic/ai-hub-models/issues/31"},{"title":"mmpose/README.md at main · open-mmlab/mmpose","url":"https://github.com/open-mmlab/mmpose/blob/main/README.md"},{"title":"[2303.07399] RTMPose: Real-Time Multi-Person Pose Estimation based on MMPose","url":"https://arxiv.org/abs/2303.07399"}]
+
+Based on the search results, here's what I found about MMPose and RTMPose:
+
+## License
+
+MMPose is released under the Apache 2.0 license.
+
+## Project Overview
+
+MMPose is an open-source toolbox for pose estimation based on PyTorch. It is a part of the OpenMMLab project. RTMPose is a real-time multi-person pose estimation framework based on MMPose, presenting a high-performance framework focused on paradigm, backbone network, localization algorithm, training strategy, and deployment inference.
+
+## Performance
+
+RTMPose-m achieves 75.8% AP on COCO with 90+ FPS on an Intel i7-11700 CPU and 430+ FPS on an NVIDIA GTX 1660 Ti GPU.
+
+**Regarding GitHub stars:** The search results provided information about the projects but did not include the specific GitHub star count. For current star counts, you may want to visit the GitHub repository directly at https://github.com/open-mmlab/mmpose.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[13] CALL: WebSearch ViTPose github stars 2026 pose estimation transformer
+================================================================================
+Web search results for query: "ViTPose github stars 2026 pose estimation transformer"
+
+Links: [{"title":"GitHub - ViTAE-Transformer/ViTPose: The official repo for [NeurIPS'22] \"ViTPose: Simple Vision Transformer Baselines for Human Pose Estimation\" and [TPAMI'23] \"ViTPose++: Vision Transformer for Generic Body Pose Estimation\" · GitHub","url":"https://github.com/ViTAE-Transformer/ViTPose"},{"title":"GitHub - mkmohangb/vit-pose · GitHub","url":"https://github.com/mkmohangb/vit-pose"},{"title":"ViTPose++: Vision Transformer for Generic Body Pose Estimation","url":"https://arxiv.org/html/2212.04246v3"},{"title":"GitHub - emcorby2/Vitpose: The official repo for [NeurIPS'22] \"ViTPose: Simple Vision Transformer Baselines for Human Pose Estimation\" and [TPAMI'23] \"ViTPose++: Vision Transformer for Generic Body Pose Estimation\"","url":"https://github.com/emcorby2/Vitpose"},{"title":"ViTPose · Hugging Face","url":"https://huggingface.co/docs/transformers/en/model_doc/vitpose"},{"title":"ViTAE-Transformer · GitHub","url":"https://github.com/ViTAE-Transformer"},{"title":"human-pose · GitHub Topics · GitHub","url":"https://github.com/topics/human-pose?o=desc&s=updated"},{"title":"vitpose · GitHub Topics · GitHub","url":"https://github.com/topics/vitpose?o=desc&s=updated"},{"title":"ViTPose : A simple yet powerful transformer baseline for Human Pose Estimation","url":"https://blogs.torus.ai/vitpose-a-simple-yet-powerful-transformer-baseline-for-human-pose-estimation/"},{"title":"[2204.12484] ViTPose: Simple Vision Transformer Baselines for Human Pose Estimation","url":"https://arxiv.org/abs/2204.12484"}]
+
+Based on the search results, I found information about ViTPose, which is a vision transformer-based approach for pose estimation. However, the search results don't explicitly display the current GitHub star count for 2026.
+
+## Key Information About ViTPose:
+
+ViTPose is the official repo for [NeurIPS'22] "ViTPose: Simple Vision Transformer Baselines for Human Pose Estimation" and [TPAMI'23] "ViTPose++: Vision Transformer for Generic Body Pose Estimation".
+
+ViTPose employs plain and non-hierarchical vision transformers as backbones to extract features for a given person instance and a lightweight decoder for pose estimation.
+
+## Performance:
+
+ViTPose with ViTAE-G obtains 81.1 AP on COCO test-dev set.
+
+## ViTPose++:
+
+ViTPose++ uses MoE strategies to jointly deal with human, animal, and wholebody pose estimation tasks.
+
+The official ViTPose repository is hosted at https://github.com/ViTAE-Transformer/ViTPose. To view the exact current number of GitHub stars, you would need to visit the repository directly, as the search results don't include the specific star count metric.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[14] CALL: WebSearch ultralytics yolov8 pose estimation github stars 2026
+================================================================================
+Web search results for query: "ultralytics yolov8 pose estimation github stars 2026"
+
+Links: [{"title":"GitHub - ultralytics/ultralytics: Ultralytics YOLO 🚀","url":"https://github.com/ultralytics/ultralytics"},{"title":"GitHub - Sadat75/ultralytics_yolov8_pose: Human pose estimation using Yolov8-pose · GitHub","url":"https://github.com/Sadat75/ultralytics_yolov8_pose"},{"title":"NEW - YOLOv8 🚀 Pose Models · Issue #1915 · ultralytics/ultralytics","url":"https://github.com/ultralytics/ultralytics/issues/1915"},{"title":"ultralytics/ultralytics/cfg/models/v8/yolov8-pose.yaml at main · ultralytics/ultralytics","url":"https://github.com/ultralytics/ultralytics/blob/main/ultralytics/cfg/models/v8/yolov8-pose.yaml"},{"title":"GitHub - Atomic-man007/Pose-Estimation-Ultralytics: Pose Estimation using Ultralytics YOLOv8 engine","url":"https://github.com/Atomic-man007/Pose-Estimation-Ultralytics"},{"title":"Pose Estimation with Ultralytics YOLOv8 Explained","url":"https://www.ultralytics.com/blog/pose-estimation-with-ultralytics-yolov8"},{"title":"ultralytics/docs/en/tasks/pose.md at main · ultralytics/ultralytics","url":"https://github.com/ultralytics/ultralytics/blob/main/docs/en/tasks/pose.md"},{"title":"ultralytics/docs/en/models/yolov8.md at main · ultralytics/ultralytics","url":"https://github.com/ultralytics/ultralytics/blob/main/docs/en/models/yolov8.md"},{"title":"Ultralytics/YOLOv8 · Hugging Face","url":"https://huggingface.co/Ultralytics/YOLOv8"},{"title":"Pose Estimation Datasets Overview - Ultralytics YOLOv8 Docs · ultralytics · Discussion #2517","url":"https://github.com/orgs/ultralytics/discussions/2517"}]
+
+Based on the search results, I found information about Ultralytics YOLOv8 pose estimation on GitHub. From the main Ultralytics repository, the ultralytics/ultralytics repository has 55.3k stars as of the search results (which were from 3 days ago, around April 7, 2026).
+
+The search results show that Ultralytics creates cutting-edge, state-of-the-art YOLO models that are fast, accurate, and easy to use, and YOLOv8 pose models are trained on the COCO keypoints dataset and are suitable for a variety of pose estimation tasks.
+
+However, the search results don't provide a more specific or current GitHub star count for April 10, 2026. The 55.3k figure mentioned is the most recent data point available from these results.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[15] CALL: WebSearch Sapiens facebook meta github human understanding foundation model 2026
+================================================================================
+Web search results for query: "Sapiens facebook meta github human understanding foundation model 2026"
+
+Links: [{"title":"GitHub - facebookresearch/sapiens: High-resolution models for human tasks. · GitHub","url":"https://github.com/facebookresearch/sapiens"},{"title":"facebook/sapiens · Hugging Face","url":"https://huggingface.co/facebook/sapiens"},{"title":"Sapiens: Foundation for Human Vision Models by Meta","url":"https://learnopencv.com/sapiens-human-vision-models/"},{"title":"Sapiens | Meta","url":"https://www.meta.com/emerging-tech/codec-avatars/sapiens/"},{"title":"Decoding Meta Sapiens: A Human-Centric AI Model for Precision Tasks | by Nandini Lokesh Reddy | Medium","url":"https://medium.com/@nandinilreddy/decoding-meta-sapiens-a-human-centric-ai-model-for-precision-tasks-16fc08b8cd31"},{"title":"Sapiens: Foundation for Human Vision Models","url":"https://rawalkhirodkar.github.io/sapiens/"},{"title":"GitHub - ibaiGorordo/Sapiens-Pytorch-Inference: Minimal code and examnples for inferencing Sapiens foundation human models in Pytorch","url":"https://github.com/ibaiGorordo/Sapiens-Pytorch-Inference"},{"title":"My Thoughts on Sapiens: Foundation for Human Vision Models | by YeHtutMaung | Medium","url":"https://medium.com/@yehtutmaung21/my-thoughts-on-sapiens-foundation-for-human-vision-models-399bab869cf6"},{"title":"Meta Enlarges Its Contribution to Foundation Models for Computer Vision with Sapiens","url":"https://www.sentisight.ai/meta-enlarges-its-contribution-to-foundation-models-for-computer-vision-with-sapiens/"},{"title":"Meta's human vision models excel \"in the wild\"","url":"https://www.rdworldonline.com/metas-sapiens-vision-models-bring-3d-analysis-of-humans-to-the-wild/"}]
+
+Based on the search results, here's what I found about Sapiens:
+
+## Overview
+
+Sapiens is a family of models for four fundamental human-centric vision tasks: 2D pose estimation, body-part segmentation, depth estimation, and surface normal prediction.
+
+## Key Characteristics
+
+Sapiens are high-resolution vision transformers pretrained on 300 million human images and natively support 1K high-resolution inference. Model performance across tasks improves as the number of parameters scales from 0.3 to 2 billion.
+
+## Training and Datasets
+
+For pre-training in a self-supervised manner, the dataset used was a finely curated dataset with real and synthetic Humans-300M images in diverse conditions, with 248 million images containing multiple human subjects filtered from a large proprietary dataset of 1 billion human images.
+
+## Performance
+
+Sapiens achieves significant improvements over prior state-of-the-art on Humans-5K (pose) by 7.6 mAP, Humans-2K (seg) by 17.1 mIoU, Hi4D (depth) by 22.4% relative RMSE, and THuman2 (normal) by 53.5% relative angular error.
+
+## Availability
+
+The code is available on GitHub at https://github.com/facebookresearch/sapiens, and the models are available on Hugging Face.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[16] CALL: WebSearch rtmlib github lightweight RTMPose inference 2026
+================================================================================
+Web search results for query: "rtmlib github lightweight RTMPose inference 2026"
+
+Links: [{"title":"GitHub - Tau-J/rtmlib: RTMPose series (RTMPose, DWPose, RTMO, RTMW) without mmcv, mmpose, mmdet etc. · GitHub","url":"https://github.com/Tau-J/rtmlib"},{"title":"GitHub - Kinetix-ML/rtmlib-coreml: RTMPose without mmcv, mmpose, mmdet etc.","url":"https://github.com/Kinetix-ML/rtmlib-coreml"},{"title":"rtmlib/rtmlib/tools/pose_estimation/rtmpose.py at main · Tau-J/rtmlib","url":"https://github.com/Tau-J/rtmlib/blob/main/rtmlib/tools/pose_estimation/rtmpose.py"},{"title":"Releases · open-mmlab/mmpose","url":"https://github.com/open-mmlab/mmpose/releases"},{"title":"rtmlib · PyPI","url":"https://pypi.org/project/rtmlib/"},{"title":"rtmpose · GitHub Topics · GitHub","url":"https://github.com/topics/rtmpose"},{"title":"rtmlib/README.md at main · Tau-J/rtmlib","url":"https://github.com/Tau-J/rtmlib/blob/main/README.md"},{"title":"Releases · Tau-J/rtmlib","url":"https://github.com/Tau-J/rtmlib/releases"},{"title":"MMPose/RTMPose Github","url":"https://github.com/open-mmlab/mmpose/tree/main/projects/rtmpose"},{"title":"mmpose/projects/rtmpose at dev-1.x · open-mmlab/mmpose","url":"https://github.com/open-mmlab/mmpose/tree/dev-1.x/projects/rtmpose"}]
+
+Based on the search results, here's what I found about rtmlib and RTMPose inference:
+
+## rtmlib Overview
+
+rtmlib is a super lightweight library to conduct human and animal pose estimation based on RTMPose and ViTPose models WITHOUT any dependencies like mmcv, mmpose, mmdet, etc.
+
+## Key Features
+
+Optionally, you can use other common backends like opencv, onnxruntime, openvino, tensorrt to accelerate the inference process.
+
+## Installation and Usage
+
+You can install from pypi with `pip install rtmlib` or from source code by cloning https://github.com/Tau-J/rtmlib.git
+
+## Supported Models
+
+The library supports multiple pose estimation models in the RTMPose series, including:
+- RTMPose
+- DWPose
+- RTMO (Real-Time Multi-person Pose EstimatiOn)
+- RTMW (whole-body pose estimation)
+
+## Performance
+
+RTMPose-m achieves 75.8% AP on COCO with 90+ FPS on an Intel i7-11700 CPU and 430+ FPS on an NVIDIA GTX 1660 Ti GPU.
+
+The official GitHub repository is available at https://github.com/Tau-J/rtmlib, which contains documentation, examples, and installation instructions for using rtmlib for lightweight RTMPose inference.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[17] CALL: WebSearch VideoPose3D facebook github 2D to 3D pose lifting
+================================================================================
+Web search results for query: "VideoPose3D facebook github 2D to 3D pose lifting"
+
+Links: [{"title":"GitHub - facebookresearch/VideoPose3D: Efficient 3D human pose estimation in video using 2D keypoint trajectories · GitHub","url":"https://github.com/facebookresearch/VideoPose3D"},{"title":"GitHub - bruceyo/GLA-GCN: 2D to 3D human pose lifting","url":"https://github.com/bruceyo/GLA-GCN"},{"title":"VideoPose3D/CONTRIBUTING.md at main · facebookresearch/VideoPose3D","url":"https://github.com/facebookresearch/VideoPose3D/blob/main/CONTRIBUTING.md"},{"title":"VideoPose3D/INFERENCE.md at main · facebookresearch/VideoPose3D","url":"https://github.com/facebookresearch/VideoPose3D/blob/main/INFERENCE.md"},{"title":"3D human pose estimation in video with temporal convolutions and semi-supervised training - Meta Research | Meta Research","url":"https://research.facebook.com/publications/3d-human-pose-estimation-in-video-with-temporal-convolutions-and-semi-supervised-training/"},{"title":"VideoPose3D/DATASETS.md at main · facebookresearch/VideoPose3D","url":"https://github.com/facebookresearch/VideoPose3D/blob/main/DATASETS.md"},{"title":"VideoPose3D/DOCUMENTATION.md at main · facebookresearch/VideoPose3D","url":"https://github.com/facebookresearch/VideoPose3D/blob/main/DOCUMENTATION.md"},{"title":"GitHub - hxu296/jeston-videopose3d: Setup, deploy, and optimize VideoPose3D for real-time human pose estimation on Jeston Nano 2G. · GitHub","url":"https://github.com/hxu296/jeston-videopose3d"},{"title":"VideoPose3D/run.py at main · facebookresearch/VideoPose3D","url":"https://github.com/facebookresearch/VideoPose3D/blob/main/run.py"},{"title":"GitHub - zh-plus/video-to-pose3D: Convert video to 3D pose in one-key.","url":"https://github.com/zh-plus/video-to-pose3D"}]
+
+Based on the search results, here's what I found about VideoPose3D:
+
+## VideoPose3D Overview
+
+VideoPose3D is a project by researchers including Dario Pavllo, Christoph Feichtenhofer, David Grangier, and Michael Auli that demonstrates 3D human pose estimation in video with temporal convolutions and semi-supervised training, published at CVPR 2019.
+
+## Key Features
+
+VideoPose3D is a lifting network where the input is 2D human pose and the output is 3D human pose, using dilated temporal convolution to exploit information across frames.
+
+The model estimates 3D poses in video using a fully convolutional model based on dilated temporal convolutions over 2D keypoints.
+
+## Semi-Supervised Learning
+
+The project introduces back-projection, a semi-supervised training method that leverages unlabeled video data by starting with predicted 2D keypoints, estimating 3D poses, and then back-projecting to the input 2D keypoints.
+
+## Results and Performance
+
+Top-performing baselines achieved 46.8 mm mean per-joint position error on Human3.6M and 33.0 mm on HumanEva-I.
+
+## Repository
+
+The code and models are available at https://github.com/facebookresearch/VideoPose3D.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[18] CALL: WebSearch Pose2Sim github 2D 3D OpenSim markerless motion capture 2026
+================================================================================
+Web search results for query: "Pose2Sim github 2D 3D OpenSim markerless motion capture 2026"
+
+Links: [{"title":"GitHub - perfanalytics/pose2sim: Markerless kinematics with any cameras — From 2D Pose estimation to 3D OpenSim motion","url":"https://github.com/perfanalytics/pose2sim"},{"title":"pose2sim | Markerless kinematics with any cameras — From 2D Pose estimation to 3D OpenSim motion","url":"https://perfanalytics.github.io/pose2sim/"},{"title":"GitHub - davidpagnon/pose2sim: Markerless kinematics, from OpenPose to OpenSim · GitHub","url":"https://github.com/davidpagnon/pose2sim"},{"title":"GitHub - VisSim-UniKO/vissim_pose2sim: Markerless kinematics with any cameras — From 2D/3D Pose estimation to 3D OpenSim motion","url":"https://github.com/VisSim-UniKO/vissim_pose2sim"},{"title":"GitHub - Munna-Manoj/pose2sim_learn: Markerless kinematics with any cameras — From 2D Pose estimation to 3D OpenSim motion","url":"https://github.com/Munna-Manoj/pose2sim_learn"},{"title":"Releases · perfanalytics/pose2sim","url":"https://github.com/perfanalytics/pose2sim/releases"},{"title":"Pose2Sim: An End-to-End Workflow for 3D Markerless Sports Kinematics—Part 1: Robustness","url":"https://www.mdpi.com/1424-8220/21/19/6530"},{"title":"pose2sim/Pose2Sim at main · perfanalytics/pose2sim","url":"https://github.com/perfanalytics/pose2sim/tree/main/Pose2Sim"},{"title":"pose2sim/Pose2Sim/Utilities at main · perfanalytics/pose2sim","url":"https://github.com/perfanalytics/pose2sim/tree/main/Pose2Sim/Utilities"},{"title":"pose2sim/README.md at main · perfanalytics/pose2sim","url":"https://github.com/perfanalytics/pose2sim/blob/main/README.md"}]
+
+Based on the web search results, here's comprehensive information about Pose2Sim:
+
+## Overview
+
+Pose2Sim provides a workflow for 3D markerless kinematics (human or animal), as an alternative to traditional marker-based MoCap methods. Pose2Sim is free and open-source, requiring low-cost hardware but with research-grade accuracy and production-grade robustness.
+
+## Key Features
+
+Any combination of phones, webcams, or GoPros can be used with fully clothed subjects, so it is particularly adapted to the sports field, the doctor's office, or for outdoor 3D animation capture. 
+
+Pose2Sim stands for "OpenPose to OpenSim", as it originally used OpenPose inputs (2D keypoints coordinates) and led to an OpenSim result (full-body 3D joint angles). Pose estimation is now performed with more recent models from RTMPose, and custom models (from DeepLabCut, for example) can also be used.
+
+## Technical Capabilities
+
+Pose2Sim uses OpenPose 2D pose detections from multiple views as inputs, identifies the person of interest, robustly triangulates joint coordinates from calibrated cameras, and feeds those to a 3D inverse kinematic full-body OpenSim model in order to compute biomechanically congruent joint angles.
+
+Scaling and inverse kinematics are performed in a fully automatic way for each trc file. No need for a static trial!
+
+## Repository
+
+The main GitHub repository is available at **https://github.com/perfanalytics/pose2sim**, which maintains the actively developed version of this markerless motion capture tool.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[19] CALL: WebSearch WHAM github world coordinate 3D pose estimation single camera
+================================================================================
+Web search results for query: "WHAM github world coordinate 3D pose estimation single camera"
+
+Links: [{"title":"GitHub - yohanshin/WHAM · GitHub","url":"https://github.com/yohanshin/WHAM"},{"title":"Human Mesh Recovery","url":"https://ucladeepvision.github.io/CS188-Projects-2024Winter/2024/03/22/team35-human-mesh-recovery.html"},{"title":"GitHub - visonpon/human-motion-capture: collect papers about human motion capture · GitHub","url":"https://github.com/visonpon/human-motion-capture"},{"title":"GitHub - mks0601/3DMPPE_POSENET_RELEASE: Official PyTorch implementation of \"Camera Distance-aware Top-down Approach for 3D Multi-person Pose Estimation from a Single RGB Image\", ICCV 2019","url":"https://github.com/mks0601/3DMPPE_POSENET_RELEASE"},{"title":"GitHub - wangzheallen/awesome-human-pose-estimation: Human Pose Estimation Related Publication · GitHub","url":"https://github.com/wangzheallen/awesome-human-pose-estimation"},{"title":"GitHub - PoseLib/PoseLib: Minimal solvers for calibrated camera pose estimation · GitHub","url":"https://github.com/PoseLib/PoseLib"},{"title":"yohanshin/WHAM | DeepWiki","url":"https://deepwiki.com/yohanshin/WHAM"},{"title":"WHAC: World-grounded Humans and Cameras","url":"https://wqyin.github.io/projects/WHAC/"},{"title":"3d-pose-estimation · GitHub Topics · GitHub","url":"https://github.com/topics/3d-pose-estimation"},{"title":"GitHub - TemugeB/bodypose3d: Real time 3D body pose estimation with Mediapipe · GitHub","url":"https://github.com/TemugeB/bodypose3d"}]
+
+Based on the search results, here's what I found about WHAM:
+
+## WHAM Overview
+
+WHAM is the official PyTorch implementation of "Reconstructing World-grounded Humans with Accurate 3D Motion." Unlike many previous approaches that focus on camera-relative motion, WHAM specifically addresses the challenge of grounding human motion in the world coordinate system, capturing both accurate body pose and global trajectory.
+
+## GitHub Repository
+
+The official GitHub repository is located at: **https://github.com/yohanshin/WHAM**
+
+## Key Features
+
+- WHAM processes monocular video input to produce world-grounded 3D human motion, combining 2D pose estimation, camera motion tracking, and deep learning to recover 3D human pose and global trajectory using the SMPL body model.
+
+- WHAM first detects 2D key points in the video frames using ViTPose, which will be useful for motion feature extraction. Because of object rotation and movement between frames, the key points are then normalized to a bounding box around the person, and motion context can be derived from them.
+
+## Input and Usage
+
+The framework assumes camera focal length following CLIFF and allows you to specify known camera intrinsics [fx fy cx cy] for SLAM. You can also skip SLAM if you only want to get camera-coordinate motion.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[20] CALL: WebSearch MotionBERT github transformer motion analysis 3D pose
+================================================================================
+Web search results for query: "MotionBERT github transformer motion analysis 3D pose"
+
+Links: [{"title":"MotionBERT: A Unified Perspective on Learning Human Motion Representations","url":"https://motionbert.github.io/"},{"title":"GitHub - Walter0807/MotionBERT: [ICCV 2023] PyTorch Implementation of \"MotionBERT: A Unified Perspective on Learning Human Motion Representations\" · GitHub","url":"https://github.com/Walter0807/MotionBERT"},{"title":"GitHub - TaatiTeam/MotionAGFormer: Official implementation of the paper \"MotionAGFormer: Enhancing 3D Pose Estimation with a Transformer-GCNFormer Network\" (WACV 2024). · GitHub","url":"https://github.com/TaatiTeam/MotionAGFormer"},{"title":"GitHub - Arshad221b/2d_to_3d_human_pose_uplift: Transformer based 2D to 3D Human Pose Estimation","url":"https://github.com/Arshad221b/2d_to_3d_human_pose_uplift"},{"title":"MotionBERT: A Unified Perspective on Learning Human Motion Representations","url":"https://openaccess.thecvf.com/content/ICCV2023/papers/Zhu_MotionBERT_A_Unified_Perspective_on_Learning_Human_Motion_Representations_ICCV_2023_paper.pdf"},{"title":"[2210.06551] MotionBERT: A Unified Perspective on Learning Human Motion Representations","url":"https://arxiv.org/abs/2210.06551"},{"title":"[2210.06551] MotionBERT: A Unified Perspective on Learning Human Motion Representations","url":"https://ar5iv.labs.arxiv.org/html/2210.06551"},{"title":"MotionAGFormer: Enhancing 3D Human Pose Estimation With ...","url":"https://openaccess.thecvf.com/content/WACV2024/papers/Mehraban_MotionAGFormer_Enhancing_3D_Human_Pose_Estimation_With_a_Transformer-GCNFormer_Network_WACV_2024_paper.pdf"},{"title":"MotionBERT: A Unified Perspective on Learning Human Motion Representations | Request PDF","url":"https://www.researchgate.net/publication/377425133_MotionBERT_A_Unified_Perspective_on_Learning_Human_Motion_Representations?_tp=eyJjb250ZXh0Ijp7InBhZ2UiOiJzY2llbnRpZmljQ29udHJpYnV0aW9ucyIsInByZXZpb3VzUGFnZSI6bnVsbH19"},{"title":"(PDF) MotionBERT: Unified Pretraining for Human Motion Analysis","url":"https://www.researchgate.net/publication/364518366_MotionBERT_Unified_Pretraining_for_Human_Motion_Analysis"}]
+
+Based on the search results, here's what I found about MotionBERT:
+
+## Overview
+
+MotionBERT is the official PyTorch implementation of the paper "MotionBERT: A Unified Perspective on Learning Human Motion Representations" (ICCV 2023).
+
+## Core Architecture
+
+The motion encoder is implemented with a Dual-stream Spatio-temporal Transformer (DSTformer) neural network. The framework involves a pretraining stage in which a motion encoder is trained to recover the underlying 3D motion from noisy partial 2D observations, acquiring motion representations that incorporate geometric, kinematic, and physical knowledge about human motion.
+
+## Key Features
+
+The DSTformer could capture long-range spatio-temporal relationships among the skeletal joints comprehensively and adaptively, exemplified by the lowest 3D pose estimation error so far when trained from scratch.
+
+## Applications
+
+The framework supports multiple downstream tasks including 3D human pose estimation, skeleton-based action recognition, and mesh recovery.
+
+## GitHub Repository
+
+The official GitHub repository is available at: https://github.com/Walter0807/MotionBERT, which includes documentation for pretraining, inference, and various applications.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[21] CALL: WebSearch SAM2 segment anything model 2 github video segmentation 2026
+================================================================================
+Web search results for query: "SAM2 segment anything model 2 github video segmentation 2026"
+
+Links: [{"title":"GitHub - facebookresearch/sam2: The repository provides code for running inference with the Meta Segment Anything Model 2 (SAM 2), links for downloading the trained model checkpoints, and example notebooks that show how to use the model. · GitHub","url":"https://github.com/facebookresearch/sam2"},{"title":"GitHub - GuoleiSun/Awesome-SAM2: This repo aims to include materials (papers, codes, slides) about SAM2 (segment anything in images and videos). We are continuously improving the project. Welcome to PR the works (papers, repos) that are missed. · GitHub","url":"https://github.com/GuoleiSun/Awesome-SAM2"},{"title":"GitHub - facebookresearch/segment-anything: The repository provides code for running inference with the SegmentAnything Model (SAM), links for downloading the trained model checkpoints, and example notebooks that show how to use the model. · GitHub","url":"https://github.com/facebookresearch/segment-anything"},{"title":"Introducing Meta Segment Anything Model 2 (SAM 2)","url":"https://ai.meta.com/sam2/"},{"title":"[2408.00714] SAM 2: Segment Anything in Images and Videos","url":"https://arxiv.org/abs/2408.00714"},{"title":"GitHub - WZH0120/SAM2-UNet: [VINT 2026] SAM2-UNet: Segment Anything 2 Makes Strong Encoder for Natural and Medical Image Segmentation · GitHub","url":"https://github.com/WZH0120/SAM2-UNet"},{"title":"SAM 2: Segment Anything Model 2 - Ultralytics YOLO Docs","url":"https://docs.ultralytics.com/models/sam-2/"},{"title":"How to Use SAM 2 for Video Segmentation","url":"https://blog.roboflow.com/sam-2-video-segmentation/"},{"title":"GitHub - mushaid01/SAM2-image-video-segmentation: Segment Anything 2 (SAM 2) is a real-time image and video segmentation model. It supports automatic mask generation to segment all objects and a point prompt feature for targeted segmentation. SAM 2 can identify specific objects in images and videos, making it ideal for precise object identification and segmentation tasks.","url":"https://github.com/mushaid01/SAM2-image-video-segmentation"},{"title":"GitHub - ilyamk/sam2-segmentation: The repository provides code for running inference with the Meta Segment Anything Model 2 (SAM 2), links for downloading the trained model checkpoints, and example notebooks that show how to use the model. · GitHub","url":"https://github.com/ilyamk/sam2-segmentation"}]
+
+Based on the search results, here's what I found about SAM2 (Segment Anything Model 2):
+
+## Overview
+
+Segment Anything Model 2 (SAM 2) is a foundation model towards solving promptable visual segmentation in images and videos. SAM 2 is a segmentation model that enables fast, precise selection of any object in any video or image.
+
+## Key Capabilities
+
+The model design is a simple transformer architecture with streaming memory for real-time video processing. The model achieves real-time inference speeds, processing approximately 44 frames per second.
+
+## GitHub Repository
+
+The official repository is available at **github.com/facebookresearch/sam2**. The repository provides code for running inference with the Meta Segment Anything Model 2 (SAM 2), links for downloading the trained model checkpoints, and example notebooks that show how to use the model.
+
+## Video Segmentation Features
+
+For promptable segmentation and tracking in videos, we provide a video predictor with APIs for example to add prompts and propagate masklets throughout a video. SAM 2 is equipped with memory that stores information about the object and previous interactions, allowing it to generate mask predictions throughout the video and effectively correct them based on the stored object context from previously observed frames.
+
+## Model Variants
+
+SAM 2 is available in 4 different model sizes, ranging from the lightweight "sam2_hiera_tiny" (38.9M parameters) to the more powerful "sam2_hiera_large" (224.4M parameters).
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[22] CALL: WebSearch roboflow supervision github stars computer vision annotation tracking 2026
+================================================================================
+Web search results for query: "roboflow supervision github stars computer vision annotation tracking 2026"
+
+Links: [{"title":"GitHub - roboflow/supervision: We write your reusable computer vision tools. 💜","url":"https://github.com/roboflow/supervision"},{"title":"Roboflow · GitHub","url":"https://github.com/roboflow"},{"title":"Roboflow: Computer vision tools for developers and enterprises","url":"https://roboflow.com/"},{"title":"Releases · roboflow/supervision","url":"https://github.com/roboflow/supervision/releases"},{"title":"Supervision","url":"https://supervision.roboflow.com/"},{"title":"Cheatsheet • Supervision","url":"https://roboflow.github.io/cheatsheet-supervision/"},{"title":"Build Computer Vision Applications Faster with Supervision","url":"https://blog.roboflow.com/supervision/"},{"title":"supervision · GitHub Topics · GitHub","url":"https://github.com/topics/supervision?o=asc&s=stars"},{"title":"roboflow/supervision: Computer Vision AI Toolkit - HelloGitHub","url":"https://hellogithub.com/en/repository/6229de6ec2ec487a8bc1366f27bb1d96"},{"title":"Roboflow on LinkedIn: Supervision, an open source package with utilities for building computer…","url":"https://www.linkedin.com/posts/roboflow-ai_supervision-an-open-source-package-with-activity-7097870507504480257-H-Bv?trk=public_profile_like_view"}]
+
+Based on the search results, I found relevant information about Roboflow's Supervision project:
+
+## Roboflow Supervision Overview
+
+Supervision is described as "reusable computer vision tools" developed by Roboflow. Supervision simplifies the process of working with vision models, offering connectors to popular model libraries, visualizers (annotators), powerful post-processing features and an easy learning curve.
+
+## GitHub Stars
+
+According to the GitHub profile information from the search results, roboflow/supervision shows 37,864 stars with Python as the primary language and an MIT license. This indicates substantial community adoption and popularity.
+
+## Key Features and Capabilities
+
+The project includes several important capabilities:
+
+- The project simplifies the development process of computer vision tasks such as object detection, classification, annotation, and tracking.
+- Supervision 0.24.0 includes the F1 score, enhancements to LineZone, EasyOCR support, NCNN support
+- Trackers gives you clean, modular re-implementations of leading multi-object tracking algorithms released under the permissive Apache 2.0 license.
+
+The project continues to be actively maintained with regular releases and contributions from the community.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[23] CALL: WebSearch roboflow sports github computer vision sports analytics
+================================================================================
+Web search results for query: "roboflow sports github computer vision sports analytics"
+
+Links: [{"title":"GitHub - roboflow/sports: computer vision and sports · GitHub","url":"https://github.com/roboflow/sports"},{"title":"Computer Vision Use Cases in Sports","url":"https://blog.roboflow.com/computer-vision-use-cases-in-sports/"},{"title":"sports/examples/soccer/README.md at main · roboflow/sports","url":"https://github.com/roboflow/sports/blob/main/examples/soccer/README.md"},{"title":"sports/README.md at main · roboflow/sports","url":"https://github.com/roboflow/sports/blob/main/README.md"},{"title":"Ball Tracking in Sports with Computer Vision","url":"https://blog.roboflow.com/tracking-ball-sports-computer-vision/"},{"title":"Camera Calibration in Sports with Keypoints","url":"https://blog.roboflow.com/camera-calibration-sports-computer-vision/"},{"title":"sports/examples/soccer at main · roboflow/sports","url":"https://github.com/roboflow/sports/tree/main/examples/soccer"},{"title":"Sports Computer Vision Datasets and Models","url":"https://universe.roboflow.com/browse/sports"},{"title":"https://github.com/roboflow/sports | Ecosyste.ms: Awesome","url":"https://awesome.ecosyste.ms/projects/github.com/roboflow/sports"},{"title":"Activity · roboflow/sports","url":"https://github.com/roboflow/sports/activity"}]
+
+Based on the search results, here's what I found about the Roboflow sports repository:
+
+## Overview
+
+The repository contains reusable tools that can be applied in sports and beyond. Roboflow uses sports as a testing ground to push object detection, image segmentation, keypoint detection, and foundational models to their limits.
+
+## Purpose and Applications
+
+Computer vision has gained popularity for sports analysis and analytics, opening up a wide variety of new tools for teams, coaches, sports analytics professionals, scouts, and fans. It can be used to build capabilities like real-time video analysis, fitness and health tracking, and sports predictions, and enhancing the overall fan experience.
+
+## Key Features and Technologies
+
+The repository includes several key components:
+
+- YOLOv8 for detecting players, goalkeepers, referees, and the ball in video
+- YOLOv8 for identifying soccer field boundaries and key points
+- SigLIP for extracting features from player images, UMAP for reducing feature dimensionality, and KMeans for clustering features to classify players into teams
+
+## Main Challenges
+
+Ball tracking is extremely difficult due to its small size and rapid movements, especially in high-resolution videos. Camera calibration is crucial for extracting advanced statistics like player speed and distance traveled, which is complex due to the dynamic nature of sports and varying camera angles.
+
+The repository is available on GitHub at https://github.com/roboflow/sports and is open to contributions from the community.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[24] CALL: WebSearch GolfSwingAnalyzer github dual camera 3D reconstruction
+================================================================================
+Web search results for query: "GolfSwingAnalyzer github dual camera 3D reconstruction"
+
+Links: [{"title":"GitHub - personableduck/GolfSwing: golf swing analysis model","url":"https://github.com/personableduck/GolfSwing"},{"title":"GitHub - tlouth19/analyze.golf: Browser based golf swing analyzer built with React, Redux, Tailwind and Konva.js. ⛳️🔥","url":"https://github.com/tlouth19/analyze.golf"},{"title":"OPTIMOTION | 3D Golf Swing Analysis & Motion Tracking","url":"https://www.golftec.com/optimotion"},{"title":"Sportsbox AI: Revolutionizing golf with 3D Motion Analysis and AI","url":"https://www.sportsbox.ai/"},{"title":"StereoMorph","url":"https://aaronolsen.github.io/software/stereomorph.html"},{"title":"GitHub - rlarcher/GolfTracker","url":"https://github.com/rlarcher/GolfTracker"},{"title":"GitHub - wmcnally/golfdb: GolfDB is a video database for Golf Swing Sequencing, which involves detecting 8 golf swing events in trimmed golf swing videos. This repo demos the baseline model, SwingNet. · GitHub","url":"https://github.com/wmcnally/golfdb"},{"title":"3D Golf Swing Analysis - UF Sports Performance Center","url":"https://ufsportsperformance.com/3d-golf-swing-analysis/"},{"title":"GitHub - openMVG/awesome_3DReconstruction_list: A curated list of papers & resources linked to 3D reconstruction from images.","url":"https://github.com/openMVG/awesome_3DReconstruction_list"},{"title":"3D Golf Swing Analysis | 3D Golf Swing Analyzer | K-MOTION","url":"https://www.k-motion.com/"}]
+
+Based on the web search results, I found several relevant GitHub repositories and projects related to golf swing analysis, though I didn't find a project specifically named "GolfSwingAnalyzer" with dual camera 3D reconstruction. Here's what I found:
+
+## GitHub Golf Swing Analysis Projects:
+
+1. **GolfSwing** - A golf swing analysis model available on GitHub (github.com/personableduck/GolfSwing)
+
+2. **analyze.golf** - A browser-based golf swing analyzer built with React, Redux, Tailwind and Konva.js (github.com/tlouth19/analyze.golf)
+
+3. **GolfTracker** - A project focused on tracking high-speed ball flight and club motion using iOS high-speed camera capabilities (github.com/rlarcher/GolfTracker)
+
+4. **GolfDB** - A video database for Golf Swing Sequencing that detects 8 golf swing events in trimmed golf swing videos (github.com/wmcnally/golfdb)
+
+## 3D Reconstruction with Dual Cameras:
+
+For dual camera 3D reconstruction techniques, I found the StereoMorph R package, which allows users to collect 3D landmarks and curves from objects using two standard digital cameras.
+
+The search results also show commercial golf analysis systems like GOLFTEC's OPTIMOTION and Sportsbox AI that use dual camera setups for 3D swing analysis, but these are commercial products rather than open-source GitHub projects.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[25] CALL: WebSearch Pose2Par golf biomechanics MMPose OpenSim github
+================================================================================
+Web search results for query: "Pose2Par golf biomechanics MMPose OpenSim github"
+
+Links: [{"title":"GitHub - perfanalytics/pose2sim: Markerless kinematics with any cameras — From 2D Pose estimation to 3D OpenSim motion","url":"https://github.com/perfanalytics/pose2sim"},{"title":"GitHub - davidpagnon/pose2sim: Markerless kinematics, from OpenPose to OpenSim · GitHub","url":"https://github.com/davidpagnon/pose2sim"},{"title":"pose2sim · PyPI","url":"https://pypi.org/project/pose2sim/"},{"title":"pose2sim | Markerless kinematics with any cameras — From 2D Pose estimation to 3D OpenSim motion","url":"https://perfanalytics.github.io/pose2sim/"},{"title":"GitHub - Munna-Manoj/pose2sim_learn: Markerless kinematics with any cameras — From 2D Pose estimation to 3D OpenSim motion","url":"https://github.com/Munna-Manoj/pose2sim_learn"},{"title":"pose2sim/README.md at master · davidpagnon/pose2sim","url":"https://github.com/davidpagnon/pose2sim/blob/master/README.md"},{"title":"GitHub - open-mmlab/mmpose: OpenMMLab Pose Estimation Toolbox and Benchmark. · GitHub","url":"https://github.com/open-mmlab/mmpose"},{"title":"sports2d · PyPI","url":"https://pypi.org/project/sports2d/"},{"title":"Pose2Sim: An End-to-End Workflow for 3D Markerless Sports Kinematics—Part 1: Robustness","url":"https://www.mdpi.com/1424-8220/21/19/6530"},{"title":"Pose2Sim: An End-to-End Workflow for 3D Markerless Sports Kinematics—Part 2: Accuracy","url":"https://www.mdpi.com/1424-8220/22/7/2712"}]
+
+Based on the search results, here's what I found:
+
+## Pose2Sim: Golf Biomechanics with OpenSim and Pose Estimation
+
+The search results reveal **Pose2Sim**, a comprehensive open-source workflow for markerless biomechanics analysis:
+
+### Main Project
+
+Pose2Sim is a Python repository that performs markerless kinematic analysis from multiple calibrated views as a unified workflow from an OpenPose input to an OpenSim result. It provides a workflow for 3D markerless kinematics as an alternative to traditional marker-based MoCap methods, is free and open-source with research-grade accuracy, and can use any combination of phones, webcams, or GoPros with fully clothed subjects, making it particularly adapted to the sports field.
+
+### GitHub Repositories
+
+- **Primary**: github.com/davidpagnon/pose2sim
+- **Alternative**: github.com/perfanalytics/pose2sim
+
+### Pose Estimation Integration
+
+Regarding your specific query about MMPose: Support for MMPose is listed as a planned feature. Currently, pose estimation is performed with more recent models from RTMPose, and custom models (from DeepLabCut for example) can also be used.
+
+### OpenSim Integration
+
+Version 0.10.0 integrated OpenSim scaling and inverse kinematics into Pose2Sim, enabling biomechanical analysis without marker-based motion capture.
+
+The project would be applicable to golf biomechanics analysis using video from multiple camera angles.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[26] CALL: WebSearch GolfDB SwingNet github golf swing phase segmentation deep learning
+================================================================================
+Web search results for query: "GolfDB SwingNet github golf swing phase segmentation deep learning"
+
+Links: [{"title":"GitHub - wmcnally/golfdb: GolfDB is a video database for Golf Swing Sequencing, which involves detecting 8 golf swing events in trimmed golf swing videos. This repo demos the baseline model, SwingNet. · GitHub","url":"https://github.com/wmcnally/golfdb"},{"title":"GitHub - valohai/GolfDB: GolfDB: A Video Database for Golf Swing Sequencing","url":"https://github.com/valohai/GolfDB"},{"title":"[1903.06528] GolfDB: A Video Database for Golf Swing Sequencing","url":"https://arxiv.org/abs/1903.06528"},{"title":"(PDF) GolfDB: A Video Database for Golf Swing Sequencing","url":"https://www.researchgate.net/publication/333984159_GolfDB_A_Video_Database_for_Golf_Swing_Sequencing"},{"title":"GitHub - CypressJack/swing-analyze: GolfDB is a video database for Golf Swing Sequencing, which involves detecting 8 golf swing events in trimmed golf swing videos. This repo demos the baseline model, SwingNet.","url":"https://github.com/CypressJack/swing-analyze"},{"title":"GolfDB: A Video Database for Golf Swing Sequencing William McNally Kanav Vats","url":"https://openaccess.thecvf.com/content_CVPRW_2019/papers/CVSports/McNally_GolfDB_A_Video_Database_for_Golf_Swing_Sequencing_CVPRW_2019_paper.pdf"},{"title":"golfdb/README.md at master · wmcnally/golfdb","url":"https://github.com/wmcnally/golfdb/blob/master/README.md"},{"title":"(PDF) Golf Swing Sequencing Using Computer Vision","url":"https://www.researchgate.net/publication/360183699_Golf_Swing_Sequencing_Using_Computer_Vision"},{"title":"GitHub - joannapurosto/gofl-swing-sequencing: Using SwingNet to recognize different phases of golf swing · GitHub","url":"https://github.com/joannapurosto/gofl-swing-sequencing"},{"title":"GitHub - Robin-Hood-zjw/golf_swing","url":"https://github.com/Robin-Hood-zjw/golf_swing/"}]
+
+Based on the search results, here's what I found about GolfDB and SwingNet:
+
+## Overview
+
+GolfDB is a high-quality video dataset created for general recognition applications in the sport of golf, and specifically for the task of golf swing sequencing. The repository contains a PyTorch implementation of the SwingNet baseline model presented in the paper.
+
+## The SwingNet Model
+
+SwingNet is a lightweight deep neural network which possesses a hybrid deep convolutional and recurrent neural network architecture. More specifically, SwingNet maps a sequence of RGB images to a corresponding sequence of event probabilities, using MobileNetV2 to generate feature vectors which are input to a bidirectional LSTM, with fully-connected layers and softmax applied at each frame to obtain event probabilities.
+
+## Performance and Dataset
+
+The benchmark database GolfDB consists of 1400 high-quality golf swing videos, each labeled with event frames, bounding box, player name and sex, club type, and view type. SwingNet correctly detects eight golf swing events at an average rate of 76.1%, and six out of eight events at a rate of 91.8%.
+
+## GitHub Repository
+
+The primary repository is available at **https://github.com/wmcnally/golfdb**, along with several community forks that demonstrate the model for recognizing different phases of golf swings.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[27] CALL: WebSearch awesome-biomechanics github curated list
+================================================================================
+Web search results for query: "awesome-biomechanics github curated list"
+
+Links: [{"title":"GitHub - modenaxe/awesome-biomechanics: A curated, public list of resources for biomechanics and human motion analysis: datasets, processing tools, software for simulation, educational videos, lectures, etc. · GitHub","url":"https://github.com/modenaxe/awesome-biomechanics"},{"title":"Activity · modenaxe/awesome-biomechanics","url":"https://github.com/modenaxe/awesome-biomechanics/activity"},{"title":"biomechanics · GitHub Topics · GitHub","url":"https://github.com/topics/biomechanics"},{"title":"Issues · modenaxe/awesome-biomechanics","url":"https://github.com/modenaxe/awesome-biomechanics/issues"},{"title":"Pull requests · modenaxe/awesome-biomechanics","url":"https://github.com/modenaxe/awesome-biomechanics/pulls"},{"title":"awesome-biomechanics/README.md at main · modenaxe/awesome-biomechanics","url":"https://github.com/modenaxe/awesome-biomechanics/blob/main/README.md"},{"title":"ISB Education - Awesome Biomechanics resource list - International Society of Biomechanics","url":"https://isbweb.org/news/isb-now/177-december-2020/737-awesome-biomechanics-resource-list-isb-education"},{"title":"modenaxe (Luca Modenese) · GitHub","url":"https://github.com/modenaxe"},{"title":"Build software better, together","url":"https://github.com/topics/musculoskeletal-models"},{"title":"awesome-biomechanics | Ecosyste.ms: Awesome","url":"https://awesome.ecosyste.ms/lists/modenaxe/awesome-biomechanics"}]
+
+I found the resource! The awesome-biomechanics is a curated, public list of resources for biomechanics and human motion analysis, including datasets, processing tools, software for simulation, educational videos, and lectures.
+
+The list was created by Luca Modenese from Imperial College London and is maintained on GitHub at https://github.com/modenaxe/awesome-biomechanics.
+
+The repository contains a comprehensive collection of resources organized by category, including:
+- Human Anatomy, Walking, Finite Element Models, Segmentation of Medical Images, Biomechanical and Neuro-musculoskeletal Simulation Software, Biomechanical Models, Motion Capture Data Import and Processing, and many other specialized topics
+
+"Awesome lists" are common on GitHub and open source communities, especially in rapidly evolving fields. They are free, open source lists meant to help others stay updated with new publications and online resources, and Modenese created one because he thought something like that was missing in biomechanics.
+
+The list is a public domain document under a Creative Commons Public license.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[28] CALL: WebSearch pyomeca biomechanics python github
+================================================================================
+Web search results for query: "pyomeca biomechanics python github"
+
+Links: [{"title":"GitHub - pyomeca/pyomeca: Python toolbox for biomechanics analysis","url":"https://github.com/pyomeca/pyomeca"},{"title":"pyomeca · GitHub","url":"https://github.com/pyomeca"},{"title":"Pyomeca","url":"https://pyomeca.github.io/"},{"title":"pyomeca/pyomeca","url":"https://github.com/pyomeca/pyomeca/issues"},{"title":"GitHub - romainmartinez/pyomeca-refactor: Python toolbox for biomechanics analysis","url":"https://github.com/romainmartinez/pyomeca-refactor"},{"title":"Workflow runs · pyomeca/pyomeca","url":"https://github.com/pyomeca/pyomeca/actions"},{"title":"GitHub - pyomeca/pyosim: Interface between OpenSim and the Pyomeca library","url":"https://github.com/pyomeca/pyosim"},{"title":"GitHub - pyomeca/bioptim: An optimization framework that links CasADi, Ipopt, ACADOS and biorbd for Optimal Control Problem","url":"https://github.com/pyomeca/bioptim"},{"title":"pyomeca/pyomeca/analogs.py at cf1d411b9770edcfa89db48f6a2dc2a7ccf06035 · pyomeca/pyomeca","url":"https://github.com/pyomeca/pyomeca/blob/cf1d411b9770edcfa89db48f6a2dc2a7ccf06035/pyomeca/analogs.py"},{"title":"pyomeca/tests/data/markers_analogs.c3d at master · pyomeca/pyomeca","url":"https://github.com/pyomeca/pyomeca/blob/master/tests/data/markers_analogs.c3d"}]
+
+Based on the search results, here's information about Pyomeca:
+
+## Pyomeca - Python Biomechanics Toolbox
+
+Pyomeca is a python library allowing you to carry out a complete biomechanical analysis in a simple, logical and concise way.
+
+**Key Features:**
+- Signal processing routines commonly used in biomechanics such as filters, normalization, onset detection, outliers detection, derivatives, etc.
+- Easy reading and writing interface to common files in biomechanics (c3d, csv, xlsx, mat, trc, sto, mot)
+
+**GitHub Repository:**
+The official repository is available at https://github.com/pyomeca/pyomeca
+
+**Licensing and Support:**
+Pyomeca is Apache-licensed and the source code is available on GitHub. If any questions or issues come up as you use pyomeca, please get in touch via GitHub issues. The project welcomes any input, feedback, bug reports, and contributions.
+
+**Installation:**
+The easiest way to get everything installed is to use conda.
+
+The project is part of the pyomeca organization on GitHub, which also maintains related projects like biorbd (biomechanical dynamics library), bioptim (optimization framework), and others for biomechanical analysis workflows.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[29] CALL: WebSearch py-c3d python C3D biomechanics github
+================================================================================
+Web search results for query: "py-c3d python C3D biomechanics github"
+
+Links: [{"title":"GitHub - EmbodiedCognition/py-c3d: Read & write C3D mocap files","url":"https://github.com/EmbodiedCognition/py-c3d"},{"title":"GitHub - pyomeca/pyomeca: Python toolbox for biomechanics analysis","url":"https://github.com/pyomeca/pyomeca"},{"title":"GitHub - pyomeca/ezc3d: Easy to use C3D reader/writer for C++, Python and Matlab · GitHub","url":"https://github.com/pyomeca/ezc3d"},{"title":"c3d · GitHub Topics · GitHub","url":"https://github.com/topics/c3d?o=desc&s=updated"},{"title":"BTK Python wrapper: Getting started","url":"https://biomechanical-toolkit.github.io/docs/Wrapping/Python/_getting_started.html"},{"title":"Pyomeca","url":"https://pyomeca.github.io/"},{"title":"c3d · PyPI","url":"https://pypi.org/project/c3d/"},{"title":"Data-processing-tool-for-biomechanics/trc_to_c3d.py at main · hunminkim98/Data-processing-tool-for-biomechanics","url":"https://github.com/hunminkim98/Data-processing-tool-for-biomechanics/blob/main/trc_to_c3d.py"},{"title":"biomechanics · GitHub Topics · GitHub","url":"https://github.com/topics/biomechanics?l=python"},{"title":"GitHub - etoshey/pyc3dtools: python package - Read c3d file","url":"https://github.com/etoshey/pyc3dtools"}]
+
+Based on the search results, here's what I found about py-c3d:
+
+## py-c3d Overview
+
+py-c3d is a small library for reading and writing C3D binary files. C3D files are a standard format for recording 3-dimensional time sequence data, especially data recorded by a 3D motion tracking apparatus.
+
+## Repository and Installation
+
+The repository can be cloned from https://github.com/EmbodiedCognition/py-c3d and installed using poetry install. You can also install it directly from the bleeding-edge version using pip.
+
+## Features
+
+The package includes a script for converting C3D motion data to CSV format (c3d2csv) and an OpenGL-based visualization tool for observing the motion described by a C3D file (c3d-viewer).
+
+## Usage
+
+To use the C3D library, you import the package and create a Reader or Writer depending on your intended usage - import c3d with open('data.c3d', 'rb') as handle: reader = c3d.Reader(handle).
+
+## Related Tools
+
+The search results also revealed complementary biomechanics tools worth noting:
+- Pyomeca is a Python toolbox for biomechanics analysis that works with C3D files
+- EZC3D is an easy to use reader, modifier and writer for C3D format files written in C++ with proper binders for Python and MATLAB scripting languages.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[30] CALL: WebSearch SportsPose dataset github 3D poses sports
+================================================================================
+Web search results for query: "SportsPose dataset github 3D poses sports"
+
+Links: [{"title":"GitHub - ChristianIngwersen/SportsPose: SportsPose - A Dynamic 3D sports pose dataset · GitHub","url":"https://github.com/ChristianIngwersen/SportsPose"},{"title":"SportsPose - A Dynamic 3D sports pose dataset","url":"https://christianingwersen.github.io/SportsPose/"},{"title":"GitHub - akashsengupta1997/SSP-3D: Repository for the Sports Shape and Pose 3D (SSP-3D) dataset.","url":"https://github.com/akashsengupta1997/SSP-3D"},{"title":"The SportsPose dataset - Welcome to DTU Research Database","url":"https://orbit.dtu.dk/en/datasets/the-sportspose-dataset/"},{"title":"[2304.01865] SportsPose -- A Dynamic 3D sports pose dataset","url":"https://arxiv.org/abs/2304.01865"},{"title":"GitHub - anibali/aspset-510: A large-scale video dataset for the training and evaluation of 3D human pose estimation models","url":"https://github.com/anibali/aspset-510"},{"title":"GitHub - calvinyeungck/AthletePose3D: Dataset and Code for CVSports at CVPR 2025 paper \"AthletePose3D: A Benchmark Dataset for 3D Human Pose Estimation and Kinematic Validation in Athletic Movements\" · GitHub","url":"https://github.com/calvinyeungck/AthletePose3D"},{"title":"AthletePose3D: A Benchmark Dataset for 3D Human Pose Estimation and Kinematic Validation in Athletic Movements","url":"https://arxiv.org/html/2503.07499v1"},{"title":"AutoSoccerPose: Automated 3D posture Analysis of Soccer Shot Movements","url":"https://arxiv.org/html/2405.12070v1"},{"title":"AthleticsPose: Authentic Sports Motion Dataset on Athletic Field and Evaluation of Monocular 3D Pose Estimation Ability","url":"https://arxiv.org/html/2507.12905v1"}]
+
+Based on the search results, here's what I found about the SportsPose dataset:
+
+## SportsPose - A Dynamic 3D Sports Pose Dataset
+
+SportsPose is a dynamic 3D sports pose dataset. The official GitHub repository is located at https://github.com/ChristianIngwersen/SportsPose.
+
+### Dataset Overview
+
+The dataset contains more than 176,000 3D poses from 24 different subjects performing 5 different sports activities. The data was filmed from 7 different points of view, providing a diverse and comprehensive set of 3D poses that reflect the complex and dynamic nature of sports movements.
+
+### Key Features
+
+Existing datasets for monocular pose estimation did not adequately capture the challenging and dynamic nature of sports movements, so SportsPose was introduced as a large-scale 3D human pose dataset consisting of highly dynamic sports movements.
+
+The dataset introduces a new metric called "local movement" which describes the movement of the wrist and ankle joints in relation to the body, showing that SportsPose contains more movement than the Human3.6M and 3DPW datasets in these extremum joints, indicating more dynamic movements.
+
+### Validation and Availability
+
+The precision of SportsPose has been quantitatively evaluated by comparing poses with a commercial marker-based system, achieving a mean error of 34.5 mm across all evaluation sequences.
+
+You can download the dataset from the SportsPose website at https://christianingwersen.github.io/SportsPose/. The dataset is intended for academic use only, and access is granted by request.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[31] CALL: WebSearch OpenSim musculoskeletal simulation github open source
+================================================================================
+Web search results for query: "OpenSim musculoskeletal simulation github open source"
+
+Links: [{"title":"SimTK: OpenSim: Project Home","url":"https://simtk.org/projects/opensim"},{"title":"OpenSim: a musculoskeletal modeling and simulation framework for in silico investigations and exchange - PMC","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4397580/"},{"title":"GitHub - ComputationalBiomechanicsLab/opensim-creator: A UI for building OpenSim models","url":"https://github.com/ComputationalBiomechanicsLab/opensim-creator"},{"title":"GitHub - mitkof6/opensim-task-space: Simulation of Constrained Musculoskeletal Systems in Task Space.","url":"https://github.com/mitkof6/opensim-task-space"},{"title":"GitHub - modenaxe/awesome-biomechanics: A curated, public list of resources for biomechanics and human motion analysis: datasets, processing tools, software for simulation, educational videos, lectures, etc. · GitHub","url":"https://github.com/modenaxe/awesome-biomechanics"},{"title":"OpenSim: a musculoskeletal modeling and simulation framework for in silico investigations and exchange - ScienceDirect","url":"https://www.sciencedirect.com/science/article/pii/S2210983811000228"},{"title":"OpenSim Project · GitHub","url":"https://github.com/opensim-org"},{"title":"GitHub - opensim-org/opensim-moco: Solve optimal control problems for musculoskeletal models using OpenSim and direct collocation. · GitHub","url":"https://github.com/opensim-org/opensim-moco"},{"title":"Tutorial 1 - Intro to Musculoskeletal Modeling - OpenSim Documentation - OpenSim","url":"https://opensimconfluence.atlassian.net/wiki/spaces/OpenSim/pages/53088700/Tutorial+1+-+Intro+to+Musculoskeletal+Modeling"},{"title":"GitHub - stanfordnmbl/osim-rl: Reinforcement learning environments with musculoskeletal models","url":"https://github.com/stanfordnmbl/osim-rl"}]
+
+Based on the search results, here's what I found about OpenSim musculoskeletal simulation and its open source availability:
+
+## OpenSim Overview
+
+OpenSim is a freely available, user extensible software system that lets users develop models of musculoskeletal structures and create dynamic simulations of movement. OpenSim is an open-source software that allows users to develop, analyze, and visualize models of the musculoskeletal system, and to generate dynamic simulations of movement.
+
+## Open Source Status
+
+The OpenSim software is covered by the Apache License 2.0, which permits its use for any purpose including both nonprofit and commercial applications, and the source code is freely and anonymously accessible on GitHub, where the community is welcomed to make contributions.
+
+## GitHub Resources
+
+The search revealed several key OpenSim repositories on GitHub:
+
+- **opensim-org**: The main OpenSim project organization with multiple repositories including:
+  - OpenSim C++ libraries and command-line applications, and Java/Python wrapping
+  - OpenSim models (.osim) and related example files that are distributed with OpenSim
+  - OpenSim graphical user interface and distribution
+
+- **OpenSim Creator**: An Interactive User Interface for Building OpenSim Musculoskeletal Models
+
+- **OpenSim Moco**: Solve optimal control problems for musculoskeletal models using OpenSim and direct collocation
+
+## Community and Support
+
+OpenSim supports a large and growing community of biomechanics and rehabilitation researchers, facilitating exchange of models and simulations for reproducing and extending discoveries, with examples, tutorials, documentation, and an active user forum supporting this community.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[32] CALL: WebSearch dtaidistance dynamic time warping python github
+================================================================================
+Web search results for query: "dtaidistance dynamic time warping python github"
+
+Links: [{"title":"GitHub - wannesm/dtaidistance: Time series distances: Dynamic Time Warping (fast DTW implementation in C)","url":"https://github.com/wannesm/dtaidistance"},{"title":"Dynamic Time Warping (DTW) — DTAIDistance 2.3.9 documentation","url":"https://dtaidistance.readthedocs.io/en/latest/usage/dtw.html"},{"title":"dtw-python · PyPI","url":"https://pypi.org/project/dtw-python/"},{"title":"Home - The DTW suite","url":"https://dynamictimewarping.github.io/"},{"title":"GitHub - pollen-robotics/dtw: DTW (Dynamic Time Warping) python module · GitHub","url":"https://github.com/pollen-robotics/dtw"},{"title":"DTW for Python - The DTW suite","url":"https://dynamictimewarping.github.io/python/"},{"title":"dynamic-time-warping · GitHub Topics · GitHub","url":"https://github.com/topics/dynamic-time-warping?l=python&o=desc"},{"title":"dtwParallel: A Python package to efficiently compute dynamic time warping between time series - ScienceDirect","url":"https://www.sciencedirect.com/science/article/pii/S2352711023000602"},{"title":"dtaidistance.dtw_ndim — DTAIDistance 2.3.9 documentation","url":"https://dtaidistance.readthedocs.io/en/latest/modules/dtw_ndim.html"},{"title":"GitHub - DynamicTimeWarping/dtw-python: Python port of R's Comprehensive Dynamic Time Warp algorithms package · GitHub","url":"https://github.com/DynamicTimeWarping/dtw-python"}]
+
+Based on the search results, here are the key findings for DTAIDistance Dynamic Time Warping Python:
+
+## Main Project: DTAIDistance
+
+DTAIDistance is a library for time series distances (e.g. Dynamic Time Warping) used in the DTAI Research Group, offering a pure Python implementation and a fast implementation in C, with Cython as the only dependency for the C implementation.
+
+**GitHub Repository:** https://github.com/wannesm/dtaidistance
+
+### Key Features:
+
+The library is compatible with Numpy and Pandas and implemented to avoid unnecessary data copy operations.
+
+The library offers several options for optimization including window constraints, max distance thresholds, maximum step sizes, maximum length differences, penalties, psi relaxation, and Euclidean upper bound pruning.
+
+### Usage Example:
+
+The library provides methods like `dtw.distance_fast()` for fast DTW computation with numpy arrays.
+
+### Documentation:
+
+The full documentation is available at: https://dtaidistance.readthedocs.io/
+
+---
+
+## Alternative: dtw-python
+
+If you're looking for other options, the dtw-python package provides a comprehensive, freely-available (GPL) implementation of Dynamic Time Warping algorithms and is a faithful Python equivalent of R's DTW package on CRAN. Its GitHub repository is at https://github.com/DynamicTimeWarping/dtw-python.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[33] CALL: WebSearch RyanGunther github MSc thesis swing biomechanics SAM2
+================================================================================
+Web search results for query: "RyanGunther github MSc thesis swing biomechanics SAM2"
+
+Links: [{"title":"biomechanics · GitHub Topics · GitHub","url":"https://github.com/topics/biomechanics?o=asc&s=stars"},{"title":"GitHub - facebookresearch/sam2: The repository provides code for running inference with the Meta Segment Anything Model 2 (SAM 2), links for downloading the trained model checkpoints, and example notebooks that show how to use the model. · GitHub","url":"https://github.com/facebookresearch/sam2"},{"title":"msc-thesis · GitHub Topics · GitHub","url":"https://github.com/topics/msc-thesis"},{"title":"Stanford Neuromuscular Biomechanics Laboratory · GitHub","url":"https://github.com/stanfordnmbl"},{"title":"GitHub - GuoleiSun/Awesome-SAM2: This repo aims to include materials (papers, codes, slides) about SAM2 (segment anything in images and videos). We are continuously improving the project. Welcome to PR the works (papers, repos) that are missed. · GitHub","url":"https://github.com/GuoleiSun/Awesome-SAM2"},{"title":"GitHub - BMClab/BMC: Notes on Scientific Computing for Biomechanics and Motor Control","url":"https://github.com/BMClab/BMC"},{"title":"GitHub - mkjung99/biomechanics_dataset: Information of public available data sets for biomechanics. · GitHub","url":"https://github.com/mkjung99/biomechanics_dataset"},{"title":"Biomechanical Golf Swing Analysis using Markerless ...","url":"https://dspace.mit.edu/bitstream/handle/1721.1/162530/taylor-bftaylor-sm-sdm-2025-thesis.pdf?sequence=1&isAllowed=y"},{"title":"GitHub - modenaxe/awesome-biomechanics: A curated, public list of resources for biomechanics and human motion analysis: datasets, processing tools, software for simulation, educational videos, lectures, etc. · GitHub","url":"https://github.com/modenaxe/awesome-biomechanics"},{"title":"GitHub - pablovela5620/sam2-depthanything","url":"https://github.com/pablovela5620/sam2-depthanything"}]
+
+I searched for "RyanGunther github MSc thesis swing biomechanics SAM2" but the results don't show a specific GitHub repository or MSc thesis by someone named RyanGunther related to swing biomechanics and SAM2.
+
+The search results returned general information about:
+- Biomechanics and golf swing analysis projects on GitHub
+- SAM 2 (Segment Anything Model 2), which provides code for running inference with the Meta model, with links for downloading trained model checkpoints and example notebooks
+- Other biomechanics-related resources and datasets
+
+However, I was unable to find the specific repository or thesis you're looking for. To help you locate this resource, you might want to:
+- Search directly on GitHub.com using "RyanGunther"
+- Check if the person uses a different username
+- Verify the spelling of the name
+- Try searching for the thesis on academic repositories like MIT DSpace, ProQuest, or your institution's thesis database
+
+Would you like me to search for something more specific or with different terms?
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[34] CALL: WebSearch dtw-python dynamic time warping github library
+================================================================================
+Web search results for query: "dtw-python dynamic time warping github library"
+
+Links: [{"title":"DTW for Python - The DTW suite","url":"https://dynamictimewarping.github.io/python/"},{"title":"GitHub - DynamicTimeWarping/dtw-python: Python port of R's Comprehensive Dynamic Time Warp algorithms package · GitHub","url":"https://github.com/DynamicTimeWarping/dtw-python"},{"title":"Home - The DTW suite","url":"https://dynamictimewarping.github.io/"},{"title":"GitHub - talcs/simpledtw: A Python implementation and API for the Dynamic Time Warping (DTW) algorithm · GitHub","url":"https://github.com/talcs/simpledtw"},{"title":"dtw-python · PyPI","url":"https://pypi.org/project/dtw-python/"},{"title":"GitHub - pollen-robotics/dtw: DTW (Dynamic Time Warping) python module · GitHub","url":"https://github.com/pollen-robotics/dtw"},{"title":"GitHub - ricardodeazambuja/DTW: Dynamic Time Warping in Python / C (using ctypes)","url":"https://github.com/ricardodeazambuja/DTW"},{"title":"GitHub - oscarescuderoarnanz/dtwParallel: Dynamic Time Warping","url":"https://github.com/oscarescuderoarnanz/dtwParallel"},{"title":"GitHub - statefb/dtwalign: Comprehensive dynamic time warping module for python","url":"https://github.com/statefb/dtwalign"},{"title":"GitHub - m3nin0-labs/dtw.py: Dynamic Time Warping in Python","url":"https://github.com/m3nin0-labs/dtw.py"}]
+
+Here are the search results for "dtw-python dynamic time warping github library":
+
+## Main Library: dtw-python
+
+The dtw-python library is a Python port of R's Comprehensive Dynamic Time Warp algorithms package. It provides the most complete, freely-available (GPL) implementation of Dynamic Time Warping-type (DTW) algorithms up to date and is a faithful Python equivalent of R's DTW package on CRAN.
+
+**Key Features:**
+- Supports arbitrary local (e.g. symmetric, asymmetric, slope-limited) and global (windowing) constraints, fast native code, several plot styles, and more
+- The pip package name is dtw-python; the import statement is just import dtw
+- To install the stable version of the package, issue the following command: pip install dtw-python
+
+**GitHub Repository:**
+Development occurs on GitHub at https://github.com/DynamicTimeWarping/dtw-python
+
+**Documentation & Learning Resources:**
+The best place to learn how to use the package is the companion paper Computing and Visualizing Dynamic Time Warping Alignments in R: The dtw Package, which the Journal of Statistical Software makes available for free.
+
+## Alternative Libraries
+
+The search also returned several other DTW implementations in Python, including simpledtw, pollen-robotics/dtw, and dtwParallel, but dtw-python appears to be the most comprehensive and actively maintained implementation.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[35] CALL: WebSearch DeepLabCut github stars markerless pose estimation animals 2026
+================================================================================
+Web search results for query: "DeepLabCut github stars markerless pose estimation animals 2026"
+
+Links: [{"title":"GitHub - DeepLabCut/DeepLabCut: Official implementation of DeepLabCut: Markerless pose estimation of user-defined features with deep learning for all animals incl. humans · GitHub","url":"https://github.com/DeepLabCut/DeepLabCut"},{"title":"DeepLabCut · GitHub","url":"https://github.com/deeplabcut"},{"title":"animal-pose-estimation · GitHub Topics · GitHub","url":"https://github.com/topics/animal-pose-estimation"},{"title":"GitHub - bigzero61/DeepLabCut: Official implementation of DeepLabCut: Markerless pose estimation of user-defined features with deep learning for all animals","url":"https://github.com/bigzero61/DeepLabCut"},{"title":"GitHub - sebo361/DeepLabCut: Markerless pose estimation of user-defined features with deep learning for all animals including humans","url":"https://github.com/sebo361/DeepLabCut"},{"title":"GitHub - Uzielol/DeepLabCutfork: Official implementation of DeepLabCut: Markerless pose estimation of user-defined features with deep learning for all animals incl. humans","url":"https://github.com/Uzielol/DeepLabCutfork"},{"title":"Using DeepLabCut for 3D markerless pose estimation across species and behaviors | Nature Protocols","url":"https://www.nature.com/articles/s41596-019-0176-0"},{"title":"GitHub - DeepLabCut/DeepLabCut at v2.2.0.6","url":"https://github.com/DeepLabCut/DeepLabCut/tree/v2.2.0.6"},{"title":"DeepLabCut: Markerless pose estimation of user-defined ...","url":"https://hpc.nih.gov/apps/DeepLabCut.html"},{"title":"DeepLabCut/docs/recipes/UsingModelZooPupil.md at main · DeepLabCut/DeepLabCut","url":"https://github.com/DeepLabCut/DeepLabCut/blob/main/docs/recipes/UsingModelZooPupil.md"}]
+
+Based on the search results, here's what I found about DeepLabCut:
+
+## GitHub Stars and Overview
+
+DeepLabCut has 5.5k stars on GitHub and is described as the "Official implementation of DeepLabCut: Markerless pose estimation of user-defined features with deep learning for all animals".
+
+However, it's worth noting that the most recent star count mentioned in the search results is from October 2023, when DeepLabCut celebrated a milestone with 4,000 stars on GitHub. The 5.5k figure appears to be more current.
+
+## What is DeepLabCut?
+
+DeepLabCut is a toolbox for state-of-the-art markerless pose estimation of animals performing various behaviors, and as long as you can see (label) what you want to track, you can use this toolbox, as it is animal and object agnostic.
+
+## Recent Achievements
+
+The original DeepLabCut paper in Nature Neuroscience has surpassed 3,000 Google Scholar citations as of January 2024, and their second Nature Protocols paper has surpassed 1,000 Google Scholar citations as of June 2024.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[36] CALL: WebSearch Driveline bat tracking computer vision single camera 3D reconstruction 2025
+================================================================================
+Web search results for query: "Driveline bat tracking computer vision single camera 3D reconstruction 2025"
+
+Links: [{"title":"Bat Tracking, Computer Vision, and the Next Frontier - Driveline Baseball","url":"https://www.drivelinebaseball.com/2025/02/bat-tracking-computer-vision-and-the-next-frontier/"},{"title":"A simple method for rapid reconstruction of 3D animal trajectory from monocular video - PMC","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC12659078/"},{"title":"Getting Started with 3D Computer Vision in 2025","url":"https://opencv.org/blog/introduction-to-3d-computer-vision/"},{"title":"A simple method for rapid reconstruction of 3D animal trajectory from monocular video | Movement Ecology | Springer Nature Link","url":"https://link.springer.com/article/10.1186/s40462-025-00608-8"},{"title":"MASt3R-SLAM: Real-Time Dense SLAM with 3D Reconstruction Priors Riku Murai*","url":"https://openaccess.thecvf.com/content/CVPR2025/papers/Murai_MASt3R-SLAM_Real-Time_Dense_SLAM_with_3D_Reconstruction_Priors_CVPR_2025_paper.pdf"},{"title":"AI Camera Tracking: Tools That Make 3D Work Simple | AI Monk","url":"https://aimonk.com/ai-camera-tracking-tools-3d-workflow/"},{"title":"(PDF) Computer Vision Based 3D Reconstruction : A Review","url":"https://www.researchgate.net/publication/336887797_Computer_Vision_Based_3D_Reconstruction_A_Review"},{"title":"What is 3D Computer Vision? Exploring Key Concepts","url":"https://viso.ai/computer-vision/3d-computer-vision/"},{"title":"3D Computer Vision: From Stereo Vision to 3D Reconstruction","url":"https://www.thinkautonomous.ai/blog/3d-computer-vision/"},{"title":"Real-Time 3D Reconstruction and 6-DoF Tracking with an Event Camera | Springer Nature Link","url":"https://link.springer.com/chapter/10.1007/978-3-319-46466-4_21"}]
+
+Based on the search results, here's what I found about Driveline's bat tracking using computer vision and single camera 3D reconstruction in 2025:
+
+## Driveline's Bat Tracking System
+
+Driveline has developed the ability to accurately track bat movement from a single camera view, opening doors for applications ranging from amateur player development to professional game analysis.
+
+### Technical Approach
+
+Driveline needed a custom pose estimation model specifically designed to track bat keypoints, marking their first venture into training a custom pose model. Their goal was to estimate bat speed from simple side-view video, requiring them to build a comprehensive dataset pairing side-view video swings with marker-based motion capture data to provide ground truth velocities for training.
+
+### Key Challenges and Solutions
+
+A significant challenge was perspective distortion. Different hitters naturally stand at varying distances from the camera, which created a fundamental problem in their 2D to 3D coordinate conversion.
+
+### Velocity Analysis
+
+Their initial analysis suggests a strong correlation between cap velocity and overall bat speed throughout the swing, and by tracking the bat cap (the furthest point from the axis of rotation), they can reconstruct the entire velocity profile of the swing. This breakthrough in swing efficiency mapping enables visualization of how effectively a batter accelerates the bat through different phases, allowing identification of potential optimization areas and comparison between different swing types.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[37] CALL: WebSearch OpenPose CMU github stars license pose estimation
+================================================================================
+Web search results for query: "OpenPose CMU github stars license pose estimation"
+
+Links: [{"title":"GitHub - CMU-Perceptual-Computing-Lab/openpose: OpenPose: Real-time multi-person keypoint detection library for body, face, hands, and foot estimation · GitHub","url":"https://github.com/CMU-Perceptual-Computing-Lab/openpose"},{"title":"openpose/LICENSE at master · CMU-Perceptual-Computing-Lab/openpose","url":"https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/LICENSE"},{"title":"openpose_train/README.md at master · CMU-Perceptual-Computing-Lab/openpose_train","url":"https://github.com/CMU-Perceptual-Computing-Lab/openpose_train/blob/master/README.md"},{"title":"GitHub - ZheC/tf-pose-estimation: Openpose from CMU implemented using Tensorflow with Custom Architecture for fast inference.","url":"https://github.com/ZheC/tf-pose-estimation"},{"title":"GitHub - CMU-Perceptual-Computing-Lab/openpose_unity_plugin: OpenPose's Unity Plugin for Unity users · GitHub","url":"https://github.com/CMU-Perceptual-Computing-Lab/openpose_unity_plugin"},{"title":"GitHub - CMU-Perceptual-Computing-Lab/openpose_train: Training repository for OpenPose · GitHub","url":"https://github.com/CMU-Perceptual-Computing-Lab/openpose_train"},{"title":"GitHub - ZhangXinNan/openpose-CMU: OpenPose: Real-time multi-person keypoint detection library for body, face, hands, and foot estimation · GitHub","url":"https://github.com/ZhangXinNan/openpose-CMU"},{"title":"OpenPose: Main Page","url":"https://cmu-perceptual-computing-lab.github.io/openpose/web/html/doc/index.html"},{"title":"GitHub - CMU-Perceptual-Computing-Lab/openpose_caffe_train: Modified Caffe version for https://github.com/CMU-Perceptual-Computing-Lab/openpose_train","url":"https://github.com/CMU-Perceptual-Computing-Lab/openpose_caffe_train"},{"title":"OpenPose: OpenPose Doc","url":"https://cmu-perceptual-computing-lab.github.io/openpose/web/html/doc/md_doc_00_index.html"}]
+
+Based on the search results, here's information about OpenPose:
+
+## Overview
+OpenPose is a real-time multi-person keypoint detection library for body, face, hands, and foot estimation. It's maintained by CMU's Perceptual Computing Lab.
+
+## License
+OpenPose is freely available for free non-commercial use, and may be redistributed under these conditions. The license restricts commercial use unless a commercial license is obtained.
+
+## GitHub Repository
+The official repository is located at: https://github.com/CMU-Perceptual-Computing-Lab/openpose
+
+## Key Technical Details
+All of OpenPose is based on "Realtime Multi-Person 2D Pose Estimation using Part Affinity Fields", while the hand and face detectors also use "Hand Keypoint Detection in Single Images using Multiview Bootstrapping".
+
+## Features
+OpenPose offers 15, 18, or 25-keypoint body/foot keypoint estimation with running time invariant to number of detected people, 6-keypoint foot keypoint estimation integrated with the body detector, 2x21-keypoint hand keypoint estimation, and 70-keypoint face keypoint estimation.
+
+Note: The search results did not provide the specific GitHub star count in the snippets returned.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[38] CALL: WebSearch MoveNet tensorflow pose estimation github 2026
+================================================================================
+Web search results for query: "MoveNet tensorflow pose estimation github 2026"
+
+Links: [{"title":"MoveNet: Ultra fast and accurate pose detection model. | TensorFlow Hub","url":"https://www.tensorflow.org/hub/tutorials/movenet"},{"title":"tfjs-models/pose-detection/src/movenet/README.md at master · tensorflow/tfjs-models","url":"https://github.com/tensorflow/tfjs-models/blob/master/pose-detection/src/movenet/README.md"},{"title":"GitHub - arunponnusamy/movenet-tensorflow: Human Pose Estimation using MoveNet with TensorFlow and Python.","url":"https://github.com/arunponnusamy/movenet-tensorflow"},{"title":"GitHub - mdshohelrana/TensorFlow-MoveNet-PoseNet: Human Pose Estimation by TensorFlow MoveNet model","url":"https://github.com/mdshohelrana/TensorFlow-MoveNet-PoseNet"},{"title":"GitHub - Major-Project-Human-Surveillance/movenet_pose_estimation: This project uses the MoveNet model for pose estimation. The model is loaded and run using TensorFlow Lite. The predicted keypoints are then visualized on the input image.","url":"https://github.com/Major-Project-Human-Surveillance/movenet_pose_estimation"},{"title":"tfjs-models/pose-detection/src/movenet at master · tensorflow/tfjs-models","url":"https://github.com/tensorflow/tfjs-models/tree/master/pose-detection/src/movenet"},{"title":"GitHub - devfemibadmus/human-pose-estimation: This project focuses on Human Pose Estimation using the MoveNet model with TensorFlow Lite. The goal is to detect keypoint positions on a person's body in images and live video frames. The project provides a Flask web application for both image and live video input, showcasing the real-time capabilities of the model.","url":"https://github.com/devfemibadmus/human-pose-estimation"},{"title":"GitHub - isilberfin/Pose-detection: A pose-detection project built with tensorflow movenet model and opencv","url":"https://github.com/isilberfin/Pose-detection"},{"title":"Human Pose Classification with MoveNet and TensorFlow ...","url":"https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/g3doc/tutorials/pose_classification.ipynb"},{"title":"Pose estimation and classification on edge devices with MoveNet and TensorFlow Lite — The TensorFlow Blog","url":"https://blog.tensorflow.org/2021/08/pose-estimation-and-classification-on-edge-devices-with-MoveNet-and-TensorFlow-Lite.html"}]
+
+Based on the search results, I found comprehensive information about MoveNet, TensorFlow pose estimation, and several GitHub repositories related to this topic:
+
+## Key Findings:
+
+**Official Resources:**
+- TensorFlow Hub provides a tutorial showing how to load MoveNet and run inference on input images and videos
+- MoveNet is an ultra fast and accurate model that detects 17 keypoints of a body, offered on TF.Hub with two variants: Lightning and Thunder
+
+**Model Variants:**
+- Lightning is intended for latency-critical applications, and Thunder is intended for applications requiring high accuracy, with both models running faster than real time (30+ FPS) on most modern desktops and laptops
+
+**GitHub Repositories:**
+Several repositories are available for MoveNet TensorFlow implementations:
+- arunponnusamy/movenet-tensorflow: Human Pose Estimation using MoveNet with TensorFlow and Python
+- mdshohelrana/TensorFlow-MoveNet-PoseNet: Human Pose Estimation by TensorFlow MoveNet model
+- devfemibadmus/human-pose-estimation focuses on human pose estimation using the MoveNet model with TensorFlow Lite, detecting keypoint positions on a person's body in images and live video frames
+- isilberfin/Pose-detection: A simple pose estimation project built with MoveNet Lightning and OpenCV
+
+The official TensorFlow documentation and GitHub repositories provide comprehensive examples and tutorials for implementing pose estimation with MoveNet.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[39] CALL: WebSearch tennis swing tracker github computer vision pose estimation
+================================================================================
+Web search results for query: "tennis swing tracker github computer vision pose estimation"
+
+Links: [{"title":"GitHub - attic-lee/Tennis-Swing-Tracker-Using-Pose-Estimation: a tool to analyse the pose and swinging path of tennis players and compare the difference between professional players and amateur players using pose estimation from computer vision","url":"https://github.com/attic-lee/Tennis-Swing-Tracker-Using-Pose-Estimation"},{"title":"Revolutionizing Tennis with Machine Learning and ...","url":"https://gml16.github.io/projects/Report_LV8_Project.pdf"},{"title":"Swing Like a Champ with Computer Vision | Backhand Tracker | by Samuel Sung | Geek Culture | Medium","url":"https://medium.com/geekculture/swing-like-a-champ-with-computer-vision-backhand-tracker-543534536912"},{"title":"Improving your Tennis Game with Computer Vision | by Bakken & Bæck | Bakken & Bæck | Medium","url":"https://medium.com/bakken-b%C3%A6ck/improving-your-tennis-game-with-computer-vision-863969743024"},{"title":"Pose2Trajectory: Using Transformers on Body Pose to Predict Tennis Player’s Trajectory","url":"https://arxiv.org/html/2411.04501v1"},{"title":"GitHub - adeeteya/Tennis-Serve-Analysis: The Tennis Serve Analysis App is a mobile application designed to revolutionize the way tennis players analyze and improve their serves. Leveraging machine learning algorithms and computer vision techniques, the app provides users with personalized feedback of their serves. · GitHub","url":"https://github.com/adeeteya/Tennis-Serve-Analysis"},{"title":"GitHub - Strojove-uceni/23206-final-pose-estimation-for-swing-improvement: 23206-final-pose-estimation-for-swing-improvement created by GitHub Classroom · GitHub","url":"https://github.com/Strojove-uceni/23206-final-pose-estimation-for-swing-improvement"},{"title":"GitHub - sohamroy2538/AI-based-Tennis-Analysis: Our proposed intelligent system utilizes computer vision architecture, specifically Detectron2, to analyze tennis gameplay. By employing activity-based pose estimation and classification, it accurately identifies tennis shots and evaluates player performance","url":"https://github.com/sohamroy2538/AI-based-Tennis-Analysis"},{"title":"1 Automated Tennis Swing Analysis Using Pose Estimation and Optical Flow","url":"http://stanford.edu/class/ee367/Winter2025/report/report_Jeffrey_Liu.pdf"},{"title":"Exploration of Applying Pose Estimation Techniques in Table Tennis","url":"https://www.mdpi.com/2076-3417/13/3/1896"}]
+
+Based on the search results, here are some key findings about tennis swing tracker projects using computer vision and pose estimation on GitHub:
+
+## Key Projects
+
+**Tennis-Swing-Tracker-Using-Pose-Estimation**: A tool to analyse the pose and swinging path of tennis players and compare the difference between professional players and amateur players using pose estimation from computer vision. This project is available on GitHub at github.com/attic-lee/Tennis-Swing-Tracker-Using-Pose-Estimation.
+
+**Tennis-Serve-Analysis**: A mobile application designed to revolutionize the way tennis players analyze and improve their serves. Leveraging machine learning algorithms and computer vision techniques, the app provides users with personalized feedback of their serves. It utilizes MoveNet, a machine learning model, to estimate key points in the user's serve, including joints such as elbows, shoulders, and knees.
+
+**AI-based-Tennis-Analysis**: An intelligent system utilizes computer vision architecture, specifically Detectron2, to analyze tennis gameplay. By employing activity-based pose estimation and classification, it accurately identifies tennis shots and evaluates player performance.
+
+## Common Pose Estimation Approaches
+
+OpenPose, HRNet, DeepCut, and Deep Pose are widely utilized pose estimation techniques for tennis analysis. MediaPipe, which is provided by Google, offers customizable deep learning solutions for live and streaming media, including face detection, face mesh, pose detection, and much more. Also, it provides a trained model that can be utilized in a non-GPU environment.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[40] CALL: WebSearch mlbgame python github MLB gameday API
+================================================================================
+Web search results for query: "mlbgame python github MLB gameday API"
+
+Links: [{"title":"GitHub - panzarino/mlbgame: A Python API to retrieve and read MLB GameDay data · GitHub","url":"https://github.com/panzarino/mlbgame"},{"title":"GitHub - sladcikc/mlbgame: A Python API to retrieve and read MLB GameDay data","url":"https://github.com/sladcikc/mlbgame"},{"title":"mlb-gameday · GitHub Topics · GitHub","url":"https://github.com/topics/mlb-gameday"},{"title":"mlbgame/mlbgame/__init__.py at master · panzarino/mlbgame","url":"https://github.com/panzarino/mlbgame/blob/master/mlbgame/__init__.py"},{"title":"mlbgame API documentation","url":"https://panz.io/mlbgame/"},{"title":"mlbgame/mlbgame/data.py at master · panzarino/mlbgame","url":"https://github.com/panzarino/mlbgame/blob/master/mlbgame/data.py"},{"title":"mlbgame · PyPI","url":"https://pypi.org/project/mlbgame/0.3.1/"},{"title":"mlbgame/mlbgame/game.py at master · panzarino/mlbgame","url":"https://github.com/panzarino/mlbgame/blob/master/mlbgame/game.py"},{"title":"GitHub - ratishsp/mlbgame-api · GitHub","url":"https://github.com/ratishsp/mlbgame-api"},{"title":"GitHub - toddheitmann/mlbgameday: A python API for MLBAM gameday data. Stores data using SQLAlchemy. Returns data in PANDAS data frames.","url":"https://github.com/toddheitmann/mlbgameday"}]
+
+Based on the search results, here's what I found about mlbgame:
+
+## mlbgame - Python MLB GameDay API
+
+mlbgame is a Python API to retrieve and read MLB GameDay data. The main repository is available at https://github.com/panzarino/mlbgame.
+
+### Key Features:
+
+- mlbgame works with real time data, getting information as games are being played, and uses the same data that MLB GameDay uses, updated as soon as something happens in a game.
+
+### Installation:
+
+mlbgame is in the Python Package Index (PyPI) and installing with pip is recommended for all systems. You can install it via:
+```
+pip install mlbgame
+```
+
+### Usage Examples:
+
+The library provides functions to query MLB game data, such as:
+- `mlbgame.day()` - to get games for a specific date
+- `mlbgame.games()` - to get games for a date range
+- `mlbgame.player_stats()` - to get player statistics for a game
+
+### Important Note:
+
+Use of mlbgame must follow the terms stated in the license and on mlb.com.
+
+There are also alternative implementations available, such as a fork by sladcikc and other projects like mlbgameday that integrate with SQLAlchemy and return data in PANDAS dataframes.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[41] CALL: WebSearch cricket bowling action analysis github computer vision pose
+================================================================================
+Web search results for query: "cricket bowling action analysis github computer vision pose"
+
+Links: [{"title":"GitHub - ashish-AIML/Cricket_Analytics_Computer_Vision","url":"https://github.com/ashish-AIML/Cricket_Analytics_Computer_Vision"},{"title":"Cricket Fast Bowling Optimization Using Machine Learning Pose Estimation Modeling | Research Archive of Rising Scholars","url":"https://research-archive.org/index.php/rars/preprint/view/2861"},{"title":"GitHub - rsnk96/Cricket-Activity-Recognition: A repository for Cricket Activity Recognition","url":"https://github.com/rsnk96/Cricket-Activity-Recognition"},{"title":"GitHub - Amala02/pose_estimator_cricket: Cricket Pose estimator using Movenet on colab","url":"https://github.com/Amala02/pose_estimator_cricket"},{"title":"AI-Powered Cricket Bowling Analyzer Using Yolo","url":"https://www.labellerr.com/blog/cricket-bowling-analysis-yolov8-pose/"},{"title":"GitHub - dvanderhaar/uj-aqa-cricketvision","url":"https://github.com/dvanderhaar/uj-aqa-cricketvision"},{"title":"Enhancing Cricket Performance Analysis with Human Pose Estimation and Machine Learning","url":"https://www.mdpi.com/1424-8220/23/15/6839"},{"title":"GitHub - DeepSportradar/cricket-bowl-release-challenge: A toolkit for the DeepSportradar Bowl Release challenge. An opportunity to publish at MMSports @ ACMMM and to win 2x $500.","url":"https://github.com/DeepSportradar/cricket-bowl-release-challenge"},{"title":"GitHub - animeshrdso/cv_cricket","url":"https://github.com/animeshrdso/cv_cricket"},{"title":"Cricket Shot Classification Using Motion Vector D Karmaker †, AZM E Chowdhury","url":"https://debajyotikarmaker.github.io/profile/papers/Cricket-Shot-Classification.pdf"}]
+
+I found several relevant GitHub projects and resources related to cricket bowling action analysis using computer vision and pose estimation:
+
+## GitHub Projects
+
+**Cricket_Analytics_Computer_Vision** - This project segments the background as white and visualizes only objects and their motion, with bowling angle calculated based on x-y coordinates. It uses YOLOv3 object detection model to train the ball, bat, pitch, and batsman.
+
+**Cricket-Activity-Recognition** - This repository uses OpenPose for pose estimation and includes 3D pose baseline models for cricket activity analysis.
+
+**pose_estimator_cricket** - A cricket pose estimator using Movenet that can detect the pose and shot of the cricketer by scanning input images.
+
+## Key Technical Approaches
+
+A cricket bowling biomechanics analysis system using YOLOv8x-Pose can track shoulder, elbow, and wrist keypoints, calculate elbow angle, measure wrist speed, and visualize the bowling arm arc from standard broadcast video.
+
+The DeepSportradar Bowl Release Challenge focuses on segmenting specific parts of videos where a bowl release action occurs, detecting the full time window of the action.
+
+## Academic Resources
+
+The CricketVision dataset and code introduce methods for Action Quality Assessment on Cricket Video data, using I3D-AE-LSTM architecture with a newly created cricket batsman dataset.
+
+Human pose estimation through computer vision has revolutionized how cricket strokes are analyzed and predicted, allowing coaches and analysts to gain detailed insights into batting techniques by scrutinizing batsmen's body posture and movements.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[42] CALL: Bash {"command": "gh api repos/jldbc/pybaseball --jq '{stars: .stargazers_count, lice
+================================================================================
+Exit code 127
+
+================================================================================
+[43] CALL: Bash {"command": "gh api repos/drivelineresearch/openbiomechanics --jq '{stars: .star
+================================================================================
+<tool_use_error>Cancelled: parallel tool call Bash(gh api repos/jldbc/pybaseball --jq '{sta…) errored</tool_use_error>
+
+================================================================================
+[44] CALL: Bash {"command": "gh api repos/dylandru/BaseballCV --jq '{stars: .stargazers_count, l
+================================================================================
+<tool_use_error>Cancelled: parallel tool call Bash(gh api repos/jldbc/pybaseball --jq '{sta…) errored</tool_use_error>
+
+================================================================================
+[45] CALL: Bash {"command": "gh api repos/open-mmlab/mmpose --jq '{stars: .stargazers_count, lic
+================================================================================
+<tool_use_error>Cancelled: parallel tool call Bash(gh api repos/jldbc/pybaseball --jq '{sta…) errored</tool_use_error>
+
+================================================================================
+[46] CALL: Bash {"command": "gh api repos/Tau-J/rtmlib --jq '{stars: .stargazers_count, license:
+================================================================================
+<tool_use_error>Cancelled: parallel tool call Bash(gh api repos/jldbc/pybaseball --jq '{sta…) errored</tool_use_error>
+
+================================================================================
+[47] CALL: WebFetch https://github.com/dylandru/BaseballCV
+================================================================================
+Request failed with status code 404
+
+================================================================================
+[48] CALL: WebFetch https://github.com/drivelineresearch/openbiomechanics
+================================================================================
+Based on the GitHub repository page content:
+
+**Star Count:** 290 stars
+
+**License:** CC BY-NC-SA 4.0 (Attribution-NonCommercial-ShareAlike 4.0 International)
+
+**Last Commit Date:** The page shows "122 Commits" but does not display a specific last commit date in the visible content provided.
+
+================================================================================
+[49] CALL: WebFetch https://github.com/jldbc/pybaseball
+================================================================================
+Based on the web page content provided:
+
+**Star Count:** 1.6k stars (displayed as "1.6k" on the repository)
+
+**License:** MIT license
+
+**Last Commit Date:** The page indicates the repository is on the "master" branch with a current commit OID of "e588989359059ba04a510cc12aefa972f0a715d6," but the specific date of this last commit is not explicitly stated in the provided content.
+
+================================================================================
+[50] CALL: WebFetch https://github.com/open-mmlab/mmpose
+================================================================================
+Based on the webpage content provided:
+
+**Star Count:** 7.5k
+
+**License:** Apache 2.0 (as stated: "This project is released under the Apache 2.0 license")
+
+**Last Commit Date:** The repository's main branch shows a commit from June 12, 2024 (based on the refInfo timestamp: "1720786683.0")
+
+================================================================================
+[51] CALL: WebFetch https://github.com/Tau-J/rtmlib
+================================================================================
+Based on the webpage content provided, I can identify the following:
+
+**Star Count:** 549 stars (shown in the navigation as "Star 549")
+
+**License:** The page references a LICENSE file in the repository, but the specific license type is not displayed in the provided content excerpt.
+
+**Last Commit Date:** The repository's main branch has a current commit ID of "f1bac7d80c88305534dbcdde12da39f6db4c3953," but the exact last commit date is not included in this content snippet.
+
+I can only reliably confirm the star count from the information provided.
+
+================================================================================
+[52] CALL: WebFetch https://github.com/BaseballCV/BaseballCV
+================================================================================
+Request failed with status code 404
+
+================================================================================
+[53] CALL: WebFetch https://github.com/perfanalytics/pose2sim
+================================================================================
+Based on the webpage content provided:
+
+**Star Count:** 608 stars
+
+**License:** BSD 3-Clause (as indicated by the badge: "License-BSD_3--Clause-blue")
+
+**Last Commit Date:** The repository's main branch current commit is `3b004c7536a5042b59ec834280ea1be3a0c01aac`, but the specific commit date is not explicitly displayed in the provided content excerpt.
+
+================================================================================
+[54] CALL: WebFetch https://github.com/ultralytics/ultralytics
+================================================================================
+Based on the webpage content provided:
+
+**Star Count:** 55.7k
+
+**License:** AGPL-3.0 (with commercial Ultralytics Enterprise License option available)
+
+**Last Commit Date:** The content shows "bed8778ae4f51ba3ee87288dc2567bce0fc99fec" as the current commit on the main branch, but the specific date of this commit is not displayed in the provided text.
+
+================================================================================
+[55] CALL: WebFetch https://github.com/ViTAE-Transformer/ViTPose
+================================================================================
+I cannot provide the exact star count, license, and last commit date based on the webpage content provided. While the page shows "Star 2k" (approximately 2,000 stars), the specific license type and last commit date are not visible in the HTML excerpt you've shared. 
+
+To obtain this information accurately, you would need to:
+- Check the LICENSE file in the repository directly
+- View the commit history on GitHub's main branch page
+
+================================================================================
+[56] CALL: WebFetch https://github.com/facebookresearch/sapiens
+================================================================================
+Based on the GitHub repository page content:
+
+**Star Count:** 5.3k stars
+
+**License:** The project is licensed under a custom LICENSE file, with portions derived from open-source projects licensed under "Apache 2.0"
+
+**Last Commit Date:** The repository shows a current commit ID (08dce797f7b40f5b41388f518cac85535c3f5d13) on the main branch, but no specific timestamp is provided in the visible content. The page indicates "15 Commits" total but doesn't display the exact date of the most recent commit.
+
+================================================================================
+[57] CALL: WebFetch https://github.com/facebookresearch/VideoPose3D
+================================================================================
+Based on the web page content:
+
+**Star Count:** 4,000 stars (displayed as "4k stars")
+
+**License:** CC BY-NC (Creative Commons Attribution-NonCommercial)
+
+**Last Commit Date:** The page shows "22 Commits" in the history but does not display a specific date for the most recent commit. The repository was archived on October 31, 2023, and is now read-only.
+
+================================================================================
+[58] CALL: WebFetch https://github.com/Walter0807/MotionBERT
+================================================================================
+Based on the webpage content:
+
+**Star count:** "1.4k stars" (approximately 1,400)
+
+**License:** Apache-2.0
+
+**Last commit date:** The page shows "30 Commits" on the main branch with a commit hash (705d3a95354db8bdb696b3492e47a3b5537174ff), but the specific date of the most recent commit is not explicitly stated in the provided content.
+
+================================================================================
+[59] CALL: WebFetch https://github.com/yohanshin/WHAM
+================================================================================
+Based on the webpage content provided:
+
+**Star Count:** "1k" (1,000 stars)
+
+**License:** MIT license
+
+**Last Commit Date:** The webpage shows "90 Commits" but does not display the specific date of the most recent commit in the visible content.
+
+================================================================================
+[60] CALL: WebFetch https://github.com/roboflow/supervision
+================================================================================
+# Supervision Repository Facts
+
+**Star Count:** 37.9k stars
+
+**License:** MIT (as indicated by the MIT license badge and LICENSE.md file in the repository)
+
+**Last Commit Date:** The repository shows 4,793 commits on the develop branch, with the most recent commit hash `ee8a61a3e71a6702f4b8470b317ed67a4b55b80a`, though the exact timestamp of this latest commit is not explicitly displayed in the provided content.
+
+================================================================================
+[61] CALL: WebFetch https://github.com/facebookresearch/sam2
+================================================================================
+# SAM 2 Repository Facts
+
+**Star Count:** 18.9k
+
+**License:** Apache 2.0 (with exceptions for fonts used in the demo)
+
+**Last Commit Date:** The repository shows 76 total commits on the main branch, with the current commit ID `2b90b9f5ceec907a1c18123530e92e794ad901a4`, though the specific timestamp of the most recent commit is not explicitly stated in the provided content.
+
+================================================================================
+[62] CALL: WebFetch https://github.com/wmcnally/golfdb
+================================================================================
+Based on the webpage content provided:
+
+**Star Count:** 282 stars
+
+**License:** Creative Commons Attribution-NonCommercial 4.0 International License
+
+**Last Commit Date:** The page does not display a specific last commit date. It shows "34 Commits" in the history, but the exact date of the most recent commit is not included in the provided content.
+
+================================================================================
+[63] CALL: WebFetch https://github.com/DeepLabCut/DeepLabCut
+================================================================================
+# DeepLabCut Repository Facts
+
+**Star Count:** 5.6k (5,600 stars)
+
+**License:** GNU Lesser General Public License v3.0
+
+**Last Commit Date:** The repository's main branch shows a commit ID of `69116fdb72cd3dd79ea7751d8082975139f36da8`, but the exact commit date is not provided in the webpage content shown.
+
+================================================================================
+[64] CALL: WebFetch https://github.com/piergiaj/mlb-youtube
+================================================================================
+Based on the webpage content provided:
+
+**Star count:** 97 stars
+
+**License:** Not specified in the provided content
+
+**Last commit date:** The page shows "27 Commits" in the repository history, but the exact date of the most recent commit is not explicitly stated in the extracted content provided.
+
+================================================================================
+[65] CALL: WebFetch https://github.com/google-ai-edge/mediapipe
+================================================================================
+Based on the GitHub repository page content:
+
+**Star Count:** 34.6k stars
+
+**License:** Apache-2.0
+
+**Last Commit Date:** The page shows the repository has "5,301 Commits" on the master branch with a current commit OID of "9950524d0e15029c074b6eb81ae8d44359516039," but a specific last commit timestamp is not displayed in the provided content.
+
+================================================================================
+[66] CALL: WebFetch https://github.com/CMU-Perceptual-Computing-Lab/openpose
+================================================================================
+Based on the webpage content provided:
+
+**Star Count:** 33.9k stars
+
+**License:** The repository is "freely available for free non-commercial use" under a custom license (not a standard open source license like MIT or Apache). Commercial licensing is available through a separate FlintBox arrangement.
+
+**Last Commit Date:** The most recent commit shown is from the master branch with commit ID `5c5d96523ef917bd30301245fdc8343937cae48d`, though the exact date of this commit is not explicitly stated in the provided content. The repository shows "716 Commits" total with a note of "Nov 17, 2020" appearing near release v1.7.0, but this is a release date, not the last commit date.
+
+================================================================================
+[67] CALL: WebFetch https://github.com/PitchingBot/PitcherMotion
+================================================================================
+# PitcherMotion Repository Facts
+
+**Star Count:** 17 stars
+
+**License:** GPL-3.0
+
+**Last Commit Date:** December 24, 2021
+
+**Description:** "Pose tracking data for baseball pitchers" — this dataset captures motion information from baseball pitchers using pose detection technology, with approximately 500 MB of coordinate data collected from games at Tropicana Field during the 2021 season.
+
+================================================================================
+[68] CALL: WebFetch https://github.com/natekbackman/Baseball-Cinematography
+================================================================================
+Based on the webpage content provided:
+
+**Star Count:** 2 stars
+
+**License:** Not specified in the repository
+
+**Last Commit Date:** Not explicitly stated in the content shown
+
+The repository contains 3 commits total on the main branch, but the specific date of the most recent commit is not displayed in this webpage excerpt.
+
+================================================================================
+[69] CALL: WebFetch https://github.com/pyomeca/pyomeca
+================================================================================
+Based on the webpage content:
+
+**Star Count:** 138 stars
+
+**License:** Apache-2.0
+
+**Last Commit Date:** The most recent release shown is "Nov 26, 2024" (v2024.0.2), though the exact last commit timestamp isn't explicitly displayed in the provided content.
+
+================================================================================
+[70] CALL: WebFetch https://github.com/modenaxe/awesome-biomechanics
+================================================================================
+Based on the webpage content provided, here are the three facts:
+
+**Star Count:** 963 stars
+
+**License:** Not explicitly stated in the provided content
+
+**Last Commit Date:** The repository shows a commit hash "de83e6dc2affb15d8672c7367b109e8e7c7ccc20" but the exact commit date is not visible in the extracted content.
+
+Note: While the page displays star and fork counts in the interface elements, the license information and precise commit timestamp would require accessing additional repository metadata not fully captured in this content excerpt.
+
+================================================================================
+[71] CALL: WebFetch https://github.com/wannesm/dtaidistance
+================================================================================
+Based on the content provided:
+
+**Star Count:** "1.2k stars" (1,200 stars)
+
+**License:** Apache License, Version 2.0
+
+**Last Commit Date:** The page shows the master branch with commit "1985d74050277810d019352dba35e7909d6076da" but does not display a specific last commit date in the visible content.
+
+================================================================================
+[72] CALL: WebFetch https://github.com/ChristianIngwersen/SportsPose
+================================================================================
+# SportsPose Repository Facts
+
+Based on the GitHub page content:
+
+**Star Count:** 56 stars
+
+**License:** Not specified on this page
+
+**Last Commit Date:** Not explicitly stated in the provided content. The repository shows "38 Commits" in the history, but no specific last commit date is displayed in the extracted information.
+
+================================================================================
+[73] CALL: WebFetch https://github.com/roboflow/sports
+================================================================================
+Based on the GitHub page content provided:
+
+**Star count:** 4.9k stars (4,900)
+
+**License:** MIT license
+
+**Last commit date:** The page shows "34 Commits" but does not display a specific last commit date in the visible content. However, the refInfo indicates the current commit OID is "42c80c06b6b65a7f89455b89fe31cdf4c38ba227" from the main branch.
+
+================================================================================
+[74] CALL: WebFetch https://github.com/EmbodiedCognition/py-c3d
+================================================================================
+Based on the webpage content provided:
+
+**Star Count:** 112 stars
+
+**License:** MIT license
+
+**Last Commit Date:** The most recent commit shown is from September 8, 2025 (v0.6.0 release date), though the exact timestamp of the latest commit to the master branch is not explicitly stated in the visible content.
+
+================================================================================
+[75] CALL: WebFetch https://github.com/panzarino/mlbgame
+================================================================================
+# mlbgame Repository Facts
+
+**Star Count:** 541 stars
+
+**License:** MIT license
+
+**Last Commit Date:** The repository shows "564 Commits" on the master branch, but the specific date of the most recent commit is not explicitly stated in the provided content.
+
+**Archived Status:** No indication the repository is archived. The repository appears active with recent releases (Version 2.5.0 dated Apr 16, 2018) and multiple open issues (24) and pull requests (2) listed.
+
+================================================================================
+[76] CALL: WebFetch https://github.com/DynamicTimeWarping/dtw-python
+================================================================================
+Based on the web page content:
+
+**Star Count:** 335 stars
+
+**License:** GPL-3.0 (GNU General Public License v3.0)
+
+**Last Commit Date:** The page shows "Feb 3, 2026" as the date for the latest release (v1.7.4), though the exact last commit date to the master branch is not explicitly stated in the visible content.
+
+================================================================================
+[77] CALL: WebSearch Swing-Analyzer github baseball batting analysis
+================================================================================
+Web search results for query: "Swing-Analyzer github baseball batting analysis"
+
+Links: [{"title":"GitHub - rainmandr/Swing-Analyzer: A baseball swing analysis platform with AI","url":"https://github.com/rainmandr/Swing-Analyzer"},{"title":"GitHub - andrewjrobinson/SportsReview: Sport video analysis and recording tool [delay video, training]","url":"https://github.com/andrewjrobinson/SportsReview"},{"title":"Blast Baseball | Most Advanced & Most Accurate Solutions in the Game","url":"https://blastmotion.com/products/baseball/"},{"title":"Baseball Analysis Tools","url":"https://probaseballinsider.com/baseball-analysis-tools/"},{"title":"Swing ML App - App Store","url":"https://apps.apple.com/us/app/swing-ml/id1628224493"},{"title":"Swing analysis for baseball - Swing Catalyst","url":"https://swingcatalyst.com/solutions/baseball"},{"title":"Should You use a Baseball Swing Analyzer? | Bat Digest Blog","url":"https://batdigest.com/blog/baseball-swing-analyzer"},{"title":"Rapsodo INSIGHT: The Ultimate Swing Analysis Tool","url":"https://rapsodo.com/blogs/diamond-sports/rapsodo-insight-the-ultimate-swing-analysis-tool"},{"title":"The DK App","url":"https://www.diamondkinetics.com/the-dk-app"},{"title":"Blast Motion | Bat Training Sensor | Phoenix Bats","url":"https://phoenixbats.com/blast-motion-bat-sensor/"}]
+
+Based on the search results, I found information about the Swing-Analyzer project on GitHub:
+
+Swing-Analyzer is an AI-powered platform that allows you to upload videos of baseball swings and get detailed feedback on mechanics, with both simple and advanced modes suitable for parents and coaches.
+
+The platform features video analysis with frame-by-frame review, manual or AI-assisted statistics input, a knowledge base of baseball swing best practices and drills, PDF report generation for sharing analysis results, and a responsive design that works on mobile, tablet, and desktop. 
+
+The frontend is built using React, TypeScript, Tailwind CSS, and Shadcn UI.
+
+The project is hosted on GitHub at https://github.com/rainmandr/Swing-Analyzer and appears to be a comprehensive tool for baseball swing analysis that combines video analysis capabilities with AI-powered feedback to help players improve their batting mechanics.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[78] CALL: WebSearch RyanGunther github baseball swing analysis repos
+================================================================================
+Web search results for query: "RyanGunther github baseball swing analysis repos"
+
+Links: [{"title":"GitHub - rainmandr/Swing-Analyzer: A baseball swing analysis platform with AI","url":"https://github.com/rainmandr/Swing-Analyzer"},{"title":"baseball · GitHub Topics · GitHub","url":"https://github.com/topics/baseball?o=asc&s=stars"},{"title":"jerry871002 (Jerry Yang) · GitHub","url":"https://github.com/jerry871002"},{"title":"GitHub - schorrm/pybaseball: I'm maintaining the original repo now. please go to github.com/jldbc/pybaseball · GitHub","url":"https://github.com/schorrm/pybaseball"},{"title":"GitHub - jerry871002/Embedded-System-Final-Project: Swing Path Tracking (2021 Spring): Track and analyze a baseball bat's swing path, aiming to improve training efficiency for players","url":"https://github.com/jerry871002/Embedded-System-Final-Project"},{"title":"GitHub - rlarcher/GolfTracker","url":"https://github.com/rlarcher/GolfTracker"},{"title":"baseball-analytics · GitHub Topics · GitHub","url":"https://github.com/topics/baseball-analytics?o=desc&s=updated"},{"title":"Shiny Baseball","url":"https://bayesball.github.io/shinybaseball/"},{"title":"Swing analysis for baseball - Swing Catalyst","url":"https://swingcatalyst.com/solutions/baseball"},{"title":"Swing and Miss","url":"https://bayesball.github.io/BLOG/swing.html"}]
+
+Based on the search results, I found one repository that appears to be relevant to your query:
+
+The Swing-Analyzer repository (rainmandr/Swing-Analyzer) is a baseball swing analysis platform with AI that features video analysis for uploading and analyzing baseball swing videos with frame-by-frame analysis, statistics input through an AI chat interface, a knowledge base for baseball swing best practices, PDF report generation, and responsive design across mobile, tablet, and desktop devices.
+
+However, I should note that the search results did not specifically return repositories for a GitHub user named "RyanGunther" with baseball swing analysis projects. The results did return some other baseball swing analysis projects from different users, including a Swing Path Tracking project from 2021 by jerry871002 that tracks the path of a bat while swinging to improve training efficiency and help players adjust batting pose.
+
+If you're looking for specific repositories by RyanGunther, you might want to visit `github.com/RyanGunther` directly or try a more specific search with additional keywords.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[79] CALL: WebSearch opensim-org opensim-core github stars
+================================================================================
+Web search results for query: "opensim-org opensim-core github stars"
+
+Links: [{"title":"GitHub - opensim-org/opensim-core: SimTK OpenSim C++ libraries and command-line applications, and Java/Python wrapping. · GitHub","url":"https://github.com/opensim-org/opensim-core"},{"title":"OpenSim Project · GitHub","url":"https://github.com/opensim-org"},{"title":"Releases · opensim-org/opensim-core","url":"https://github.com/opensim-org/opensim-core/releases"},{"title":"opensim · GitHub Topics · GitHub","url":"https://github.com/topics/opensim?o=asc&s=stars"},{"title":"opensim-core/CHANGELOG.md at main · opensim-org/opensim-core","url":"https://github.com/opensim-org/opensim-core/blob/main/CHANGELOG.md"},{"title":"opensim-org/opensim-core","url":"https://github.com/opensim-org/opensim-core/milestone/3"},{"title":"Issues · opensim-org/opensim-core","url":"https://github.com/opensim-org/opensim-core/issues"},{"title":"Activity · opensim-org/opensim-core","url":"https://github.com/opensim-org/opensim-core/activity"},{"title":"GitHub - mrrezaie/testBuildOpenSim: WIP - A custom opensim-core for personal use","url":"https://github.com/mrrezaie/testBuildOpenSim"},{"title":"GitHub - opensim-org/opensim-gui: SimTK OpenSim graphical user interface and distribution.","url":"https://github.com/opensim-org/opensim-gui"}]
+
+Based on the search results, here's what I found about the opensim-org/opensim-core GitHub repository stars:
+
+The opensim-org/opensim-core repository has 1,000 stars (as shown in the releases page). However, there are some variations in the counts shown across different pages - other pages show 965 stars, and the activity page shows 1k stars.
+
+The opensim-core repository also has 365 forks. OpenSim is software that lets users develop models of musculoskeletal structures and create dynamic simulations of movement, with this repository containing the source code of OpenSim 4.x.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[80] CALL: WebFetch https://github.com/RyanGunther
+================================================================================
+# RyanGunther's Repositories
+
+Based on the GitHub profile, here are the user's 5 repositories:
+
+1. **Masters-Thesis-Baseball-Biomech-Data**
+   - "Master's in statistics thesis code, which is centered around biomechanical data of the baseball swing"
+
+2. **Computational-Statistics-Scripts**
+   - "Scripts produced as part of a graduate-level computational statistics class at Brock University, where I received an A. Course had a heavy focus on machine learning."
+
+3. **Computer-Vision-Baseball-Academic-**
+   - For computer vision Python/R scripts used in the user's master's thesis work
+
+4. **Computer-Vision-Baseball-Independent-Research-**
+   - "A place where code has been written to perform baseball specific computer vision tasks, like ball tracking and pose estimation, that are made for personal interest"
+
+5. **Neural-Nets-from-Statquest-Book**
+   - "Neural nets created from Josh Starmer's book, The Statquest illustrated guide to Neural Networks and AI"
+
+================================================================================
+[81] CALL: WebFetch https://github.com/opensim-org/opensim-core
+================================================================================
+Based on the GitHub page content:
+
+**Star Count:** 1,000 stars (displayed as "1k" on the repository)
+
+**License:** Apache License, Version 2.0
+
+**Last Commit Date:** The page shows 16,633 total commits on the main branch, but does not display a specific date for the most recent commit in the provided content.
+
+================================================================================
+[82] CALL: WebFetch https://github.com/anishreddy3/tf-openpose-baseball-pitcher
+================================================================================
+Based on the webpage content provided:
+
+**Star Count:** 11 stars
+
+**License:** Not specified on the page
+
+**Last Commit Date:** The repository shows "7 Commits" but no specific last commit date is displayed in the provided content
+
+**Description:** "Real time Human Pose estimation using Tensorflow and OpenCV"
+
+================================================================================
+[83] CALL: WebFetch https://github.com/RyanGunther/Computer-Vision-Baseball-Academic-
+================================================================================
+# Repository Summary: Computer-Vision-Baseball-Academic-
+
+**Star Count:** 0 stars
+
+**License:** GNU Affero General Public License v3.0 (AGPL-3.0 or later)
+
+**Last Commit Date:** Not explicitly stated in the provided content
+
+**Description:** The repository contains "computer vision python / R scripts that I use for my master's thesis"
+
+**Technologies & Tools:**
+- **Languages:** Jupyter Notebook (84.1%), Python (15.9%)
+- **Key Components:** 
+  - SAM2 (Segment Anything Model 2) with isomap pipeline
+  - YOLOv8-based image segmentation
+  - Mask coordinate extraction and processing
+  - Distance transform visualization with color-coded silhouettes
+  - Configuration management (config.json)
+
+**Notable Detail:** One script incorporates modified code from the computervisioneng/image-segmentation-yolov8 repository, with modifications attributed to Ryan Gunther in 2025.
+
+================================================================================
+[84] CALL: WebFetch https://github.com/pascalewalters/baseball-tracking
+================================================================================
+# Baseball-Tracking Repository Facts
+
+**Star Count:** 10 stars
+
+**License:** Not specified in the provided content
+
+**Last Commit Date:** The repository shows "14 Commits" on the master branch, but the exact date of the most recent commit is not displayed in the provided webpage content.
+
+**Description:** The page indicates "No description, website, or topics provided." However, the README states the project involves baseball tracking during pitching using three main steps: detection via YOLOv3, ball tracking with release point identification, and spin rate/axis calculation through texture registration.
+
+================================================================================
+[85] CALL: WebFetch https://github.com/RyanGunther/Masters-Thesis-Baseball-Biomech-Data
+================================================================================
+# Repository Analysis: Masters-Thesis-Baseball-Biomech-Data
+
+## Key Metrics
+- **Star Count:** 0 stars
+- **License:** Not specified in the provided content
+- **Last Commit Date:** Not explicitly stated (repository shows 13 commits on main branch)
+- **Description:** A master's thesis project applying dimensionality reduction techniques to baseball swing biomechanical data from motion capture analysis
+
+## Project Overview
+The repository focuses on analyzing motion capture data from Driveline's OpenBiomechanics Dataset. The core methodology involves "principal feature analysis via clustering, then probabilistic principal component analysis" to identify signal versus noise patterns in baseball swings.
+
+## Methods & Tools Used
+
+**Statistical Techniques:**
+- Principal Component Analysis (PCA)
+- Probabilistic PCA (PPCA)
+- K-means clustering
+- LASSO regression
+- Covariance structure analysis
+
+**Technologies:**
+- R (primary analysis language - 38.5% of codebase)
+- Python/Jupyter Notebook (C3D file conversion - 61.5%)
+
+## Research Foundation
+The work builds on Liu et al. (2006) on human motion estimation and Barbic et al. (2004) on motion capture segmentation. The pipeline segments swing data, clusters behavioral patterns across players, and correlates biomechanical structures with hitting performance metrics like exit velocity and bat speed.
+
+## Contact
+Email: ryangunther98@gmail.com
+
+================================================================================
+[86] CALL: WebSearch pyomeca ezc3d github stars C3D reader writer
+================================================================================
+Web search results for query: "pyomeca ezc3d github stars C3D reader writer"
+
+Links: [{"title":"GitHub - pyomeca/ezc3d: Easy to use C3D reader/writer for C++, Python and Matlab · GitHub","url":"https://github.com/pyomeca/ezc3d"},{"title":"Releases · pyomeca/ezc3d","url":"https://github.com/pyomeca/ezc3d/releases"},{"title":"EZC3D: EZC3D","url":"https://pyomeca.github.io/Documentation/ezc3d/md__home_pariterre_Programmation_ezc3d_README.html"},{"title":"EZC3D: README.md Source File","url":"https://pyomeca.github.io/Documentation/ezc3d/README_8md_source.html"},{"title":"ezc3d/README.md at dev · pyomeca/ezc3d","url":"https://github.com/pyomeca/ezc3d/blob/dev/README.md"},{"title":"Pyomeca","url":"https://pyomeca.github.io/"},{"title":"ezc3d - File Exchange - MATLAB Central","url":"https://www.mathworks.com/matlabcentral/fileexchange/69372-ezc3d"},{"title":"ezc3d/examples/modify_c3d_example.cpp at dev · pyomeca/ezc3d","url":"https://github.com/pyomeca/ezc3d/blob/dev/examples/modify_c3d_example.cpp"},{"title":"pyomeca/ezc3d","url":"https://github.com/pyomeca/ezc3d/issues"},{"title":"ezc3d/setup.py at dev · pyomeca/ezc3d","url":"https://github.com/pyomeca/ezc3d/blob/dev/setup.py"}]
+
+Based on the search results, here's what I found about ezc3d:
+
+## Overview
+
+EZC3D is an easy to use C3D reader/writer for C++, Python and Matlab. It offers a comprehensive and light API to read and write C3D files.
+
+## GitHub Presence
+
+According to the search results, the repository has 151 stars and 48 forks.
+
+## Key Features
+
+The source code is written in C++ and can be compiled and used by higher level languages thanks to SWIG, with proper interfaces written on top of the SWIG binder to facilitate the experience of coders in their respective languages.
+
+There are example codes for C++, Python3 and MATLAB in the folder example that can be used as template to perform all the day-to-day tasks.
+
+## Use Case
+
+C3D files are widely used in the field of biomechanics and the community lacked easy solutions to deal with them. EZC3D addresses this problem by providing a C++, Python and MATLAB easy solution for all C3D manipulation.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[87] CALL: WebSearch AthletePose3D github CVPR 2025 benchmark 3D pose athletic
+================================================================================
+Web search results for query: "AthletePose3D github CVPR 2025 benchmark 3D pose athletic"
+
+Links: [{"title":"GitHub - calvinyeungck/AthletePose3D: Dataset and Code for CVSports at CVPR 2025 paper \"AthletePose3D: A Benchmark Dataset for 3D Human Pose Estimation and Kinematic Validation in Athletic Movements\" · GitHub","url":"https://github.com/calvinyeungck/AthletePose3D"},{"title":"AthletePose3D: A Benchmark Dataset for 3D Human Pose Estimation and","url":"https://openaccess.thecvf.com/content/CVPR2025W/CVSPORTS/papers/Yeung_AthletePose3D_A_Benchmark_Dataset_for_3D_Human_Pose_Estimation_and_CVPRW_2025_paper.pdf"},{"title":"AthletePose3D - CVPR 2025 Open Access Repository","url":"https://openaccess.thecvf.com/content/CVPR2025W/CVSPORTS/html/Yeung_AthletePose3D_A_Benchmark_Dataset_for_3D_Human_Pose_Estimation_and_CVPRW_2025_paper.html"},{"title":"AthletePose3D: A Benchmark Dataset for 3D Human Pose Estimation and Kinematic Validation in Athletic Movements","url":"https://arxiv.org/html/2503.07499v3"},{"title":"[2503.07499] AthletePose3D: A Benchmark Dataset for 3D Human Pose Estimation and Kinematic Validation in Athletic Movements","url":"https://arxiv.org/abs/2503.07499"},{"title":"AthletePose3D: A Benchmark Dataset for 3D Human Pose Estimation and Kinematic Validation in Athletic Movements | IEEE Conference Publication | IEEE Xplore","url":"https://ieeexplore.ieee.org/document/11147531/"},{"title":"(PDF) AthletePose3D: A Benchmark Dataset for 3D Human Pose Estimation and Kinematic Validation in Athletic Movements","url":"https://www.researchgate.net/publication/389749122_AthletePose3D_A_Benchmark_Dataset_for_3D_Human_Pose_Estimation_and_Kinematic_Validation_in_Athletic_Movements"},{"title":"AthleticsPose: Authentic Sports Motion Dataset on Athletic Field and Evaluation of Monocular 3D Pose Estimation Ability","url":"https://arxiv.org/html/2507.12905v1"},{"title":"AthletePose3D: A Benchmark Dataset for 3D Human Pose Estimation and Kinematic Validation in Athletic Movements | Request PDF","url":"https://www.researchgate.net/publication/395602667_AthletePose3D_A_Benchmark_Dataset_for_3D_Human_Pose_Estimation_and_Kinematic_Validation_in_Athletic_Movements"},{"title":"SportsPose - A Dynamic 3D sports pose dataset","url":"https://christianingwersen.github.io/SportsPose/"}]
+
+Based on the search results, here's what I found about AthletePose3D:
+
+## Overview
+
+AthletePose3D is a dataset and code for a CVSports at CVPR 2025 paper titled "AthletePose3D: A Benchmark Dataset for 3D Human Pose Estimation and Kinematic Validation in Athletic Movements".
+
+## Dataset Details
+
+The dataset includes 12 types of sports motions performed by athletes, comprising approximately 1.3 million frames and 165 thousand unique postures across disciplines such as running, track and field, and figure skating. Compared to conventional benchmarking datasets, AthletePose3D features notably higher speeds and accelerations, making it uniquely suited for athletic movement analysis.
+
+## Key Findings
+
+State-of-the-art monocular 2D and 3D pose estimation models trained on conventional datasets perform poorly on athletic motions; however, fine-tuning these models on AthletePose3D reduces the mean per joint position error (MPJPE) from 214mm to 65mm—a reduction of over 69%.
+
+The work also validates the kinematic accuracy of monocular pose estimations through waveform analysis, highlighting strong correlations in joint angle estimations but limitations in velocity estimation.
+
+## Repository Access
+
+The dataset, code, and model checkpoints are available at https://github.com/calvinyeungck/AthletePose3D.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[88] CALL: WebSearch golf swing analysis MediaPipe pose estimation github project 2024 2025
+================================================================================
+Web search results for query: "golf swing analysis MediaPipe pose estimation github project 2024 2025"
+
+Links: [{"title":"GitHub - HeleenaRobert/golf-swing-analysis: 🏌️ Golf swing analysis using MediaPipe Pose & OpenCV for motion tracking, posture evaluation, and performance improvement.","url":"https://github.com/HeleenaRobert/golf-swing-analysis"},{"title":"GitHub - Strojove-uceni/23206-final-pose-estimation-for-swing-improvement: 23206-final-pose-estimation-for-swing-improvement created by GitHub Classroom · GitHub","url":"https://github.com/Strojove-uceni/23206-final-pose-estimation-for-swing-improvement"},{"title":"mediapipe-pose · GitHub Topics · GitHub","url":"https://github.com/topics/mediapipe-pose?o=desc&s=updated"},{"title":"Pose Estimation in Action: Visualizing the Golf Swing Frame by Frame ⛳️🤖 - DEV Community","url":"https://dev.to/aws-builders/pose-estimation-in-action-visualizing-the-golf-swing-frame-by-frame-2hmg"},{"title":"🏌️‍♂️ How I Built a Golf Swing Analyzer in Python Using AI Pose Detection (That Actually Works) - DEV Community","url":"https://dev.to/ryanboscobanze/how-i-built-a-golf-swing-analyzer-in-python-using-ai-pose-detection-that-actually-works-3jc5"},{"title":"Dynamic Golf Swing Analysis Framework Based on Efficient Similarity Assessment","url":"https://www.mdpi.com/1424-8220/25/22/7073"},{"title":"🏌️‍♂️ How I Built a Golf Swing Analyzer in Python Using AI Pose Detection (That Actually Works) | by Ryan Banze | Medium","url":"https://medium.com/@algoforge.ai/%EF%B8%8F-%EF%B8%8F-how-i-built-a-golf-swing-analyzer-in-python-using-ai-pose-detection-that-actually-works-66abdb0d46ee"},{"title":"Advanced Golf Swing Analysis Using MediaPipe and Machine Learning | Request PDF","url":"https://www.researchgate.net/publication/394742786_Advanced_Golf_Swing_Analysis_Using_MediaPipe_and_Machine_Learning"},{"title":"motion-analysis · GitHub Topics · GitHub","url":"https://github.com/topics/motion-analysis"},{"title":"Golf Swing Analysis and Posture Correction System | PDF","url":"https://www.slideshare.net/slideshow/golf-swing-analysis-and-posture-correction-system/267085594"}]
+
+Based on the web search results, here are several notable GitHub projects and resources for golf swing analysis using MediaPipe pose estimation from 2024-2025:
+
+## Key GitHub Projects
+
+**HeleenaRobert/golf-swing-analysis** - A Python project that analyzes golf swings using MediaPipe Pose, tracking body landmarks (ear, hip, wrist) and the golf ball, calculating swing angles, and saving an annotated swing video. It detects ear, hip, and wrist positions using MediaPipe Pose and calculates the swing angle (ear-hip-wrist) per frame.
+
+**Strojove-uceni/23206-final-pose-estimation-for-swing-improvement** - Uses MediaPipe Pose Estimation to process videos and identify and track key points on the golfer's body throughout the swing. The project uses MediaPipe Pose Estimation, a solution developed by Google for real-time, high-fidelity pose tracking capable of tracking 33 key points on the body.
+
+## Recent Technical Resources (2025)
+
+A comprehensive golf swing analyzer project built with Python, MediaPipe, OpenCV, matplotlib, and Google Colab Pro that segments swing phases dynamically: Address → Backswing → Top → Downswing → Impact → Follow-through.
+
+A Dynamic Golf Swing Analysis Framework (published November 2025) that extracts skeletal keypoints using BlazePose-based MediaPipe Pose Estimation, segments each swing into seven canonical phases, and performs dynamic similarity evaluation with phase-wise feedback.
+
+These projects demonstrate the active development of golf swing analysis tools using MediaPipe's pose estimation capabilities, with recent implementations focusing on multi-phase swing segmentation and biomechanical analysis.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[89] CALL: Read {"file_path": "/home/user/Baseball/research/04-research-plan.md", "limit": 50}
+================================================================================
+1	# Research Plan
+2	
+3	> Last updated: 2026-04-09
+4	
+5	This document outlines a comprehensive research plan designed to be executed by a team of specialized Claude Code agents. Each phase produces concrete deliverables that feed into the next. The goal is to answer every critical question before writing a single line of production code.
+6	
+7	---
+8	
+9	## Research Philosophy
+10	
+11	1. **Breadth before depth** — Survey everything first, then go deep on what matters
+12	2. **Steal shamelessly, credit generously** — Build on existing open-source work
+13	3. **Validate with data** — Don't assume; test against Driveline's dataset and real swings
+14	4. **Think like the user** — Every technical decision must survive the question "does a travel ball coach care about this?"
+15	5. **Document everything** — Research is only valuable if it's captured and retrievable
+16	
+17	---
+18	
+19	## Phase 1: Landscape & Technology Deep Dive
+20	
+21	**Duration:** 1-2 weeks
+22	**Goal:** Build a complete map of every relevant project, dataset, model, paper, and person in the baseball + CV + biomechanics space.
+23	
+24	### Task 1.1: Open Source Project Catalog
+25	Systematically catalog every relevant GitHub project. For each, document: what it does, tech stack, quality/maturity, license, last activity, what we can reuse.
+26	
+27	**Search targets:**
+28	- GitHub topics: `baseball`, `baseball-analytics`, `baseball-data`, `statcast`, `swing-analysis`, `pose-estimation`, `sports-biomechanics`, `motion-capture`, `bat-tracking`
+29	- GitHub orgs: `drivelineresearch`, and any other baseball research orgs
+30	- Individual repos already identified (see `03-landscape-analysis.md`)
+31	- Adjacent sports CV projects (golf swing analysis, tennis, cricket) — same problems, different sport
+32	
+33	**Deliverable:** `research/artifacts/open-source-catalog.md` — Organized table of every project with assessment of reusability.
+34	
+35	### Task 1.2: Academic Paper Survey
+36	Find and summarize key academic papers on:
+37	- Pose estimation applied to sports (especially baseball)
+38	- Markerless motion capture accuracy vs. marker-based
+39	- Baseball swing biomechanics and performance predictors
+40	- Single-camera 3D reconstruction techniques
+41	- Bat/object tracking in sports video
+42	- Dimensionality reduction for motion capture (Ryan Gunther's references + related work)
+43	
+44	**Search targets:**
+45	- Google Scholar, arXiv, ResearchGate
+46	- References cited in Ryan Gunther's thesis repo
+47	- Driveline's blog post references
+48	- Theia's 50+ peer-reviewed validation studies
+49	
+50	**Deliverable:** `research/artifacts/paper-survey.md` — Annotated bibliography with key findings and relevance to our project.

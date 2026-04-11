@@ -1,0 +1,2859 @@
+
+================================================================================
+[0] CALL: Bash {"command": "ls /home/user/Baseball/research/artifacts/ 2>/dev/null || echo \"Di
+================================================================================
+(Bash completed with no output)
+
+================================================================================
+[1] CALL: ToolSearch select:WebFetch,WebSearch,mcp__github__get_file_contents,mcp__github__search_code
+================================================================================
+   
+
+================================================================================
+[2] CALL: mcp__github__get_file_contents {"owner": "RyanGunther", "repo": "Masters-Thesis-Baseball-Biomech-Data"}
+================================================================================
+Access denied: repository "ryangunther/masters-thesis-baseball-biomech-data" is not configured for this session. Allowed repositories: wtsadmin-brad/baseball
+
+================================================================================
+[3] CALL: mcp__github__get_file_contents {"owner": "RyanGunther", "repo": "Computer-Vision-Baseball-Academic-"}
+================================================================================
+Access denied: repository "ryangunther/computer-vision-baseball-academic-" is not configured for this session. Allowed repositories: wtsadmin-brad/baseball
+
+================================================================================
+[4] CALL: mcp__github__get_file_contents {"owner": "RyanGunther", "repo": "Computer-Vision-Baseball-Independent-Research-
+================================================================================
+Access denied: repository "ryangunther/computer-vision-baseball-independent-research-" is not configured for this session. Allowed repositories: wtsadmin-brad/baseball
+
+================================================================================
+[5] CALL: mcp__github__get_file_contents {"owner": "RyanGunther", "repo": "Computational-Statistics-Scripts"}
+================================================================================
+Access denied: repository "ryangunther/computational-statistics-scripts" is not configured for this session. Allowed repositories: wtsadmin-brad/baseball
+
+================================================================================
+[6] CALL: mcp__github__get_file_contents {"owner": "RyanGunther", "repo": "Neural-Nets-from-Statquest-Book"}
+================================================================================
+Access denied: repository "ryangunther/neural-nets-from-statquest-book" is not configured for this session. Allowed repositories: wtsadmin-brad/baseball
+
+================================================================================
+[7] CALL: WebFetch https://github.com/RyanGunther
+================================================================================
+# RyanGunther's GitHub Repositories
+
+Based on the profile page, here are the visible repositories:
+
+1. **Masters-Thesis-Baseball-Biomech-Data** (Public)
+   - Language: Jupyter Notebook
+   - Description: A repository containing master's thesis code focused on biomechanical data analysis of baseball swings.
+
+2. **Computational-Statistics-Scripts** (Public)
+   - Language: R
+   - Description: Graduate-level coursework scripts emphasizing machine learning, completed with instructor permission.
+
+3. **Computer-Vision-Baseball-Academic-** (Public)
+   - Language: Jupyter Notebook
+   - Description: Computer vision scripts using Python and R for master's thesis work.
+
+4. **Computer-Vision-Baseball-Independent-Research-** (Public)
+   - Language: Not specified
+   - Description: Baseball-specific computer vision implementations including ball tracking and pose estimation for personal research.
+
+5. **Neural-Nets-from-Statquest-Book** (Public)
+   - Language: Jupyter Notebook
+   - Description: Neural network implementations based on Josh Starmer's "The Statquest illustrated guide to Neural Networks and AI."
+
+**Profile Summary:** Ryan Gunther is an MSc student at Brock University with research interests in baseball biomechanics, computer vision, and statistical computation.
+
+================================================================================
+[8] CALL: WebFetch https://github.com/RyanGunther/Computer-Vision-Baseball-Academic-
+================================================================================
+# Repository Structure
+
+## Files and Directories
+
+```
+Computer-Vision-Baseball-Academic-/
+├── A_download_and_click.py
+├── LICENSE
+├── MaskCoordinatesScript.ipynb
+├── README.md
+├── SAM2_isomap_pipeline.ipynb
+├── SegmentationTraining09_2025.ipynb
+├── config.json
+└── distance_transform_colour_code_silhouettes (1).ipynb
+```
+
+## Repository Overview
+
+**Owner:** RyanGunther  
+**Language Distribution:** Jupyter Notebook (84.1%), Python (15.9%)  
+**Total Commits:** 8  
+**License:** GNU Affero General Public License v3.0
+
+## README Content
+
+This repository contains "computer vision python / R scripts that I use for my master's thesis."
+
+The project is licensed under AGPL-3.0, permitting users to "use, modify, and share this software under the terms of the AGPL-3.0 (or any later version, at your option)."
+
+**Attribution Note:** One script incorporates code from `computervisioneng/image-segmentation-yolov8`, with modifications completed by Ryan Gunther in 2025.
+
+================================================================================
+[9] CALL: WebFetch https://github.com/RyanGunther/Masters-Thesis-Baseball-Biomech-Data
+================================================================================
+# Repository Structure: Masters-Thesis-Baseball-Biomech-Data
+
+## Files and Directories
+
+```
+Masters-Thesis-Baseball-Biomech-Data/
+├── 3d_interactive_plotting.R
+├── DimensionalityReductionBiomechData.R
+├── README.md
+├── convert_c3d_script.ipynb
+├── dynamic_PPCA_pipeline.R
+├── feat_vec_LASSO.R
+└── quick2dview.R
+```
+
+## README Content Summary
+
+**Project Overview:**
+This repository contains code for a master's thesis in statistics focused on baseball swing biomechanics. The work uses motion capture data from Driveline's OpenBiomechanics Dataset.
+
+**Methodology:**
+The approach combines principal feature analysis through clustering with probabilistic PCA to distinguish signal from noise. The pipeline identifies covariance structures in body part movements, segments swing phases based on structural changes, and clusters similar swing behaviors across the dataset.
+
+**Key Finding:**
+The analysis successfully reconstructs complete swings using only feature vectors from principal markers.
+
+**File Purposes:**
+- `DimensionalityReductionBiomechData.R` - Main pipeline with detailed explanations
+- `dynamic_PPCA_pipeline.R` - Batch processing for multiple swings
+- `quick2dview.R` - 2D visualization for swing motion verification
+- `convert_c3d_script.ipynb` - Data format conversion (C3D to CSV)
+- `feat_vec_LASSO.R` - Feature vector analysis
+- `3d_interactive_plotting.R` - 3D visualization tool
+
+**Contact Information:**
+Email: ryangunther98@gmail.com | LinkedIn, Bluesky, and X available
+
+================================================================================
+[10] CALL: WebFetch https://raw.githubusercontent.com/RyanGunther/Masters-Thesis-Baseball-Biomech-Data/main/dynamic_PPCA_pipeline.R
+================================================================================
+# Complete R Script Contents
+
+This R script implements a dimensionality reduction pipeline for analyzing baseball swing motion capture data (C3D files converted to CSV). Here are the complete contents:
+
+**Core Functions:**
+
+1. **`%||%`** – null coalescing operator for default value assignment
+2. **`defaults_ctrl`** – list of tuning parameters (variance threshold, tau values, training window sizes, etc.)
+3. **`merge_ctrl`** – merges user-supplied parameters with defaults
+4. **`compute_PPCA_C`** – probabilistic PCA implementation returning mean vector and covariance matrix via SVD
+5. **`select_principal_markers`** – principal-feature analysis using eigendecomposition and k-means clustering to identify key motion markers
+6. **`build_global_markers`** – processes multiple swing files to establish a global marker set
+7. **`detect_ppca_cuts`** – forward sliding-window algorithm detecting structural breaks using chi-squared statistics
+8. **`ppca_breaks_backward`** – backward pass validation of detected breakpoints
+9. **`divisive_split_idx`** – recursive divisive clustering with depth-first tree structure
+10. **`reconstruct_swing`** – reconstructs full swing data using segment-specific models and least-squares fitting
+11. **`process_swing`** – main pipeline processing single swing file (marker selection → break detection → reconstruction)
+12. **`process_folder`** – batch processing of multiple CSV files
+13. **`process_swing_fixedpm`** – processes swing with predetermined markers and template header matching
+14. **`print.swing_obj`** – custom S3 print method displaying markers, breaks, and behavior labels
+15. **`summarise_swings`** – generates summary statistics table for batch results
+
+The pipeline extracts principal motion markers, identifies behavioral segments through probabilistic PCA change-point detection, and reconstructs complete kinematic sequences using cluster-specific linear models.
+
+================================================================================
+[11] CALL: WebFetch https://raw.githubusercontent.com/RyanGunther/Masters-Thesis-Baseball-Biomech-Data/main/feat_vec_LASSO.R
+================================================================================
+# Complete R Script Contents
+
+```r
+# 1.Bind swings (R or L) to match the template swing's # of columns and column names
+# 2.Compute global principal markers across all swings
+# 3.Segment each swing locally (adding a cut at beginning and end of each swing)
+# 4.Global divisive clustering will determine the # of unique behaviour types and determine the behaviour pattern of each swing
+# 5. LASSO via glmnet to determine if these fv's have predictive value
+
+
+source("dynamic_PPCA_pipeline.R")
+
+# have used the file shown below as template extensively, am confident with its shape and data, hence using it as the template
+params <- list(
+  swing_dir = "/Users/ryangunther/Downloads/ALL_OBP_FILES/content/ALL_CSV_FILES",
+  template = "000080_000282_71_188_R_010_1070.csv",
+  handed = "R",
+  var_thresh = 0.95,
+  seed = 20250728,
+  tol_global = 0.4
+)
+
+# some csvs are missing columns (often bat markers)
+# some csvs have col names Marker1_X while others have MARKER1_X
+# some csvs have random 0s found in the middle of the data. I am not overly familiar with the type of mocap markers used but I think it could be a calibration or charging issue
+
+# match all csv cols to the template cols
+read_as_template <- function(path, tmpl_hdr, tmpl_lc) {
+  df <- tryCatch(read.csv(path, check.names = FALSE),
+                 error = function(e) return(NULL))
+  if (is.null(df)) return(NULL)
+  hdr_lc <- tolower(names(df))
+  if (!setequal(hdr_lc, tmpl_lc)) return(NULL)
+  names(df) <- tmpl_hdr[match(hdr_lc, tmpl_lc)]
+  df[ , tmpl_hdr, drop = FALSE]
+}
+
+# bind all swings together
+# this will take our individual 600-1000 row, 165 col csvs and bind/stack them all on top of each other creating a 165 col, massive length row csv
+bind_swings <- function(dir, handed, template, verbose = TRUE) {
+  tmpl_hdr <- names(read.csv(template, nrows = 1, check.names = FALSE))
+  tmpl_lc  <- tolower(tmpl_hdr)
+  pat <- sprintf("_[%s%s]_.*\\.csv$", handed, tolower(handed))
+  files <- list.files(dir, pattern = pat, full.names = TRUE)
+  
+  good_mats <- vector("list", length(files))
+  keep_idx <- logical(length(files))
+  bad_info <- vector("list", length(files))
+  
+  for (i in seq_along(files)) {
+    df <- read_as_template(files[i], tmpl_hdr, tmpl_lc)
+    if (is.null(df)) {
+      hdr  <- tolower(names(read.csv(files[i], nrows = 1, check.names = FALSE)))
+      miss <- setdiff(tmpl_lc, hdr)
+      bad_info[[i]] <- data.frame(
+        file = basename(files[i]),
+        n_missing = length(miss),
+        missing_cols = paste(tmpl_hdr[match(miss, tmpl_lc)], collapse = ", "),
+        stringsAsFactors = FALSE
+      )
+    } else {
+      good_mats[[i]] <- as.matrix(df)
+      keep_idx[i]    <- TRUE
+    }
+  }
+  
+  list(
+    big_mat = if (any(keep_idx)) do.call(rbind, good_mats[keep_idx]) else NULL,
+    good_mats = good_mats[keep_idx],
+    good_files = files[keep_idx],
+    bad_files = do.call(rbind, bad_info[!keep_idx])
+  )
+}
+
+# column name remap while ignoring case
+apply_template_header <- function(df, tmpl_hdr, tmpl_lc) {
+  hdr_lc <- tolower(names(df))
+  names(df) <- tmpl_hdr[ match(hdr_lc, tmpl_lc) ]
+  df
+}
+
+
+swing_template <- file.path(params$swing_dir, params$template)
+tmpl_hdr <- names(read.csv(swing_template, nrows = 1, check.names = FALSE))
+tmpl_lc <- tolower(tmpl_hdr)
+bind_out <- bind_swings(params$swing_dir, params$handed, swing_template)
+
+if (is.null(bind_out$big_mat))
+  stop("No swings passed the template‑matching step – nothing to process.")
+
+cat("Bound swings:", length(bind_out$good_files), "\n")
+# all Rhand swings that have full data and all columns bound together properly
+
+# find global PMS
+# this may take some additional context to understand, looking at DimensionalityReductionBiomechData file on my github will explain further
+# in short, clustering and PFA determines the most valuable clusters to retain that explain enough % of the variance in the data
+
+set.seed(params$seed)
+global_pm <- select_principal_markers(bind_out$big_mat,
+                                      var_thresh = params$var_thresh,
+                                      seed = params$seed)
+cat("Global PMs:", paste(global_pm, collapse = ", "), "\n")
+# global PMs across all Rhand swings are just 6 (i.e. 18 dimensions):
+# Marker10, Marker7, LMKNE, RWRB, RTHI, T10 (X,Y,Z dim for each one)
+
+# LOCAL segmenting
+# now want to segment the swings by using the global PMs and determining the covariance matrix of each one with each other within groups of frames of a swing
+# more context for this also found in the DRBD.R file on github
+# essentially there is an algorithm that checks a small window of frames/rows in a swing, learns the cov structure, then checks against the next 25 rows to see if it's similar within a certain threshold
+# if similar, extend the learning window and try again. If different enough, cut the data and start a new segment within that swing
+
+seg_list <- mapply(
+  process_swing_fixedpm,
+  input = bind_out$good_files,
+  MoreArgs = list(
+    pm = global_pm,
+    tmpl_hdr = tmpl_hdr,
+    tmpl_lc  = tmpl_lc
+  ),
+  SIMPLIFY = FALSE
+)
+
+names(seg_list) <- basename(bind_out$good_files)
+seg_list
+# making progress here, but need to double check the naming conventions
+# naming conventions good
+
+pool_segments <- function(seg_list) {
+  do.call(rbind, lapply(seq_along(seg_list), function(i) {
+    nseg <- nrow(seg_list[[i]]$feature_matrix)
+    data.frame(
+      swing_id = i,
+      seg_id = seq_len(nseg),
+      swing_file = names(seg_list)[i],
+      seg_list[[i]]$feature_matrix,
+      row.names  = NULL
+    )
+  }))
+}
+
+seg_pool <- pool_segments(seg_list)
+View(seg_pool)
+fv_mat   <- as.matrix(seg_pool[ , -(1:3)])
+cat("Total segments pooled:", nrow(fv_mat), "\n")
+# 865 segments in existence
+# this will be reduced later since swings that follow a X-Y-X pattern would have 3 segs but reduce down to just 2 practical segs
+# also, swings can be split into 2 segs, but have similar enough feat vecs to be clustered into the same behaviour type, result in Seg1-Seg2 type swings being pushed back together into 1-1 (aka 1) behaviour type swing
+
+# experiment with different tols to get a feel for how many clusters
+# roughly 10 is ideal, first pass gave 200+ different cluster IDs aka very little clustering at all
+# need a more feasible number that actually finds like-valued feat vecs 
+global_divisive <- function(X, tol) {
+  ids <- seq_len(nrow(X))
+  out <- divisive_split_idx(X, tol = tol, ids = ids)
+  lab <- integer(nrow(X))
+  for (cid in seq_along(out$groups))
+    lab[ out$groups[[cid]] ] <- cid
+  list(cluster_id = lab, split_tree = out$tree_lines)
+}
+
+# explore cluster counts quickly
+diag_nclusters <- function(X, cand = c(0.1,0.2,.3,.4,.5,1,2)) {
+  sapply(cand, function(t) length(unique(global_divisive(X, tol = t)$cluster_id)))
+}
+
+cat("Clusters per tol:\n")
+print(diag_nclusters(fv_mat))
+# happy with 9 clusters hence tol of 0.4
+
+
+glob_cl <- global_divisive(fv_mat, tol = 0.4)
+
+#fit the columns in my desired order
+seg_pool$cluster_id <- glob_cl$cluster_id
+seg_pool <- seg_pool[ c(1:3, ncol(seg_pool), 4:(ncol(seg_pool) - 1)) ]
+View(seg_pool)
+
+
+
+# list of vectors of frame indices grouped by cluster ID
+frames_by_cluster <- function(sw) {
+  cuts <- sw$breaks_forward
+  cid <- sw$cluster_global
+  nseg <- length(cid)
+  
+  split(seq_len(cuts[nseg + 1] - 1),
+        rep(cid, diff(cuts)))
+}
+
+
+# Use the same mean+cov construction as what was used in the building of the feature vectors initially
+# however, in the building of the design mat, I am gonna leave out the means hence the toggle feature in the function's signature
+# same math as before, but allow turning off the means
+cluster_fv <- function(dat, frames, pm, tau = 0.75, w = 0.8, include_means = FALSE) {
+  xyz_cols <- unlist(lapply(pm, \(m) paste0(m, c("_X","_Y","_Z"))))
+  X <- as.matrix(dat[frames, xyz_cols, drop = FALSE])
+  m <- compute_PPCA_C(X, tau)
+
+  # vectorize covariance (upper triangle incl. diag)
+  v_cov <- m$C[upper.tri(m$C, diag = TRUE)]
+
+  # if wanting to still include the means, use previous weights of 0.8 for covs and 0.2 for means
+  if (include_means) {
+    c(w * v_cov, (1 - w) * m$mu)
+  } else {
+    # if not including means, no need for linear weights scaling the data
+    v_cov
+  }
+}
+
+
+
+# build one row per swing x global behaviour i.e. if a swing follows a 1-2-1 pattern,
+# it would now have one row for all the 1 type behaviours which hypothetically be frames 1-450 and 600-900
+
+pool_cluster_level <- function(seg_list, include_means = FALSE) {
+  rows <- lapply(seq_along(seg_list), function(i) {
+    sw <- seg_list[[i]]
+    # frames for each global cluster visited by this swing
+    cuts <- sw$breaks_forward
+    cid  <- sw$cluster_global
+    fr_by_c <- split(seq_len(cuts[length(cuts)] - 1), rep(cid, diff(cuts)))
+    
+    do.call(rbind, lapply(names(fr_by_c), function(cid_k) {
+      fv <- cluster_fv(sw$reconstructed,
+                       frames = fr_by_c[[cid_k]],
+                       pm     = sw$principal_markers,
+                       include_means = include_means)
+      data.frame(
+        swing_id   = i,
+        cluster_id = as.integer(cid_k),
+        swing_file = names(seg_list)[i],
+        t(fv), row.names = NULL, check.names = FALSE
+      )
+    }))
+  })
+  # stack all swings together in one big df
+  do.call(rbind, rows)
+}
+
+# now build the feat vecs on a per swing basis
+# important: since glmnet would struggle with different length predictors, and since
+# comparing a swing with beh type 1-5 is not apples2apples with a swing of 2-9, i'm going to need to entirely flesh out the fv's
+# hence, each feat vec is gonna be length 9x171
+# 9 is the # of clusters
+# 171 is the upper tri of the 18x18 cov mat
+
+# therefore, if a swing follows a 1-5 swing pattern:
+# it will have 171 nonzero values, followed by (3x171) 0s, 171 more nonzero vals, then (4x171) 0s
+# the 2-9 swing would have 0s, nonzeros, 0s, 0s, 0s, 0s, 0s, 0s, nonzeros
+
+make_block_X_by_swing <- function(cluster_pool_cov,
+                                  key_col     = "swing_file",
+                                  cluster_col = "cluster_id") {
+  # cov-only: these will be just V* columns
+  fv_cols <- grep("^(V)?[0-9]+$", names(cluster_pool_cov), value = TRUE)
+  levels  <- sort(unique(cluster_pool_cov[[cluster_col]]))  # actual cluster labels (e.g., 1..9)
+  K <- length(levels); p <- length(fv_cols)
+  
+  swings <- unique(cluster_pool_cov[[key_col]])
+  X <- matrix(0, nrow = length(swings), ncol = K * p)
+  rownames(X) <- basename(swings)
+  colnames(X) <- as.vector(outer(paste0("cid", levels, "_"), fv_cols, paste0))
+  
+  for (i in seq_along(swings)) {
+    sub <- cluster_pool_cov[ cluster_pool_cov[[key_col]] == swings[i], , drop = FALSE ]
+    if (!nrow(sub)) next
+    for (r in seq_len(nrow(sub))) {
+      j <- match(sub[[cluster_col]][r], levels)         # which cluster block
+      idx <- ((j - 1) * p + 1):(j * p)
+      X[i, idx] <- as.numeric(sub[r, fv_cols])
+    }
+  }
+  X
+}
+
+
+for (i in seq_len(nrow(seg_pool))) {
+  s <- seg_pool$swing_id[i]
+  k <- seg_pool$seg_id[i]
+  seg_list[[s]]$cluster_global[k] <- seg_pool$cluster_id[i]
+}
+
+cluster_pool <- pool_cluster_level(seg_list)
+View(cluster_pool)
+# glmnet lasso regression
+
+
+
+
+# first need to join with metadata
+# build one-row-per-swing design (cov-only, block by cluster)
+cluster_pool_cov <- cluster_pool   # (clarity)
+View(cluster_pool_cov)
+
+# remember that the fv's in the below matrix will look different from those in seg_pool by a factor of 0.8!
+# in seg pool there are scaled down to make way for the 0.2 * mean vals. Those won't exist here since we're keeping only the covs
+
+X_bySwing <- make_block_X_by_swing(cluster_pool_cov)
+View(X_bySwing)
+
+# outcomes & folds keyed by swing (basename)
+source("build_df_full.R")
+df_full <- build_df_full(
+  swing_dir = params$swing_dir,
+  handed    = params$handed,
+  meta_path = "/Users/ryangunther/Downloads/metadata(hitting).csv"
+)
+
+# need to intelligently join feat vecs/ files to correct exit velo / bat speed and user values
+
+df_full$key <- basename(df_full$file)
+
+exit_lookup <- setNames(df_full$exit_velo_mph_x,     df_full$key)
+bat_lookup  <- setNames(df_full$bat_speed_mph_max_x, df_full$key)
+user_lookup <- setNames(df_full$user,                df_full$key)
+
+swing_keys <- rownames(X_bySwing)
+head(swing_keys)
+y_ev  <- exit_lookup[swing_keys]
+y_bs  <- bat_lookup[swing_keys]
+user  <- user_lookup[swing_keys]
+
+ok <- complete.cases(y_ev, y_bs, user)
+ok
+X_bySwing <- X_bySwing[ok, , drop = FALSE]
+y_ev <- y_ev[ok]; y_bs <- y_bs[ok]; user <- user[ok]
+# don't want to let users bleed across training/testing sets. hence maintaining all swings from a unique user into one fold
+foldid <- as.integer(factor(user))
+
+
+# scale-only (no centering) so zeros stay zero (could allow centering as it's functionally the same, but it's visual much more difficult to see which behaviours a feat vec contains)
+sds <- apply(X_bySwing, 2, sd, na.rm = TRUE)
+sds[!is.finite(sds) | sds == 0] <- 1    # guard
+
+X_scale_only <- sweep(X_bySwing, 2, sds, "/")
+View(X_scale_only)
+set.seed(2025)
+
+cv_ev <- cv.glmnet(X_scale_only, y_ev, alpha = 1,
+                   foldid = foldid, standardize = FALSE)
+cv_bs <- cv.glmnet(X_scale_only, y_bs, alpha = 1,
+                   foldid = foldid, standardize = FALSE)
+
+cat("Exit-velo RMSE:", round(sqrt(min(cv_ev$cvm)), 2), "\n")
+cat("Bat-speed RMSE:", round(sqrt(min(cv_bs$cvm)), 2), "\n")
+
+cv_ev
+cv_bs
+
+# fv's not useful for predicting exit velo but there are other factors at play like contact quality (as in topping/bottoming the ball) that wouldn't be accounted for here
+
+# biggest takeaway is that there are more efficient and less efficient ways to move, which are captured in the covariance structure of a dimensionality-reduced dataset!
+
+
+# checking SD across folds
+K <- 5   # number of CV folds used
+
+## at lambda.min
+j_min <- which(cv_bs$lambda == cv_bs$lambda.min)
+sd_min <- cv_bs$cvsd[j_min] * sqrt(K)
+
+## at lambda.1se
+j_1se <- which(cv_bs$lambda == cv_bs$lambda.1se)
+sd_1se <- cv_bs$cvsd[j_1se] * sqrt(K)
+
+cat("SD across folds @lambda.min:", sd_min, "\n")
+cat("SD across folds @lambda.1se:", sd_1se, "\n")
+```
+
+================================================================================
+[12] CALL: WebFetch https://raw.githubusercontent.com/RyanGunther/Masters-Thesis-Baseball-Biomech-Data/main/DimensionalityReductionBiomechData.R
+================================================================================
+# Complete R Script: Motion Capture Data Segmentation
+
+```r
+# motion capture data segmentation technique
+# the goal of this code is to take markered mocap data provided by Driveline's open biomechanics project and complete dimensionality reduction on it
+# this means to take the lengthy 810x165 time-series dataset (that's only one swing of approx 800!) and extract as much information as possible from it, while also reducing it as much as possible
+# I want to do this so the data can be more easily understood (which features are most important?) and for ease of modelling
+# most mocap data is heavily redundant (there are 10 markers on the bat alone) so doing this cleanly is of massive importance
+
+# The techniques used in this code are based off of Liu et al, 2006, with more in-depth descriptions of the methods provided by Barbic et al, 2004
+# the data can be found here: https://github.com/drivelineresearch/openbiomechanics/tree/main/baseball_hitting
+
+# An overview of the method:
+# First, I will perform principal feature analysis (PFA) on the full dataset, by completing a Principal Component Analysis (PCA), then performing a k means clustering wherein the features
+# that eventually get selected appropriately cover all clusters used, while having the most coverage and least avg distance to the cluster centers
+
+# testing fully through with a single swing first
+hit080_10 <- read.csv("/Users/ryangunther/Downloads/000080_282.csv")
+# 080 is the hitter's unique player ID
+# 10 is swing number ten in the session
+View(hit080_10)
+str(hit080_10)
+
+### (added at the end. first pass was only on one swing) tie multiple swings from the same hitter together and determine if the funcs still work well ----
+hit080_01 <- read.csv("/Users/ryangunther/Downloads/hit080_01.csv")
+hit080_02 <- read.csv("/Users/ryangunther/Downloads/hit080_02.csv")
+hit080_04 <- read.csv("/Users/ryangunther/Downloads/hit080_04.csv")
+hit080_06 <- read.csv("/Users/ryangunther/Downloads/hit080_06.csv")
+concat_df_080 <- rbind(hit080_10,hit080_01, hit080_02, hit080_04, hit080_06)
+View(concat_df_080)
+
+
+
+# important to note that the global "0" points in the dataset are: ----
+# z: the ground
+# y: the edge of home plate closest to the RH batter's box
+# x: the front of home plate
+# time series data points are in metres from those 0 points
+# pos x is towards pitcher's mound
+# pos y is towards RHB box
+# pos z is up towards the sky
+
+
+
+# perform PFA on the dataset ----
+# originally used only hit080_10 in the next line, changed to concat_df_080 (matrix of multiple rbind'ed swings) later on
+Y  <- as.matrix(concat_df_080)
+Yc <- scale(Y, center=TRUE, scale=FALSE)
+View(Yc)
+covY <- cov(Yc)
+covY
+# below should be the principal components
+eig <- eigen(covY)
+# below should be the var explained by each principal component
+lambda <- eig$values
+lambda # they're already ranked in order of most variance explained
+V <- eig$vectors # principal directions that the data will be projected/rotated onto
+
+# find the ones that explain the most var
+cumvar <- cumsum(lambda) / sum(lambda) #calculate cum var explained
+cumvar
+q <- which(cumvar >= .99)[1]
+q
+Aq <- V[, 1:q] # select the first q PCs
+Aq            # 165 x q mat
+
+rownames(Aq) <- colnames(Y)
+
+W <- abs(Aq)
+View(W)
+# (12 clusters on the concat matrix since 10 PCs):
+K <- q + 2
+
+# now begins the k means portion where I am determining which components have the most coverage and least distance from the cluster centers
+set.seed(42)
+km <- kmeans(W, centers = K, nstart = 150)
+km
+clust <- km$cluster
+centers <- km$centers
+
+
+feat_names <- rownames(Aq)
+feat_mark <- sub("_[XYZ]$", "", feat_names)
+
+
+# distance to centroid of each cluster (used as tiebreaker)
+dists <- rowSums((W - centers[clust, ])^2)
+
+# prepare empty DF
+markers <- unique(feat_mark)
+marker_info <- data.frame(
+  marker = markers,
+  cover_count = integer(length(markers)),
+  total_dist = numeric(length(markers)),
+  stringsAsFactors = FALSE
+)
+
+# fill in DF with clusters participated in and total distance to their centroids, then work backwards deleting the least important row of this df until I reach a minimum dataset
+for (i in seq_along(markers)) {
+  m <- markers[i]
+  idxs <- which(feat_mark == m)
+  cls <- unique(clust[idxs])
+  marker_info$cover_count[i] <- length(cls)
+  marker_info$total_dist[i] <- sum(dists[idxs])
+}
+View(marker_info)
+# now have a table showing how many clusters a marker appears in (max 3 because 3 dimensions (x,y,z)) and the total dist to centroid
+# sorting this provides the most useful markers per the text:
+
+# "a marker that appears in more distinct clusters is considered to be more
+# important. To break ties between markers, we prefer those whose
+# sum of the square distances from the marker's features to their
+# cluster mean is minimal."
+
+
+
+# sort by least important
+marker_info <- marker_info[order(marker_info$cover_count, -marker_info$total_dist), ]
+marker_info
+
+
+
+# Q: why does it drop markers that are "more useful" than the final kept ones?
+# A: because each cluster needs at least one representative
+all_clusters <- sort(unique(clust))
+keep <- marker_info$marker
+
+for (m in marker_info$marker) {
+  cand <- setdiff(keep, m)
+  # below: check if each cluster still has >= 1 rep
+  covered <- sort(unique(unlist(
+    lapply(cand, function(x) unique(clust[feat_mark == x]))
+  )))
+  # if all still covered, candidate list becomes new keep list, continue loop
+  if (identical(covered, all_clusters)) keep <- cand
+}
+
+principal_markers <- keep
+principal_markers
+str(principal_markers)
+# goal is stated as:
+# "We continue removing the least important markers as
+# long as every cluster is still covered. This process is repeated until
+# no more markers can be eliminated. "
+
+# Hence the list of just 6 markers
+# and the selected 6 not aligning with the top of marker_info leaderboard
+
+# "Marker5" "RWRA"    "RMKNE"   "LANK"    "LASI"    "Marker4" are the 6 PFAs that cover all 12 clusters 
+# in laymen's terms, these are the Right wrist, Right inner knee, Left ankle, front of Left hip, and two markers on the bat
+# this link has a photo of every marker on the body with their labels: https://github.com/drivelineresearch/openbiomechanics/tree/main/baseball_hitting
+# also view a different set of code on my github ("quick 2d view") to quickly visualize all the markers in the x and z dimensions with special labels for these principal markers
+
+
+
+### Section 3.2 - Piecewise Linear Modeling ----
+# attempt to replicate manual ppca method from barbic et al
+
+# retained 6 markers x 3 dims each = 18 features
+# I now have the reduced dataset. I am going to complete probabilistic PCA (PPCA) on it
+# this means that of the 18 features remaining (x,y,z components of 6 principal markers), perform singular value decomposition (SVD) 
+# and then again order by variance explained. Some markers (enough to get over a variance explained threshold "tau" are retained as the relevant dimensions moving forward within ppca)
+# the additional dimensions (nonrelevant/"out group") are treated as isotropic ("same in all directions") Gaussian noise
+# the goal here is to find the var explained "over and above" the isotropic noise level in the data
+# hence why we see the line Λ_r <- pmax(λ[1:r] - σ2, 0) below, we are subtracting the noise from the relevant dimensions
+
+xyz_cols <- unlist(lapply(principal_markers, function(m) {
+  paste0(m, c("_X","_Y","_Z"))
+}))
+reduced_mat <- concat_df_080[, xyz_cols]
+View(reduced_mat)
+
+
+# ppca func to run on an already reduced dataset, in this case reduced_mat
+compute_PPCA_C <- function(data_mat, tau = 0.90) {
+  n <- nrow(data_mat); p <- ncol(data_mat)
+  mu <- colMeans(data_mat)
+  D <- data_mat - matrix(mu, n, p, byrow = TRUE)
+  
+  # singular value decomp portion (for more info see this link: https://www.geeksforgeeks.org/machine-learning/singular-value-decomposition-svd/)
+  sv <- svd(D); Σ <- sv$d; V <- sv$v
+  λ <- numeric(p); λ[1:length(Σ)] <- Σ^2 / (n - 1)
+  
+  # compare variance explained to tau, this generates the "in crowd" which will be the signal
+  # remaining few markers are the isotropic noise
+  # determine signal "over and above" mean noise by subtracting in line 193
+  cumv <- cumsum(λ) / sum(λ)
+  idx <- which(cumv >= tau)
+  r <- if (length(idx) == 0) p else idx[1]
+  
+  σ2 <- if (r < p) mean(λ[(r + 1):p]) else 0
+  V_r <- V[, 1:r, drop = FALSE]
+  
+  # guard against negative inside sqrt
+  # subtract the noise
+  Λ_r <- pmax(λ[1:r] - σ2, 0)
+  W <- V_r %*% diag(sqrt(Λ_r), r, r)
+  C <- W %*% t(W) + σ2 * diag(p)
+  list(mu = mu, C = C)
+}
+
+
+### now "slide the window" to begin building local linear models ----
+# this next section involves training an algorithm to use the function above, which determines avg covariances across some number of rows, and implement it on only a subset of the rows of the data
+# (we will only be using the most reduced dataset in these calculations i.e. taking the product of ppca above)
+# the model trains on the first K (50 for now) frames, and determines an avg cov matrix for those frames
+# 50 frames while recording at 360 Hz is 5/36 of one second, the full dataset for an average swing by this hitter is 800 frames or roughly 2.25 seconds
+# after training, the algo "looks ahead" at the next T (25 for now) frames to determine if the next set is "different enough" beyond a certain threshold to be considered a separate motion type
+# if yes, the algorithm splits into segments. If not, it adds delta (5 as of now) frames to its training set, learns the avg cov mat for that, and repeats
+# this nets entirely data-driven segments of the swing
+
+
+N <- nrow(reduced_mat)
+N
+break_pts <- c()
+# recall from barbic et al that Mahalanobis distance is calculated as such:
+# 1/T summation t(xi-xbar) %*% solve(C) %*% (xi-xbar)
+
+# Mahalanobis dist (H) is measuring in units of SD how far the distribution of
+# K+1 to K+T changes relative to 1 to K
+
+detect_ppca_cuts <- function(reduced_mat,
+                             K     = 50,
+                             T     = 25,
+                             delta = 5,
+                             tau   = 0.95,
+                             q     = 0.99) {
+  
+  # have to have everything in matrix form for future matrix mult
+  reduced_mat <- as.matrix(reduced_mat)
+  storage.mode(reduced_mat) <- "double"
+  
+  N <- nrow(reduced_mat)
+  p <- ncol(reduced_mat)
+  
+  # set chisq threshold of avg mahalanobis dist
+  infl <-1000
+  chi_thresh <- infl * qchisq(q, df = T * p) / T
+  
+  # first frame after a cut is always the start of a new segment, which now as of last updates, starts training at 0 after a cut instead of retaining the existing learned data
+  cuts <- 1L   
+  s <- 1L
+  
+  while (s + K + T - 1 <= N) {
+    
+    # run ppca calc on training block. starts at first 50 frames, tests on 25, if no need for a cut, advances training block by delta, tries again
+    seg <- reduced_mat[s:(s+K-1), , drop = FALSE]
+    ppca <- compute_PPCA_C(seg, tau)
+    mu <- ppca$mu
+    Cinv <- solve(ppca$C)
+    
+    # test on testing block of 25 frames
+    probe <- reduced_mat[(s+K):(s+K+T-1), , drop = FALSE]
+    diffs <- sweep(probe, 2, mu)
+    H_vals <- rowSums((diffs %*% Cinv) * diffs)
+    H_avg <- mean(H_vals)
+    
+    # cut or add delta and try again
+    if (H_avg > chi_thresh) {
+      cut_pt <- s + K
+      cuts <- c(cuts, cut_pt)
+      s <- cut_pt
+    } else {
+      s <- s + delta
+    }
+  }
+  # add a cut at the very end to close the final segment
+  c(cuts, N + 1L)
+}
+
+forward_breaks <- detect_ppca_cuts(reduced_mat)
+forward_breaks
+### IMPORTANT:
+# going from one swing's dataset to the next occur at 811, 1621, 2393, 3266
+# concat df had breaks at 1  561  791 1381 1606 2141 2366 3046 3246 4001 4240
+# since the testing window is 25 frames, any cut that is within 25 frames of 811, 1621, 2393, 3266 is properly cutting between datasets
+
+# every break is completely in line with expectations except one:
+# 1 = beginning
+# 561 = rotational portion of 1st swing
+# 791 = changing from first to second swing
+# 1381 = rotational portion of second swing
+# 1606 = changing from second swing to third
+# 2141 = rotational portion of third swing
+#########  2366 - oddly enough the test portion of this window ends 2 frames before the break from third to 4th swing*** ###
+######### (2366+25=2391 but break is at 2393****) ###
+# 3046 = rotational portion of 4th swing
+# 3246 = changing from 4th swing to 5th
+# 4001 = rotational portion of 5th swing
+# 4240 ending
+
+# tricky swing in question has about 55 swings of recoil, perhaps that's the problem, need to compare to other swing recoils
+# first swing recoil looks to be 43 frames
+# second swing recoil looks to be 35 frames
+# third swing is the mystery
+# fourth swing recoil is 0-2 frames at most
+# fifth and final swing recoil is 32 frames
+
+# this might actually be a correctly segmented break going the opposite direction (recoil) than the normal swing
+
+
+
+
+### sliding the window backwards ----
+# sometimes the motion at the beginning of the sequence is very stable and the end is very full of movement
+# hence to avoid training on edge cases run the same algorithm but in reverse
+rev_breaks <- c()
+
+# reverse version of window slide to make cuts:
+
+detect_ppca_cuts_backward <- function(reduced_mat,
+                                      K      = 50,   # training length
+                                      T      = 25,   # testing length
+                                      delta  = 5,
+                                      tau    = 0.95,
+                                      q      = 0.99,
+                                      infl   = 1000)
+{
+  # ensure matrix form
+  reduced_mat <- as.matrix(concat_df_080)
+  storage.mode(reduced_mat) <- "double"
+  
+  N <- nrow(reduced_mat)
+  p <- ncol(reduced_mat)
+  
+  # chi sq thresh for avg mahalanobis dist
+  chi_thresh <- infl * qchisq(q, df = T * p) / T
+  
+  # beginning point of reverse which is really the end point of the data
+  cuts <- N + 1L      
+  e <- N
+  
+  while (e - K - T + 1 >= 1) {
+    
+    # ppca on the last K frames of the current segment
+    seg_idx <- (e - K + 1):e
+    seg <- reduced_mat[seg_idx, , drop = FALSE]
+    ppca <- compute_PPCA_C(seg, tau)
+    mu <- ppca$mu
+    Cinv <- solve(ppca$C)
+    
+    # testing forward the next T frames
+    probe_idx <- (e - K - T + 1):(e - K)
+    probe <- reduced_mat[probe_idx, , drop = FALSE]
+    diffs <- sweep(probe, 2, mu)
+    H_vals <- rowSums((diffs %*% Cinv) * diffs)
+    H_avg <- mean(H_vals)
+    
+    # determine segment break or add delta and re-iterate
+    if (H_avg > chi_thresh) {
+      cut_pt <- e - K
+      cuts <- c(cuts, cut_pt)
+      e <- cut_pt
+    } else {
+      e <- e - delta
+    }
+  }
+  # add frame number 1 to the cuts to close the last (first in real terms) segment
+  c(cuts, 1L)
+}
+
+
+rev_breaks <- detect_ppca_cuts_backward()
+rev_breaks
+
+# the reverse window sliding function cuts at a subset of all the same spots as the forward version
+# numbers won't align perfectly since forward cut will happen 1-25 frames BEFORE the true break, and reverse will happen 1-25 frames AFTER
+
+### commenting this part out, since the cuts aren't at identical spots, they're on opposite sides of the true break, but do show the same behaviour
+# reverse is essentially functioning as a sanity check
+## combine forward and backward cuts, de-duplicate, sort
+# all_breaks <- sort(unique(c(1, break_pts, rev_break)))
+# adding a few as a test run
+# all_breaks <- sort(unique(c(461,711,251, all_breaks)))
+# all_breaks
+
+
+### for tomorrow: ----
+
+### June 13 early morning update
+# ppca func is now splitting properly
+# need to give more thought to tau
+# K, T, delta in a good place right now
+# T is pretty small so it can pick up miniscule motions (the whole swing is usually about 40 frames so this is necessary)
+
+
+# segmenting, feature vectors, PCA, k means clustering ----
+
+# determine largest eucl. dist of points in a cluster to its centroid
+
+# writing the code so that the feature vectors enter the divisive splitting algorithm, if their dist from means is greater than tol, run k means clustering with k=2
+# this will separate the fv's into smaller bundles to then be tested again to see if they are similar enough to become a leaf or need to split further
+# this concept would make more sense if the motion data repeating similar motions over and over, in practice, in a baseball swing, very few segments will get bundled unless tau for ppca is tuned very low and we have many segments of similar motions
+# if <= 2 FV's in the current bundle, the below func just computes euclid. dist between the scaled feature vectors and determines if they are within or beyond the tolerance level
+divisive_split_idx <- function(x, tol, ids, depth = 0) {
+  x <- as.matrix(x)
+  n <- nrow(x)
+  cen <- colMeans(x)
+  
+  # 1-point leaf: just make a leaf
+  if (n == 1) {
+    spread <- 0
+    cat(strrep("  ", depth),
+        "depth=", depth, "  n=1  spread=", sprintf("%.3f\n", spread), sep = "")
+    cat(strrep("  ", depth+1), "→ leaf\n", sep = "")
+    return(list(ids))
+  }
+  
+  # 2-point: compare euclid dist from one fv to mean of both, if dist > tol, split into 2 separate 1 FV leaves, if < tol, 2 FV's in same leaf
+  if (n == 2) {
+    spread <- sqrt(sum((x[1,] - cen)^2))
+    cat(strrep("  ", depth),
+        "depth=", depth, "  n=2  spread=", sprintf("%.3f\n", spread), sep = "")
+    
+    if (spread > tol) {
+      # split into two singles
+      return(list(ids[1], ids[2]))
+    } else {
+      cat(strrep("  ", depth+1),
+          sprintf("→ 2-row leaf (spread = %.3f)\n", spread), sep = "")
+      return(list(ids))
+    }
+  }
+  
+  # general case: n > 2
+  # compare dist from furthest fv to mean of all within that bundle, if > tol, run kmeans clustering with nstart=100, split into bundles along kmeans clustering lines
+  dists <- sqrt(rowSums((x - matrix(cen, n, ncol(x), byrow=TRUE))^2))
+  spread <- max(dists)
+  cat(strrep("  ", depth),
+      "depth=", depth, "  n=", n, "  spread=", sprintf("%.3f\n", spread), "\n", sep = "")
+  
+  if (spread > tol) {
+    km <- kmeans(x, centers = 2, nstart = 100)
+    out <- list()
+    for (cl in 1:2) {
+      sel <- which(km$cluster == cl)
+      out <- c(
+        out,
+        divisive_split_idx(x[sel, , drop=FALSE],
+                           tol,
+                           ids[sel],
+                           depth + 1)
+      )
+    }
+    return(out)
+  } else {
+    cat(strrep("  ", depth+1), "→ leaf\n", sep = "")
+    return(list(ids))
+  }
+}
+
+
+# determine avg cov and mu for each segment, assemble feature vecs
+# (feature vectors will be # of segments columns x 189 rows) because the covariance matrices are 18x18
+# the 189 rows are composed of 171 variances or covariances, pulled from the upper triang of each cov mat, and 18 column means 171+18=189
+seg_models <- lapply(seq_len(length(forward_breaks) - 1), function(j) {
+  idx <- forward_breaks[j]:(forward_breaks[j + 1] - 1)
+  compute_PPCA_C(reduced_mat[idx, ], tau = 0.75)
+})
+
+# assemble feature vector as per f = [wvT, (1-w)µT]T
+# "difference in distribution between the segments is mainly due to the covariance matrix."
+# "Mean vector has very little impact"
+w <- 0.8
+p <- ncol(reduced_mat)
+
+
+
+feature_mat <- t(vapply(seg_models, function(m) {
+  v <- m$C[upper.tri(m$C, diag = TRUE)]
+  # total length p(p+3)/2 = 189
+  c(w * v, (1 - w) * m$mu)
+}, numeric(p * (p + 3) / 2)))
+# calling feature_mat should emit (len(forward_breaks)-1) rows of 189 col vectors
+# first 171 cols are all the variances and covariances with the segment
+# final 18 figures are the within segment means of each feature
+str(feature_mat)
+
+# if <=2 segments, skip kmeans clustering, since they don't add any value
+# if 3+ segments, complete PCA and kmeans clustering:
+
+set.seed(1)
+tol <- 10
+
+# center and scale, apply PCA
+pca_out <- prcomp(feature_mat, center = TRUE, scale. = TRUE)
+
+var_explained <- cumsum(pca_out$sdev^2) / sum(pca_out$sdev^2)
+var_explained
+k95 <- which(var_explained >= 0.95)[1]
+k95
+cat("Retaining", k95, "PCs (", round(var_explained[k95]*100,1), "% of variance)\n")
+reduced_mat95 <- pca_out$x[, 1:k95, drop = FALSE]
+reduced_mat95
+# should produce "segments" number of rows x "retained PCs" number of columns
+
+n_seg <- nrow(reduced_mat95)
+n_seg
+ids <- seq_len(n_seg)
+# if only 1 segment (no breaks in the motion), that piece is the only feature vector to describe the motion
+# if 2 segments, calc the euclid dist and compare to tolerance level
+
+behaviour_label <- divisive_split_idx(x = reduced_mat95, tol = tol, ids = ids, depth = 0)
+print(behaviour_label)
+
+# incredible result. Worked spectacularly, algorithm is grouping all the rotational portions of the swings together, 
+# and all the "transition from end swing X - beginning swing Y" portions together
+# except swing 1 which is fine
+# really really successful result
+
+
+
+### motion reconstruction ----
+
+keep_cols <- unlist(lapply(principal_markers, function(m) {
+  grep(paste0("^", m, "_"), colnames(concat_df_080))
+}))
+keep_cols
+# 3. Build X and Z directly on the ORIGINAL (frames × vars) matrix:
+X <- concat_df_080[, keep_cols, drop = FALSE]
+Z <- concat_df_080[, -keep_cols, drop = FALSE]
+X
+str(Z)
+
+
+# set each segment and frame within that segment to a cluster ID
+# for segments:
+seg_cluster_id <- integer(n_seg)
+seg_cluster_id
+
+for (cluster_i in seq_along(behaviour_label)) {
+  segs <- behaviour_label[[cluster_i]]
+  seg_cluster_id[segs] <- cluster_i
+}
+segs # not like the tiktok term :p
+seg_cluster_id
+
+# for frames:
+n_frames <- nrow(concat_df_080)
+model_id <- integer(n_frames)
+model_id
+
+for (j in seq_len(n_seg)) {
+  fr <- forward_breaks[j]:(forward_breaks[j+1] - 1)
+  model_id[fr] <- seg_cluster_id[j]
+}
+fr
+model_id
+
+# constructing B
+other_cols <- setdiff(seq_len(ncol(concat_df_080)), keep_cols)
+cluster_frames <- split(seq_len(nrow(concat_df_080)), model_id)
+cluster_frames
+
+Bs <- vector("list", length(cluster_frames))
+mu_x_lst <- vector("list", length(cluster_frames))
+mu_z_lst <- vector("list", length(cluster_frames))
+
+
+for (cid in seq_along(cluster_frames)) {
+  fr <- cluster_frames[[cid]]
+  
+  # pull cluster-specific blocks and transpose so rows = coords, cols = frames
+  Xc <- t(as.matrix(X[fr, , drop = FALSE]))   # (3k) × n_f
+  Zc <- t(as.matrix(Z[fr, , drop = FALSE]))   # 3(m−k) × n_f
+  
+  mu_x <- rowMeans(Xc);  mu_z <- rowMeans(Zc)
+  Xc   <- sweep(Xc, 1, mu_x, "-")
+  Zc   <- sweep(Zc, 1, mu_z, "-")
+  
+  # have to consider what to do if mat is non-invertible
+  XtX  <- Xc %*% t(Xc)
+  
+  Bs[[cid]]       <- Zc %*% t(Xc) %*% solve(XtX)
+  mu_x_lst[[cid]] <- mu_x
+  mu_z_lst[[cid]] <- mu_z
+}
+
+# display the weights that will be used for blind reconstruction later
+Bs
+# looks great
+
+# reconstruct this swing:
+
+reconstructed <- matrix(NA_real_, nrow = nrow(concat_df_080), ncol = ncol(concat_df_080))
+reconstructed
+
+
+for (f in seq_len(nrow(concat_df_080))) {
+  cid <- model_id[f]
+  xf <- as.numeric(concat_df_080[f, keep_cols ])
+  zhat <- Bs[[cid]] %*% (xf - mu_x_lst[[cid]]) + mu_z_lst[[cid]]
+  
+  full <- numeric(ncol(concat_df_080))
+  full[ keep_cols ] <- xf
+  full[ other_cols ] <- zhat
+  reconstructed[f, ] <- full
+}
+
+colnames(reconstructed) <- colnames(concat_df_080)
+View(reconstructed)
+View(concat_df_080)
+# room for improvement: get detect_ppca_cuts to cut exactly at the frame that violates tau instead of at s+K (minor change)
+# investigate further the one recoil segment, although spent lots of time on it and it seems to be a legitimate motion on its own
+```
+
+================================================================================
+[13] CALL: WebFetch https://raw.githubusercontent.com/RyanGunther/Computer-Vision-Baseball-Academic-/main/SegmentationTraining09_2025.ipynb
+================================================================================
+# Complete Jupyter Notebook Contents
+
+## Cell 1: Initial Comments
+```python
+# main training code for my video segmentation project, that will eventually lean on "Human Motion Recognition
+# Using Isomap and Dynamic Time Warping" by Blackburn and Ribeiro to use the silhouettes/masks for dimensionality reduction purposes in biomechanics
+
+# will likely be updated further for iterative training, and possibly 3d capability
+
+# if interested in preparing your own project of this type, you will need to build a dataset
+# my recommendation for building an image or video dataset is cvat.ai, where you can manually draw polygons and then download the masks
+# use a different script in this same Github repo to convert your masks to .txt coordinate files and train from those + the natural PNGs
+
+# this youtube creator has an excellent tutorial on this and all things computer vision:
+# https://www.youtube.com/watch?v=aVKGjzAUHz0&list=PLb49csYFtO2HAdNGChGzohFJGnJnXBOqd
+
+# Ryan Gunther
+# Brock University MSc in Statistics
+# written in 2025
+# my bluesky account: https://bsky.app/profile/ryangunther1.bsky.social
+
+# seeking jobs in data science and professional baseball
+```
+
+## Cell 2: Mount Google Drive
+```python
+from google.colab import drive
+drive.mount('/content/drive')
+```
+
+## Cell 3: Dataset Verification
+```python
+# create data.yaml file for yolo to read and understand the structure of my folders
+# should output roughly a 70-20-10 training / val / testing split
+import os, glob
+
+DATASET_DIR = "/content/drive/MyDrive/BaseballCV/Segmentation_training_2"
+DATA = os.path.join(DATASET_DIR, "data.yaml")
+
+assert os.path.exists(DATA), f"data.yaml not found at {DATA}"
+
+print("Using dataset:", DATASET_DIR)
+
+# quick counts of images/labels per split
+for split in ["train","val","test"]:
+    img_count = len(glob.glob(os.path.join(DATASET_DIR, "images", split, "*.png")))
+    lbl_count = len(glob.glob(os.path.join(DATASET_DIR, "labels", split, "*.txt")))
+    print(f"{split:5s} images={img_count:3d}  labels={lbl_count:3d}")
+```
+
+## Cell 4: Model Training
+```python
+# train! (use Colab and free GPU access, or 150 epochs will never end)
+!pip -q install ultralytics
+
+from ultralytics import YOLO
+import torch, os
+# directory for my dataset:
+DATASET_DIR = "/content/drive/MyDrive/BaseballCV/Segmentation_training_2"
+
+# referencing the above data file
+fixed_yaml = f"""path: {DATASET_DIR}
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: hitter
+"""
+
+with open("/content/data_fixed.yaml", "w") as f:
+    f.write(fixed_yaml)
+
+from ultralytics import YOLO
+model = YOLO("yolov8n-seg.pt")
+model.train(
+    data="/content/data_fixed.yaml",
+    imgsz=960, # bigger seems to be better generally, but also would take more time to train
+    epochs=150,
+    batch=16,
+    patience=25, # this is basically saying "if there's no improvement for 25 straight epochs, kill the training early
+    pretrained=True,
+    device=0,
+    project="/content/drive/MyDrive/yolo_runs",
+    name="hitter_seg"
+)
+```
+
+## Cell 5: Video Prediction
+```python
+# testing on unseen video footage
+
+from ultralytics import YOLO
+model = YOLO("/content/drive/MyDrive/yolo_runs/hitter_seg2/weights/best.pt")
+
+model.predict(
+    source="/content/bogaerts_testing_recode.mp4",
+    imgsz=960,
+    conf=0.5,       # baseline confidence required to identify a player
+    iou=0.6,
+    augment=True,
+    save=True, save_txt=True, device=0, max_det=5
+)
+```
+
+## Cell 6: Video Validation
+```python
+# check if the video can be read properly - I had some issues with incorrect .mp4 types
+# will read False if video is not being read correctly
+import cv2
+cap = cv2.VideoCapture("/content/bogaerts_testing_recode.mp4")
+ok, frame = cap.read()
+print("Frame read:", ok, "shape:" if ok else "", None if not ok else frame.shape)
+cap.release()
+```
+
+## Cell 7: Video Conversion
+```python
+# not necessarily required every time, but if above reads False, this will convert to a suitable .mp4 type if video is not working properly
+!ffmpeg -y -i "/content/drive/MyDrive/BaseballCV/bogaerts_testing_clip.mp4" \
+  -c:v libx264 -preset fast -crf 20 -c:a aac \
+  "/content/bogaerts_testing_recode.mp4"
+```
+
+## Cell 8: Frame Extraction
+```python
+# not necessary but I used this to grab a 10fps sample of new video to throw it into my training set. Hence the first testing run I did was on a 20 annotated/ 100 unseen frames video of Bogaerts
+# sample 10 fps to train quickly (used this to grab a random sample of frames of the first bogaerts video)
+# eventually tested on completely unseen
+
+!mkdir -p /content/new_swing_frames
+!ffmpeg -y -i /content/bogaerts_recode.mp4 -vf "fps=10" /content/new_swing_frames/%06d.png
+```
+
+## Cell 9: Download Frames
+```python
+# zip the 20 sampled pngs (10 fps * 2 secs) and download them
+!zip -r /content/new_swing_frames.zip /content/new_swing_frames
+
+from google.colab import files
+files.download("/content/new_swing_frames.zip")
+```
+
+## Cell 10: Iterative Training
+```python
+#### not really using this at the moment but it can be used to update training instead of starting again
+
+# tack on updated training including the new 20 Xander bogaerts frames to see if that can predict on the remaining xander frames
+
+!pip -q install ultralytics
+from ultralytics import YOLO
+
+BEST = "/content/drive/MyDrive/yolo_runs/hitter_seg2/weights/best.pt"
+DATA = "/content/drive/MyDrive/BaseballCV/Segmentation_training_clean/data.yaml"
+
+model = YOLO(BEST)
+
+model.train(
+    data=DATA,
+    imgsz=960,
+    epochs=40,
+    batch=16,
+    lr0=5e-4,
+    patience=12,
+    device=0,
+    project="/content/drive/MyDrive/yolo_runs",
+    name="hitter_seg_adapt"
+)
+```
+
+================================================================================
+[14] CALL: WebFetch https://raw.githubusercontent.com/RyanGunther/Computer-Vision-Baseball-Academic-/main/A_download_and_click.py
+================================================================================
+# Complete Python Script Contents
+
+```python
+# this script will download clips from youtube and package them in such a way to upload to my colab script, run propogation, colour code, and isomap
+
+"""
+local stage for CV pipeline (minimal version)
+1: download YT clip section via yt-dlp with descriptive name
+2: re-encode to OpenCV-friendly mp4
+3: contact-sheet preview to choose frames to label
+4: interactive clicking for selected frames
+5: save JSON + contact sheet + fixed video into zip
+
+usage:
+  python3 A_download_and_click.py config.json
+  python3 A_download_and_click.py config.json --mode drift --frames 70 78 82
+  python3 A_download_and_click.py config.json --force --preview-stride 10
+"""
+
+import argparse, json, os, re, shutil, subprocess, sys, textwrap, zipfile
+from pathlib import Path
+
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+from PIL import Image
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+BASE_OUT_DIR = SCRIPT_DIR / "isomap_pipeline" / "outputs"
+CONTACT_SHEET_NAME = "contact_sheet.jpg"
+
+
+# helper funcs
+def req_tool(name: str):
+    if shutil.which(name) is None:  
+        sys.exit(f"tool not found in path {name}")
+
+
+def timestr_to_tag(t: str) -> str:
+    m = re.match(r"^(\d{2}):(\d{2})(?::\d{2})?$", t) or re.match(r"^(\d{2}):(\d{2}):\d{2}$", t)
+    if not m:
+        parts = t.split(":")
+        if len(parts) >= 2 and len(parts[0]) == 2 and len(parts[1]) == 2:
+            return f"{parts[0]}-{parts[1]}"
+        return t.replace(":", "-")
+    hh, mm = m.group(1), m.group(2)
+    return f"{hh}-{mm}"
+
+
+def safe_slug(s: str) -> str:
+    return re.sub(r"[^A-Za-z0-9_-]+", "_", s.strip())
+
+
+def run(cmd: list, cwd: Path | None = None):
+    subprocess.run(cmd, check=True, cwd=cwd)
+
+
+def make_contact_sheet(frames: list[np.ndarray], stride: int, out_path: Path, max_cols: int = 12):
+    sampled = list(range(0, len(frames), max(1, stride)))
+    if not sampled:
+        sampled = [0]
+    thumbs = [frames[i] for i in sampled]
+
+    n = len(thumbs)
+    cols = min(max_cols, n)
+    rows = int(np.ceil(n / cols))
+    h, w, _ = thumbs[0].shape
+    gap = 4
+    sheet = np.ones(((h + gap) * rows - gap, (w + gap) * cols - gap, 3), dtype=np.uint8) * 255
+
+    for idx, img in enumerate(thumbs):
+        r, c = divmod(idx, cols)
+        y0 = r * (h + gap)
+        x0 = c * (w + gap)
+        sheet[y0:y0 + h, x0:x0 + w] = img
+        disp_idx = sampled[idx]
+        cv2.putText(sheet, str(disp_idx), (x0 + 8, y0 + 28),
+                    cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 0, 0), 2, cv2.LINE_AA)
+
+    Image.fromarray(sheet).save(out_path)
+    return sampled
+
+
+def load_video_frames(video_path: Path, resize: tuple[int, int] | None):
+    cap = cv2.VideoCapture(str(video_path))
+    frames, indices = [], []
+    i = 0
+    while True:
+        ok, frame = cap.read()
+        if not ok:
+            break
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        if resize:
+            frame = cv2.resize(frame, resize)
+        frames.append(frame)
+        indices.append(i)
+        i += 1
+    cap.release()
+    return frames, indices
+
+
+def interactive_click(frames: list[np.ndarray], frame_indices: list[int]) -> dict:
+    plt.ion()
+    all_points = {}
+    for frame_idx in frame_indices:
+        fig, ax = plt.subplots(figsize=(10, 10))
+        img = frames[frame_idx].copy()
+        ax.imshow(img)
+        ax.set_title(f"Frame {frame_idx}: left=positive, right=negative. hit X when done")
+        ax.set_xlabel("X")
+        ax.set_ylabel("Y")
+        pos, neg = [], []
+
+        def onclick(event):
+            if event.xdata is None or event.ydata is None:
+                return
+            x, y = float(event.xdata), float(event.ydata)
+            if event.button == 1:
+                pos.append([x, y])
+                ax.scatter(x, y, c="lime", s=80, edgecolor="black", linewidth=1.2)
+            elif event.button == 3:
+                neg.append([x, y])
+                ax.scatter(x, y, c="red", s=80, edgecolor="black", linewidth=1.2)
+            fig.canvas.draw_idle()
+
+        cid = fig.canvas.mpl_connect("button_press_event", onclick)
+        plt.show(block=True)
+        plt.close(fig)
+        fig.canvas.mpl_disconnect(cid)
+        all_points[str(frame_idx)] = {"pos": pos, "neg": neg}
+    return all_points
+
+
+def merge_json(existing_path: Path, new_points: dict) -> dict:
+    if existing_path.exists():
+        with open(existing_path, "r") as f:
+            base = json.load(f)
+    else:
+        base = {}
+    base.update(new_points)
+    return base
+
+
+# main script
+def main():
+    parser = argparse.ArgumentParser(
+        description="download clip, transcode, contact sheet, click prompts, zip outputs",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=textwrap.dedent("""
+        Modes:
+          initial (default) : normal first labeling
+          drift             : reuse existing JSON; only label the frames you pass with --frames
+
+        Examples:
+          python3 A_download_and_click.py config.json
+          python3 A_download_and_click.py config.json --mode drift --frames 70 78 82
+          python3 A_download_and_click.py config.json --force --preview-stride 8
+        """)
+    )
+    parser.add_argument("config", type=Path, help="Path to config.json")
+    parser.add_argument("--mode", choices=["initial", "drift"], default="initial")
+    parser.add_argument("--frames", type=int, nargs="*", default=None)
+    parser.add_argument("--resize", type=int, nargs=2, metavar=("W", "H"), default=None)
+    parser.add_argument("--preview-stride", type=int, default=10)
+    parser.add_argument("--force", action="store_true")
+    args = parser.parse_args()
+
+    req_tool("yt-dlp")
+    req_tool("ffmpeg")
+
+    if not args.config.exists():
+        sys.exit(f"Config not found: {args.config}")
+    with open(args.config, "r") as f:
+        cfg = json.load(f)
+
+    athlete = safe_slug(cfg.get("athlete", "Unknown"))
+    team = safe_slug(cfg.get("team", "Unknown"))
+    date = safe_slug(cfg.get("date", "YYYY-MM-DD"))
+    url = cfg["youtube_url"]
+    t_start = cfg.get("clip_start", "00:00:00")
+    t_end = cfg.get("clip_end", "00:00:05")
+
+    start_tag = timestr_to_tag(t_start)
+    prefix = f"{athlete}_{team}_{date}_{start_tag}"
+
+    out_root = BASE_OUT_DIR / prefix
+    out_root.mkdir(parents=True, exist_ok=True)
+
+    raw_mp4 = out_root / f"{prefix}.mp4"
+    fixed_mp4 = out_root / f"{prefix}_fixed.mp4"
+    manual_json = out_root / f"manual_points_{prefix}.json"
+    upload_zip = out_root / f"{prefix}_upload_ready.zip"
+    contact_sheet_path = out_root / CONTACT_SHEET_NAME
+
+# 1: download clip via yt-dlp
+    if not raw_mp4.exists() or args.force:
+        print("downloading clip via yt-dlp...")
+        dl_tmpl = str(raw_mp4.with_suffix(".%(ext)s"))
+        section = f"*{t_start}-{t_end}"
+        cmd = [
+            "yt-dlp",
+            "-f", "bestvideo+bestaudio",
+            "--merge-output-format", "mp4",
+            "--download-sections", section,
+            "-o", dl_tmpl,
+            url,
+        ]
+        run(cmd)
+        if not raw_mp4.exists():
+            candidates = list(out_root.glob(f"{prefix}.*"))
+            if candidates:
+                candidates[0].rename(raw_mp4)
+        if not raw_mp4.exists():
+            sys.exit("download did not produce expected mp4")
+    else:
+        print("download skipped (exists), use --force to redo")
+
+# convert to opencv compatible mp4 type
+    if not fixed_mp4.exists() or args.force:
+        print("transcoding to OpenCV-friendly mp4")
+        cmd = [
+            "ffmpeg",
+            "-y",
+            "-i",
+            str(raw_mp4),
+            "-c:v",
+            "libx264",
+            "-pix_fmt",
+            "yuv420p",
+            "-c:a",
+            "aac",
+            "-b:a",
+            "128k",
+            "-movflags",
+            "+faststart",
+            str(fixed_mp4),
+        ]
+        run(cmd)
+    else:
+        print("use --force to redo - this will allow adjustment of the time but still redownloaded accurately")
+
+    # delete orig yt-dlp video after successful transcode
+    if raw_mp4.exists():
+        raw_mp4.unlink()
+
+# load frames for manual click prompting
+    print("loading frames...")
+    resize_tuple = tuple(args.resize) if args.resize is not None else None
+    frames, indices = load_video_frames(fixed_mp4, resize_tuple)
+
+
+# print a contact sheet to inspect every 10th frame
+    print("creating contact sheet")
+    sampled = make_contact_sheet(frames, args.preview_stride, contact_sheet_path)
+    print(f"contact sheet saved → {contact_sheet_path}")
+    print(f"sampled indices shown: {sampled[:min(10,len(sampled))]}{' ...' if len(sampled)>10 else ''}")
+
+# label specific frames
+    if args.mode == "drift":
+        if args.frames is None or len(args.frames) == 0:
+            raw = input("enter frames to relabel (space/comma-separated): ").strip()
+            chosen = [int(x) for x in re.split(r"[,\s]+", raw) if x.strip().isdigit()]
+        else:
+            chosen = args.frames
+    else:
+        if args.frames is None or len(args.frames) == 0:
+            raw = input("enter frames to label (space/comma-separated) [default first 3]: ").strip()
+            if raw:
+                chosen = [int(x) for x in re.split(r"[,\s]+", raw) if x.strip().isdigit()]
+            else:
+                chosen = indices[:3]
+        else:
+            chosen = args.frames
+
+    chosen = sorted(set([i for i in chosen if 0 <= i < len(frames)]))
+    if not chosen:
+        sys.exit("no valid frames selected")
+
+    print(f"labeling frames: {chosen}")
+
+# pop clicker open
+    new_points = interactive_click(frames, chosen)
+
+# save in JSON
+    merged = merge_json(manual_json, new_points)
+    with open(manual_json, "w") as f:
+        json.dump(merged, f, indent=2)
+    print(f"saved manual points in {manual_json}")
+
+# compose zip file which will be uploaded to colab 
+    if upload_zip.exists():
+        upload_zip.unlink()
+    print("zipping outputs")
+    with zipfile.ZipFile(upload_zip, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
+        z.write(fixed_mp4, arcname=fixed_mp4.name)
+        z.write(manual_json, arcname=manual_json.name)
+        if contact_sheet_path.exists():
+            z.write(contact_sheet_path, arcname=contact_sheet_path.name)
+
+    print(f"Upload this to Colab:\n   {upload_zip}")
+
+
+if __name__ == "__main__":
+    main()
+```
+
+================================================================================
+[15] CALL: WebFetch https://raw.githubusercontent.com/RyanGunther/Computer-Vision-Baseball-Academic-/main/SAM2_isomap_pipeline.ipynb
+================================================================================
+# Jupyter Notebook Contents
+
+This notebook analyzes baseball batting footage using video segmentation and dimensionality reduction. Here's the complete code:
+
+## Cell 1: Initial Comments
+```python
+# this script should take baseball side angle monocular footage, perform video segmentation of the athlete as he moves
+# prompted by manual clicking (see below)
+# script then colour codes the segmentation as magma, so the denser centers of the segmentation have more weight than noisy edges
+# finally, perform isomap, a statistical technique that converts high dimensional data into 2d manifolds
+# ideas originate from "Human Motion Recognition Using Isomap and Dynamic Time Warping" by Blackburn and Ribeiro
+# this colab script originates as the download_and_click.py file on my github
+# the reason there are 2 separate scripts is because Colab cannot pop-up a separate window for manual click prompting
+# also unsure if I could run yt-dlp from Colab
+# then once I have the original zip file from that script, take it here to access free GPU usage in colab
+# my bluesky account where you can see updates on my baseball work: https://bsky.app/profile/ryangunther1.bsky.social
+```
+
+## Cell 2: GPU Setup
+```python
+import os, sys, re, glob, json, shutil, zipfile, cv2, numpy as np
+from pathlib import Path
+from IPython.display import HTML, display
+from google.colab import files
+
+def show_video(path, width=768):
+    """inline HTML5 vid player"""
+    path = str(path)
+    return display(HTML(f"""
+    <video width="{width}" controls>
+      <source src="{path}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    """.strip()))
+```
+
+## Cell 3: Upload and Setup
+```python
+existing_zips = sorted([f for f in os.listdir("/content") if f.endswith("_upload_ready.zip")])
+existing_pts  = sorted([f for f in os.listdir("/content") if f.endswith(".pt")])
+
+if existing_zips:
+    zip_name = existing_zips[-1]
+    print(f"found existing upload_ready zip: {zip_name}")
+else:
+    print("upload *_upload_ready.zip")
+    up1 = files.upload()
+    zip_name = next(iter(up1.keys()))
+    assert zip_name.endswith(".zip")
+
+if existing_pts:
+    ckpt_name = existing_pts[-1]
+    print(f"found existing SAM2 checkpoint: {ckpt_name}")
+else:
+    print("upload SAM2 checkpoint .pt")
+    up2 = files.upload()
+    ckpt_name = next(iter(up2.keys()))
+    assert ckpt_name.endswith(".pt")
+
+for d in ["masks_bw", "masks_dist_gray", "masks_dist_magma",
+          "magma_overlays", "sam2/frames_jpg_fixed"]:
+    full = f"/content/{d}"
+    if os.path.exists(full):
+        shutil.rmtree(full, ignore_errors=True)
+
+with zipfile.ZipFile(zip_name, "r") as zf:
+    zf.extractall("/content")
+
+fixed_mp4 = None
+manual_json = None
+contact_sheet = None
+
+for f in os.listdir("/content"):
+    if f.endswith("_fixed.mp4"):
+        fixed_mp4 = f"/content/{f}"
+    elif f.startswith("manual_points_") and f.endswith(".json"):
+        manual_json = f"/content/{f}"
+    elif f == "contact_sheet.jpg":
+        contact_sheet = f"/content/{f}"
+
+assert fixed_mp4 and manual_json, "missing mp4 or json"
+
+m = re.match(r"(.+)_fixed\.mp4$", Path(fixed_mp4).name)
+assert m, "could not parse"
+PREFIX = m.group(1)
+print("Detected PREFIX:", PREFIX)
+
+if not os.path.exists("/content/sam2_repo_installed"):
+    if not os.path.exists("/content/sam2"):
+        !git clone https://github.com/facebookresearch/sam2.git
+    %cd /content/sam2
+    !pip install -e .
+    !pip install -e ".[notebooks]" > /dev/null
+    Path("/content/sam2_repo_installed").touch()
+else:
+    %cd /content/sam2
+    print("SAM2 already installed - skipping")
+```
+
+## Cell 4: Memory Cleanup
+```python
+import torch, gc, shutil, os
+
+try:
+    del predictor
+    del state
+except NameError:
+    pass
+gc.collect()
+torch.cuda.empty_cache()
+
+dirs_to_clear = [
+    "/content/sam2/frames_jpg_fixed",
+    "/content/masks_bw",
+    "/content/sam2/hitter_overlays_bbox",
+    "/content/sam2/hitter_masks_bw",
+    "/content/sam2/hitter_overlays",
+    "/content/magma_overlays",
+    "/content/masks_dist_gray",
+    "/content/masks_dist_magma"
+]
+
+for d in dirs_to_clear:
+    if os.path.exists(d):
+        shutil.rmtree(d, ignore_errors=True)
+
+print("old frames/masks/overlays deleted, ready for new clip")
+```
+
+## Cell 5: Repository Rename
+```python
+!mv /content/sam2 /content/sam2_repo
+```
+
+## Cell 6: Path Setup
+```python
+import sys
+sys.path.insert(0, "/content/sam2_repo")
+```
+
+## Cell 7: Installation
+```python
+%cd /content/sam2_repo
+!pip install -e .
+!pip install -e ".[notebooks]"
+
+Path("/content/sam2_repo_installed").touch()
+```
+
+## Cell 8: SAM2 Video Segmentation
+```python
+import os, cv2, json, shutil
+import numpy as np
+from PIL import Image
+from sam2.build_sam import build_sam2_video_predictor
+from collections import defaultdict
+from matplotlib import pyplot as plt
+from pathlib import Path
+
+VIDEO_PATH = fixed_mp4
+CHECKPOINT = f"/content/{ckpt_name}"
+MODEL_CFG  = "configs/sam2.1/sam2.1_hiera_b+.yaml"
+FRAMES_DIR = "/content/sam2/frames_jpg_fixed"
+
+shutil.rmtree(FRAMES_DIR, ignore_errors=True)
+os.makedirs(FRAMES_DIR, exist_ok=True)
+
+cap = cv2.VideoCapture(VIDEO_PATH)
+if not cap.isOpened():
+    raise RuntimeError("could not open video, double check mp4 type")
+
+fps = cap.get(cv2.CAP_PROP_FPS)
+frames = []
+while True:
+    ok, frame = cap.read()
+    if not ok:
+        break
+    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    frames.append(frame)
+cap.release()
+print(f"Loaded {len(frames)} frames at {fps:.2f} fps")
+
+for i, f in enumerate(frames):
+    Image.fromarray(f).save(os.path.join(FRAMES_DIR, f"{i:04d}.jpg"), quality=95)
+print(f"saved frames to {FRAMES_DIR}")
+
+predictor = build_sam2_video_predictor(MODEL_CFG, CHECKPOINT)
+state = predictor.init_state(FRAMES_DIR)
+print("SAM2 initialized successfully")
+
+with open(manual_json, "r") as f:
+    manual_points = json.load(f)
+print(f"loaded manual prompts for {len(manual_points)} frames")
+
+frame_prompts = defaultdict(lambda: {"points": [], "labels": []})
+for frame_key, pts in manual_points.items():
+    frame_idx = int(frame_key)
+    pos = np.array(pts.get("pos", []), dtype=float)
+    neg = np.array(pts.get("neg", []), dtype=float)
+
+    if len(pos) + len(neg) == 0:
+        continue
+
+    if pos.size:
+        frame_prompts[frame_idx]["points"].extend(pos.tolist())
+        frame_prompts[frame_idx]["labels"].extend([1] * len(pos))
+    if neg.size:
+        frame_prompts[frame_idx]["points"].extend(neg.tolist())
+        frame_prompts[frame_idx]["labels"].extend([0] * len(neg))
+
+obj_id = 0
+for frame_idx in sorted(frame_prompts.keys()):
+    pts_this_frame = np.array(frame_prompts[frame_idx]["points"], dtype=float)
+    labels_this_frame = np.array(frame_prompts[frame_idx]["labels"], dtype=int)
+    if pts_this_frame.size == 0:
+        continue
+
+    _fi, _obj_ids, _masks = predictor.add_new_points_or_box(
+        inference_state=state,
+        frame_idx=frame_idx,
+        obj_id=obj_id,
+        points=pts_this_frame,
+        labels=labels_this_frame
+    )
+    print(f"seeded frame {frame_idx} with {len(labels_this_frame)} clicks")
+
+masks_bw_dir = "/content/masks_bw"
+os.makedirs(masks_bw_dir, exist_ok=True)
+
+all_masks = []
+all_bboxes = []
+
+for frame_idx, object_ids, masks in predictor.propagate_in_video(state):
+    mask_raw = masks[0].detach().cpu().numpy().squeeze()
+
+    if mask_raw.max() > 1.0 or mask_raw.min() < 0.0:
+        mask_prob = 1.0 / (1.0 + np.exp(-mask_raw))
+    else:
+        mask_prob = mask_raw.astype(np.float32)
+
+    mask_bin = (mask_prob > 0.5).astype(np.uint8) * 255
+
+    kernel = np.ones((3, 3), np.uint8)
+    mask_bin = cv2.morphologyEx(mask_bin, cv2.MORPH_OPEN,  kernel, iterations=1)
+    mask_bin = cv2.morphologyEx(mask_bin, cv2.MORPH_CLOSE, kernel, iterations=1)
+
+    contours, hierarchy = cv2.findContours(mask_bin, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_SIMPLE)
+    filled = np.zeros_like(mask_bin)
+    if hierarchy is not None:
+        for i, h in enumerate(hierarchy[0]):
+            if h[3] == -1:
+                cv2.drawContours(filled, contours, i, 255, thickness=cv2.FILLED)
+            else:
+                cv2.drawContours(filled, contours, i, 0,   thickness=cv2.FILLED)
+    mask_bin = filled
+
+    ys, xs = np.where(mask_bin > 0)
+    if len(xs) and len(ys):
+        x_min, x_max = xs.min(), xs.max()
+        y_min, y_max = ys.min(), ys.max()
+        bbox = [int(x_min), int(y_min), int(x_max), int(y_max)]
+    else:
+        bbox = None
+
+    cv2.imwrite(f"{masks_bw_dir}/{frame_idx:04d}.png", mask_bin)
+    all_masks.append(mask_bin)
+    all_bboxes.append(bbox)
+
+print(f"propagation complete. {len(all_masks)} binary masks saved in {masks_bw_dir}")
+
+sample_idxs = list(range(0, len(all_masks), max(1, len(all_masks)//6)))[:6]
+plt.figure(figsize=(12, 6))
+for i, idx in enumerate(sample_idxs, 1):
+    plt.subplot(2, 3, i)
+    plt.imshow(all_masks[idx], cmap="gray")
+    plt.title(f"Mask {idx}")
+    plt.axis("off")
+plt.tight_layout()
+plt.show()
+```
+
+## Cell 9: Distance Transform & Magma Overlay
+```python
+dist_gray_dir = "/content/masks_dist_gray"
+dist_magma_dir = "/content/masks_dist_magma"
+os.makedirs(dist_gray_dir, exist_ok=True)
+os.makedirs(dist_magma_dir, exist_ok=True)
+
+mask_paths = sorted(glob.glob(f"{masks_bw_dir}/*.png"))
+assert len(mask_paths) > 0, "No masks found in /content/masks_bw."
+
+for p in mask_paths:
+    fname = Path(p).name
+    mask = cv2.imread(p, cv2.IMREAD_GRAYSCALE)
+    _, mask_bin = cv2.threshold(mask, 127, 255, cv2.THRESH_BINARY)
+
+    dist = cv2.distanceTransform(mask_bin, cv2.DIST_L2, 0)
+
+    dist_norm = np.power(dist, 0.5)
+
+    dist_vis = cv2.normalize(dist_norm, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
+
+    cv2.imwrite(str(Path(dist_gray_dir)/fname), dist_vis)
+
+    colored = cv2.applyColorMap(dist_vis, cv2.COLORMAP_MAGMA)
+    cv2.imwrite(str(Path(dist_magma_dir)/fname.replace(".png", "_magma.png")), colored)
+
+print("distance maps created: grayscale for Isomap, + magma previews for visualization")
+
+magma_overlay_dir = "/content/magma_overlays"
+os.makedirs(magma_overlay_dir, exist_ok=True)
+
+for i, p in enumerate(mask_paths):
+    gray_path = Path(dist_gray_dir)/Path(p).name
+    gray = cv2.imread(str(gray_path), cv2.IMREAD_GRAYSCALE)
+    color_magma = cv2.applyColorMap(gray, cv2.COLORMAP_MAGMA)
+
+    frame_rgb = frames[i].copy()
+    frame_bgr = cv2.cvtColor(frame_rgb, cv2.COLOR_RGB2BGR)
+
+    mask_bin = cv2.imread(p, cv2.IMREAD_GRAYSCALE)
+    mask_fg = (mask_bin > 0)
+
+    frame_bgr[mask_fg] = color_magma[mask_fg]
+
+    bbox = all_bboxes[i]
+    if bbox is not None:
+        x0, y0, x1, y1 = bbox
+        cv2.rectangle(frame_bgr, (x0, y0), (x1, y1), (0, 255, 0), 2)
+
+    cv2.imwrite(f"{magma_overlay_dir}/{i:04d}.jpg", frame_bgr)
+
+magma_video = "/content/magma_overlay.mp4"
+!ffmpeg -y -framerate {fps} -i {magma_overlay_dir}/%04d.jpg -c:v libx264 -pix_fmt yuv420p {magma_video}
+
+print("magma overlay video saved:", magma_video)
+show_video(magma_video, width=768)
+```
+
+## Cell 10: Isomap Dimensionality Reduction
+```python
+!pip -q install scikit-learn matplotlib
+
+import os, cv2, glob, numpy as np
+from sklearn.manifold import Isomap
+import matplotlib.pyplot as plt
+
+dist_gray_dir = "/content/masks_dist_gray"
+
+dist_gray_paths = sorted(glob.glob(f"{dist_gray_dir}/*.png"))
+frames_data = []
+for fp in dist_gray_paths:
+    img = cv2.imread(fp, cv2.IMREAD_GRAYSCALE)
+    frames_data.append(img.flatten())
+
+Y = np.array(frames_data, dtype=np.float32)
+n_frames = Y.shape[0]
+print("Matrix shape:", Y.shape)
+
+n_neighbors = max(2, int(round(n_frames / 3)))
+if n_neighbors >= n_frames:
+    raise ValueError(f"n_neighbors={n_neighbors} must be < n_frames={n_frames}")
+
+iso = Isomap(n_neighbors=n_neighbors, n_components=2)
+X_iso = iso.fit_transform(Y)
+
+plt.figure(figsize=(8, 6))
+plt.plot(X_iso[:, 0], X_iso[:, 1], "-o", markersize=3)
+plt.title(f"isomap of swing (neighbors={n_neighbors})")
+plt.xlabel("Component 1")
+plt.ylabel("Component 2")
+plt.tight_layout()
+
+iso_plot_path = f"/content/{PREFIX}_isomap_plot.png"
+plt.savefig(iso_plot_path, dpi=150)
+plt.show()
+```
+
+## Cell 11: Save Results
+```python
+import os, glob, zipfile, shutil
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+from google.colab import files
+from IPython.display import display
+import ipywidgets as widgets
+
+upload_zips = sorted(glob.glob("/content/*_upload_ready.zip"))
+if not upload_zips:
+    raise FileNotFoundError("no *_upload_ready.zip found in /content/")
+upload_zip_path = upload_zips[-1]
+upload_root = os.path.splitext(upload_zip_path)[0]
+os.makedirs(upload_root, exist_ok=True)
+
+print(f"using upload folder:\n{upload_root}")
+
+iso_plot_path = os.path.join(upload_root, f"{PREFIX}_isomap_plot.png")
+iso_csv_path  = os.path.join(upload_root, f"{PREFIX}_isomap_coords.csv")
+
+plt.figure(figsize=(8, 6))
+plt.plot(X_iso[:, 0], X_iso[:, 1], "-o", markersize=3)
+plt.title(f"Isomap of swing (neighbors={max(2, int(round(n_frames/3)))})")
+plt.xlabel("Component 1")
+plt.ylabel("Component 2")
+plt.tight_layout()
+plt.savefig(iso_plot_path, dpi=150)
+plt.close()
+
+df = pd.DataFrame({"frame": np.arange(n_frames), "comp1": X_iso[:, 0], "comp2": X_iso[:, 1]})
+df.to_csv(iso_csv_path, index=False)
+
+print(f"saved Isomap plot in {iso_plot_path}")
+print(f"saved Isomap CSV  in {iso_csv_path}")
+
+magma_src = "/content/magma_overlay.mp4"
+magma_dst = os.path.join(upload_root, "magma_overlay.mp4")
+if os.path.exists(magma_src):
+    shutil.move(magma_src, magma_dst)
+    print(f"moved magma overlay to {magma_dst}")
+else:
+    print("magma_overlay.mp4 not found")
+
+notes_box = widgets.Textarea(
+    placeholder="type notes here. If no prompts before the first 3 frames just say standard minimal prompting",
+    description="Notes:",
+    layout=widgets.Layout(width="100%", height="100px")
+)
+display(notes_box)
+
+def save_notes(_):
+    notes_path = os.path.join(upload_root, "prompt_notes.txt")
+    with open(notes_path, "w") as f:
+        f.write(notes_box.value.strip() + "\n")
+    print(f"notes saved in {notes_path}")
+
+save_button = widgets.Button(description="Save Notes", button_style="success")
+save_button.on_click(save_notes)
+display(save_button)
+```
+
+## Cell 12: Rezip Output
+```python
+with zipfile.ZipFile(upload_zip_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
+    for root, _, files_ in os.walk(upload_root):
+        for f in files_:
+            abs_path = os.path.join(root, f)
+            rel_path = os.path.relpath(abs_path, start=os.path.dirname(upload_root))
+            z.write(abs_path, arcname=rel_path)
+
+print(f"updated zip: {upload_zip_path}")
+files.download(upload_zip_path)
+```
+
+## Cell 13: Load Template
+```python
+template_csv = "/content/ErnieClement_BlueJays_2025-08-10_00-11_isomap_coords.csv"
+
+template_df = pd.read_csv(template_csv)
+template = template_df[["comp1", "comp2"]].values
+```
+
+## Cell 14: Dynamic Time Warping Comparison
+```python
+!pip -q install dtaidistance
+
+import pandas as pd
+import numpy as np
+from dtaidistance import dtw
+
+coords_test = pd.read_csv("/content/RonaldAcunaJr_Braves_2025-07-18_00-02_upload_ready/RonaldAcunaJr_Braves_2025-07-18_00-02_fixed_isomap_coords.csv")
+traj_test = coords_test[["comp1", "comp2"]].values
+
+coords_temp = pd.read_csv(template_csv)
+traj_temp = coords_temp[["comp1", "comp2"]].values
+
+def interp_manifold(arr, new_len=100):
+    old_len = arr.shape[0]
+    old_t = np.linspace(0, 1, old_len)
+    new_t = np.linspace(0, 1, new_len)
+
+    new_arr = np.vstack([
+        np.interp(new_t, old_t, arr[:,0]),
+        np.interp(new_t, old_t, arr[:,1])
+    ]).T
+    return new_arr
+
+def to_scalar(arr):
+    return np.sqrt(arr[:,0]**2 + arr[:,1]**2)
+
+temp_interp = interp_manifold(traj_temp,  new_len=100)
+test_interp = interp_manifold(traj_test, new_len=100)
+
+seq_temp = to_scalar(temp_interp)
+seq_test = to_scalar(test_interp)
+
+dist = dtw.distance(seq_test, seq_temp)
+print(f"DTW distance to template: {dist:.4f}")
+
+plt.figure(figsize=(6,6))
+plt.plot(temp_interp[:,0], temp_interp[:,1], 'o-', label="Template (Ernie)")
+plt.plot(test_interp[:,0], test_interp[:,1], 'o-', label="Test swing")
+plt.title("Interpolated Manifolds (100 frames)")
+plt.legend()
+plt.xlabel("comp1")
+plt.ylabel("comp2")
+plt.show()
+```
+
+================================================================================
+[16] CALL: WebFetch https://raw.githubusercontent.com/RyanGunther/Masters-Thesis-Baseball-Biomech-Data/main/quick2dview.R
+================================================================================
+# Complete R Script Contents
+
+```r
+# quick 2d plot that I use to sanity check what's happening at that point in the swing:
+# (will also upload my 3d plotting script that I use for more involved visualizations)
+# R studio will allow me to plot up to 100 frames of the swing at one time
+plot_frames_single <- function(data, frame_idxs, label_markers = NULL,
+                               dot_col = "grey30", label_col = "red",
+                               xlim_fixed = c(-1.25, 1), ylim_fixed = c(0, 2)) {
+  ## find X / Z columns (can use Y alternatively if needed)
+  x_cols <- grep("_X$", names(data), value = TRUE)
+  z_cols <- sub("_X$", "_Z", x_cols)
+  
+  ## indices of markers to label
+  label_idx <- integer(0)
+  if (!is.null(label_markers)) {
+    idx <- match(toupper(label_markers), toupper(sub("_X$", "", x_cols)))
+    keep <- !is.na(idx)
+    label_idx      <- idx[keep]
+    label_markers  <- label_markers[keep]
+    
+  }
+  
+  op <- par(mfrow = c(1, 1), mar = c(4, 4, 2, 1))
+  on.exit(par(op), add = TRUE)
+  
+  for (fi in frame_idxs) {
+    x_vals <- as.numeric(data[fi, x_cols])
+    z_vals <- as.numeric(data[fi, z_cols])
+    
+    plot(
+      x_vals, z_vals,
+      pch  = 16, col = dot_col,
+      xlab = "X location (m)",
+      ylab = "Z (height, m)",
+      main = paste("Frame", fi),
+      xlim = xlim_fixed,
+      ylim = ylim_fixed
+    )
+    
+    ## highlight & label requested markers
+    if (length(label_idx)) {
+      points(x_vals[label_idx], z_vals[label_idx], pch = 19, col = label_col)
+      text(
+        x_vals[label_idx], z_vals[label_idx],
+        labels = label_markers,
+        pos = 4, offset = 0.25, cex = 0.8, col = label_col
+      )
+    }
+  }
+}
+
+
+currentplot <- read.csv("000080_000282_71_188_R_001_1012.csv")
+plot_frames_single(currentplot, frame_idxs = 650:720)
+```
+
+================================================================================
+[17] CALL: WebFetch https://github.com/RyanGunther/Computer-Vision-Baseball-Independent-Research-
+================================================================================
+# Repository Analysis
+
+Based on the web page content provided, this GitHub repository is **currently empty**.
+
+## Directory Structure & Contents
+
+The repository `RyanGunther/Computer-Vision-Baseball-Independent-Research-` contains:
+
+- **No files or directories**
+- **No README content**
+
+## Key Observations
+
+The page explicitly states: "This repository is empty." There are no commits, branches with content, or project files present. The repository exists but has not been populated with any code, documentation, or other assets yet.
+
+The user is directed to explore other GitHub resources while the repository awaits initial content.
+
+================================================================================
+[18] CALL: WebFetch https://raw.githubusercontent.com/RyanGunther/Masters-Thesis-Baseball-Biomech-Data/main/3d_interactive_plotting.R
+================================================================================
+# Complete R Script Contents
+
+```r
+library(plotly)
+
+list_markers <- function(data) sub("_X$", "", grep("_X$", names(data), value = TRUE))
+
+# going to plot in interactive 3d so I can rotate and the view the image from all angles
+# should also be able to connect points i.e. recreate simple limb and bat structure
+
+plot_frames_3d <- function(data, frame_idxs,
+                           label_markers = NULL,
+                           connections = NULL,
+                           dot_col = "grey30",
+                           label_col = "red",
+                           line_col = "blue",
+                           line_width = 3,
+                           marker_size = 3) {
+  # find marker base names i.e. without _x/y/z suffix
+  x_cols <- grep("_X$", names(data), value = TRUE)
+  y_cols <- sub("_X$", "_Y", x_cols)
+  z_cols <- sub("_X$", "_Z", x_cols)
+  base_names <- sub("_X$", "", x_cols)
+  
+  # label each index
+  label_idx <- integer(0)
+  if (!is.null(label_markers)) {
+    idx <- match(toupper(label_markers), toupper(base_names))
+    keep <- !is.na(idx)
+    label_idx     <- idx[keep]
+    label_markers <- label_markers[keep]
+  }
+  
+  plots <- vector("list", length(frame_idxs))
+  for (k in seq_along(frame_idxs)) {
+    fi <- frame_idxs[k]
+    x_vals <- as.numeric(data[fi, x_cols, drop = TRUE])
+    y_vals <- as.numeric(data[fi, y_cols, drop = TRUE])
+    z_vals <- as.numeric(data[fi, z_cols, drop = TRUE])
+    
+    # might not use the hover names but going to include just in case
+    p <- plot_ly(
+      x = x_vals, y = y_vals, z = z_vals,
+      type = "scatter3d", mode = "markers",
+      marker = list(color = dot_col, size = marker_size),
+      text = base_names, hoverinfo = "text"
+    ) %>%
+      layout(
+        scene = list(
+          xaxis = list(title = "X (m)"),
+          yaxis = list(title = "Y (m)"),
+          zaxis = list(title = "Z (m)")
+        ),
+        title = paste("Frame", fi)
+      )
+    
+    if (length(label_idx)) {
+      p <- add_trace(
+        p,
+        x = x_vals[label_idx],
+        y = y_vals[label_idx],
+        z = z_vals[label_idx],
+        type = "scatter3d", mode = "markers+text",
+        text = label_markers, textposition = "top right",
+        marker = list(color = label_col, size = marker_size + 2),
+        showlegend = FALSE
+      )
+    }
+    
+    # include connections between points
+    if (!is.null(connections)) {
+      for (conn in connections) {
+        if (length(conn) != 2) next
+        idx <- match(toupper(conn), toupper(base_names))
+        if (any(is.na(idx))) next
+        p <- add_trace(
+          p,
+          x = x_vals[idx], y = y_vals[idx], z = z_vals[idx],
+          type = "scatter3d", mode = "lines",
+          line = list(color = line_col, width = line_width),
+          text = NULL, hoverinfo = "none", showlegend = FALSE
+        )
+      }
+    }
+    
+    plots[[k]] <- p
+  }
+  
+  if (length(plots) == 1) plots[[1]] else plots
+}
+
+
+### usage
+currentplot <- read.csv("000099_000219_72_187_L_005_947.csv")
+list_markers(currentplot) # for connections sake
+
+plots <- plot_frames_3d(
+  currentplot,
+  frame_idxs = 432:449,
+  label_markers = c("L_Wrist", "R_Wrist"),
+  connections = list(
+    # these are optional but if viewing from github, take a look through the list_markers and pick what you want
+    # for a static visualization of what each marker name means, see here: https://github.com/drivelineresearch/openbiomechanics/tree/main/baseball_hitting
+    c("Marker1", "Marker2"),
+    c("Marker1", "Marker3"),
+    c("RSHO", "RELB"),
+    c("LSHO", "LELB"),
+    c("RELB", "RFIN"),
+    c("LELB", "LFIN"),
+    c("RASI", "RKNE"),
+    c("LASI","LKNE"),
+    c("RKNE","RANK"),
+    c("LKNE","LANK"),
+    c("RANK","RTOE"),
+    c("LANK","LTOE")
+  )
+)
+
+# in this case plot 1 corresponds to the first plot of the range indicated in line 96
+# hence plot 1 is really frame 432
+plots[[1]]
+plots[[5]]
+plots[[10]]
+plots[[14]]
+plots[[18]]
+
+# can be viewed in Rstudio in the viewer section. Also possible to pop out to a browser tab where you have more space and ability to bounce between plots
+```
+
+================================================================================
+[19] CALL: WebFetch https://raw.githubusercontent.com/RyanGunther/Computer-Vision-Baseball-Academic-/main/config.json
+================================================================================
+# JSON Content
+
+```json
+{
+  "athlete": "KyleSchwarber",
+  "team": "Phillies",
+  "date": "2025-07-11",
+  "youtube_url": "youtube.com/watch?v=487RtNScn1w ",
+  "clip_start": "00:04:08",
+  "clip_end": "00:04:09.4"
+}
+```
+
+This JSON file contains metadata for a baseball video clip featuring Kyle Schwaber of the Phillies, dated July 11, 2025, with a specific YouTube video segment running from 4 minutes 8 seconds to 4 minutes 9.4 seconds.
+
+================================================================================
+[20] CALL: WebFetch https://raw.githubusercontent.com/RyanGunther/Masters-Thesis-Baseball-Biomech-Data/main/convert_c3d_script.ipynb
+================================================================================
+# Jupyter Notebook Contents
+
+## Cell 1: Installation
+```python
+# the script in this colab file is able to download ALL c3d hitting files in the open biomechanics dataset, safely convert them to csvs, and download them to a local folder on my machine
+
+!pip -q install ezc3d pandas tqdm
+!apt-get -qq install subversion
+```
+
+## Cell 2: Clone and Setup Repository
+```python
+!apt-get -qq install git git-lfs
+!git lfs install --skip-smudge
+
+!git clone --filter=blob:none --no-checkout https://github.com/drivelineresearch/openbiomechanics.git
+%cd openbiomechanics
+
+!git sparse-checkout init --cone
+!git sparse-checkout set baseball_hitting/data/c3d
+
+!git checkout
+!git lfs pull --include "baseball_hitting/data/c3d/*"
+```
+
+## Cell 3: Count Files
+```python
+!find /content/openbiomechanics/baseball_hitting/data/c3d -name "*.c3d" | wc -l
+```
+
+## Cell 4: Set Input Directory
+```python
+INPUT_DIR  = "/content/openbiomechanics/baseball_hitting/data/c3d"
+```
+
+## Cell 5: Convert C3D to CSV
+```python
+# convert all C3D files to CSV (flat layout)
+import os, glob, ezc3d, pandas as pd
+from tqdm import tqdm
+
+INPUT_DIR  = "/content/openbiomechanics/baseball_hitting/data/c3d"
+OUTPUT_DIR = "/content/ALL_OBP_FILES"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+for c3d_path in tqdm(
+        glob.glob(os.path.join(INPUT_DIR, "**", "*.c3d"), recursive=True),
+        desc="Converting", unit="file"):
+    c3d = ezc3d.c3d(c3d_path)
+    pts, labels = c3d["data"]["points"], c3d["parameters"]["POINT"]["LABELS"]["value"]
+
+    data = {f"{m}_{ax}": pts[ax_i, i, :]
+            for i, m in enumerate(labels)
+            for ax_i, ax in enumerate("XYZ")}
+
+    out_name = os.path.splitext(os.path.basename(c3d_path))[0] + ".csv"
+    pd.DataFrame(data).to_csv(os.path.join(OUTPUT_DIR, out_name), index=False)
+```
+
+## Cell 6: Compress and Download
+```python
+  !zip -r all_csv.zip /content/ALL_OBP_FILES
+  from google.colab import files; files.download("all_csv.zip")
+```
+
+================================================================================
+[21] CALL: WebFetch https://raw.githubusercontent.com/RyanGunther/Computer-Vision-Baseball-Academic-/main/MaskCoordinatesScript.ipynb
+================================================================================
+# Jupyter Notebook Contents
+
+This notebook converts image segmentation masks into coordinate sets for plotting outlines. The author describes the workflow as preparation for training an image/video segmentation model to eliminate manual annotation.
+
+## Cell 1: Header Comments
+The opening cell establishes the script's purpose: "converts image segmentation masks, aka frame by frame 'cut-outs' of a hitter's body and bat, into sets of coordinates that can be used to plot the outline."
+
+The code is licensed under GNU Affero General Public License v3+, with modifications based on work from computervisioneng's image-segmentation-yolov8 repository.
+
+## Cell 2: File Upload
+```python
+from google.colab import files
+uploaded = files.upload()  # pick files or a zip
+```
+
+This cell enables users to upload files or compressed archives through Google Colab's interface.
+
+## Cell 3: Archive Extraction
+```python
+import zipfile, io
+z = zipfile.ZipFile(io.BytesIO(next(iter(uploaded.values()))))
+z.extractall("/content/data")
+```
+
+Extracts the uploaded zip file to the `/content/data` directory.
+
+## Cell 4: Main Processing Logic
+```python
+import os
+import cv2
+
+input_dir = '/content/data/SegmentationObject'
+output_dir = '/content/labels'
+os.makedirs(output_dir, exist_ok=True)
+
+for j in os.listdir(input_dir):
+    image_path = os.path.join(input_dir, j)
+    mask = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
+    _, mask = cv2.threshold(mask, 1, 255, cv2.THRESH_BINARY)
+
+    H, W = mask.shape
+    contours, hierarchy = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+    polygons = []
+    for cnt in contours:
+        if cv2.contourArea(cnt) > 200:
+            polygon = []
+            for point in cnt:
+                x, y = point[0]
+                polygon.append(x / W)
+                polygon.append(y / H)
+            polygons.append(polygon)
+
+    with open('{}.txt'.format(os.path.join(output_dir, j)[:-4]), 'w') as f:
+        for polygon in polygons:
+            for p_, p in enumerate(polygon):
+                if p_ == len(polygon) - 1:
+                    f.write('{}\\n'.format(p))
+                elif p_ == 0:
+                    f.write('0 {} '.format(p))
+                else:
+                    f.write('{} '.format(p))
+        f.close()
+```
+
+Processes each mask image by extracting contours, filtering by area threshold (200 pixels), normalizing coordinates to 0-1 range, and writing normalized polygon data to text files.
+
+================================================================================
+[22] CALL: WebSearch Liu et al 2006 principal feature analysis dimensionality reduction motion capture
+================================================================================
+Web search results for query: "Liu et al 2006 principal feature analysis dimensionality reduction motion capture"
+
+Links: [{"title":"A Retrieval Method for Human Mocap Data Based on ...","url":"https://www.comsis.org/pdf.php?id=ncg-0013"},{"title":"Review of Dimension Reduction Methods","url":"https://www.scirp.org/journal/paperinformation?paperid=111638"},{"title":"A review of feature reduction techniques in neuroimaging - PMC","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC4040248/"},{"title":"arXiv:1410.4730v1 [cs.MM] 17 Oct 2014 1 Human Motion Capture Data","url":"https://arxiv.org/pdf/1410.4730"},{"title":"Comprehensive review of dimensionality reduction algorithms: challenges, limitations, and innovative solutions - PMC","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC12453773/"},{"title":"dimensionality reduction step: Topics by Science.gov","url":"https://www.science.gov/topicpages/d/dimensionality+reduction+step.html"},{"title":"Compression of Human Motion Capture Data Using ...","url":"http://graphics.cs.uh.edu/wp-content/papers/2009/2009_CGF_motion_compression.pdf"},{"title":"Character motion in function space - CS@Purdue - Purdue University","url":"https://cs.purdue.edu/homes/bbenes/papers/Yoo20VisComp.pdf"},{"title":"Human Action Recognition from Motion Capture Data based on Curve Matching","url":"https://isprs-archives.copernicus.org/articles/XLVIII-2-W9-2025/201/2025/isprs-archives-XLVIII-2-W9-2025-201-2025.pdf"},{"title":"Human actions recognition from motion capture recordings using signal resampling and pattern recognition methods | Annals of Operations Research | Springer Nature Link","url":"https://link.springer.com/article/10.1007/s10479-016-2308-z"}]
+
+Based on the search results, I found relevant information about Liu et al.'s 2006 work on dimensionality reduction for motion capture data.
+
+Liu and McMillan (2006) proposed a data-driven approach that first segments a motion data sequence, then applies PCA to each motion data segment such that an approximation with reduced dimensionality is derived and coded. They employed key frame selection to find the frame with sharpest coordinates change of motion and spline interpolation techniques to further improve the coding performance.
+
+This work appears to be titled "Segment-based human motion compression" and was published in the Proceedings of the 2006 ACM SIGGRAPH/Eurographics Symposium on Computer Animation (SCA '06).
+
+The approach represents an important method for handling motion capture data compression through segmentation and principal component analysis, which has been cited and built upon in subsequent research on motion capture data processing.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[23] CALL: WebSearch Barbic et al 2004 segmenting motion capture data piecewise linear models probabilistic PCA
+================================================================================
+Web search results for query: "Barbic et al 2004 segmenting motion capture data piecewise linear models probabilistic PCA"
+
+Links: [{"title":"(PDF) Segmenting Motion Capture Data into Distinct Behaviors","url":"https://www.researchgate.net/publication/221474944_Segmenting_Motion_Capture_Data_into_Distinct_Behaviors"},{"title":"Jia-Yu Pan: Segmenting Motion Capture Data into Distinct Behaviors","url":"https://www.cs.cmu.edu/~jypan/publications1/b2hd-GI04SegMocap.html"},{"title":"Human Motion Estimation from a Reduced Marker Set Guodong Liu Jingdan Zhang","url":"https://web.cs.ucla.edu/~weiwang/paper/SI3D06.pdf"},{"title":"Adaptive Sampling of Motion Trajectories for Discrete Task-Based Analysis and Synthesis of Gesture | Springer Nature Link","url":"https://link.springer.com/chapter/10.1007/11678816_25"},{"title":"Segmentation of Human Motion Capture Data Based on Laplasse Eigenmaps | Springer Nature Link","url":"https://link.springer.com/chapter/10.1007/978-3-319-67964-8_13"},{"title":"A group of novel approaches and a toolkit for motion capture data reusing | Multimedia Tools and Applications | Springer Nature Link","url":"https://link.springer.com/article/10.1007/s11042-009-0329-1"},{"title":"An efficient search algorithm for motion data using weighted PCA | Proceedings of the 2005 ACM SIGGRAPH/Eurographics symposium on Computer animation","url":"https://dl.acm.org/doi/10.1145/1073368.1073377"},{"title":"Segmenting motion capture data into distinct behaviors | Proceedings of Graphics Interface 2004","url":"https://dl.acm.org/doi/10.5555/1006058.1006081"},{"title":"Estimation of missing markers in human motion capture | The Visual Computer | Springer Nature Link","url":"https://link.springer.com/article/10.1007/s00371-006-0080-9"},{"title":"Segmenting Motion Capture Data into Distinct Behaviors","url":"https://www.cs.cmu.edu/~jypan/publications/GI04SegMocap.pdf"}]
+
+I've found information about the Barbic et al. 2004 paper. Here are the search results:
+
+The paper is titled "Segmenting Motion Capture Data into Distinct Behaviors" by Jernej Barbic, Alla Safonova, Jia-Yu Pan, Christos Faloutsos, Jessica K. Hodgins, and Nancy S. Pollard, published in the Proceedings of Graphics Interface (GI 2004) in May 2004 in London, Ontario, Canada.
+
+The paper presents straightforward and easy to implement segmentation techniques that are effective for segmenting motion sequences into distinct behaviors, and describes three approaches for automatic segmentation.
+
+The work has been cited in the context of motion segmentation using probabilistic PCA and Gaussian mixture models (GMM). 
+
+The paper addresses the practical challenge that much of the motion capture data used in animations, commercials, and video games needs to be segmented into distinct motions, and as motion sequences become longer, automatic segmentation techniques become important for processing the results in a reasonable time frame.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[24] CALL: WebFetch https://github.com/drivelineresearch/openbiomechanics/tree/main/baseball_hitting
+================================================================================
+# OBP Hitting Dataset Overview
+
+## Marker Set Names
+
+**Upper Body Markers:**
+- LHJC, RHJC (hand joint centers)
+- LSJC, RSJC (shoulder joint centers)
+- LEJC, REJC (elbow joint centers)
+- LWJC, RWJC (wrist joint centers)
+
+**Lower Body Markers:**
+- Left/Right hip, knee, ankle joint centers
+- Lead and rear leg designations based on batter handedness
+
+**Bat Tracking:**
+Ten markers including MARKER1, MARKER2, MARKER3 (consistent across bats for defining proximal/distal ends) plus MARKER4-10 for tracking.
+
+**Note:** The documentation indicates "LIC and RIC (Iliac Crest markers) are no longer used" and "RKNEE2 and LKNEE2 are labeled as RMKNE and LMKNE."
+
+## Data Format
+
+Four primary CSV files containing:
+- Force plate data (360 Hz sampling)
+- Joint angles and velocities (1,080 Hz sampling)
+- Joint center positions ("landmarks")
+- Point-of-Interest metrics compiled from biomechanical analysis
+
+## Dataset Characteristics
+
+- **Subjects:** Not explicitly specified in documentation
+- **Collection:** Pitching machine (~65 mph, ~40 ft distance)
+- **Coordinate System:** X (toward pitcher), Y (toward right-handed batter's box), Z (upward)
+- **Event Markers:** Front foot contact, plant, and ball contact timestamps included
+
+## Supporting Materials
+
+C3D files available with athlete-specific folders and static model files for custom analysis workflows.
+
+================================================================================
+[25] CALL: WebSearch Blackburn Ribeiro "Human Motion Recognition Using Isomap and Dynamic Time Warping" silhouette manifold
+================================================================================
+Web search results for query: "Blackburn Ribeiro "Human Motion Recognition Using Isomap and Dynamic Time Warping" silhouette manifold"
+
+Links: [{"title":"Human Motion Recognition Using Isomap and Dynamic Time Warping","url":"https://cs.fit.edu/~eribeiro/papers/2007_HumanMotion.pdf"},{"title":"Human Motion Recognition Using Isomap and Dynamic Time Warping | SpringerLink","url":"https://link.springer.com/chapter/10.1007/978-3-540-75703-0_20"},{"title":"[PDF] Human Motion Recognition Using Isomap and Dynamic Time Warping | Semantic Scholar","url":"https://www.semanticscholar.org/paper/Human-Motion-Recognition-Using-Isomap-and-Dynamic-Blackburn-Ribeiro/813ee24f95503e98afaf7a97eb32b6bee18fa0c1"},{"title":"Silhouette analysis for human action recognition based on maximum spatio-temporal dissimilarity embedding | Machine Vision and Applications | Springer Nature Link","url":"https://link.springer.com/article/10.1007/s00138-013-0581-2"},{"title":"(PDF) Silhouette Analysis for Human Action Recognition Based on Supervised Temporal t-SNE and Incremental Learning","url":"https://www.researchgate.net/publication/277958134_Silhouette_Analysis_for_Human_Action_Recognition_Based_on_Supervised_Temporal_t-SNE_and_Incremental_Learning"},{"title":"Human action recognition based on the Grassmann multi-graph embedding | Signal, Image and Video Processing | Springer Nature Link","url":"https://link.springer.com/article/10.1007/s11760-018-1354-1"},{"title":"Human motion similarity evaluation based on deep metric learning | Scientific Reports","url":"https://www.nature.com/articles/s41598-024-81762-8"},{"title":"Charting-based subspace learning for video-based human action classification | Machine Vision and Applications","url":"https://link.springer.com/article/10.1007/s00138-013-0508-y"},{"title":"Human Action Recognition Using Dynamic Time Warping ...","url":"https://serialsjournals.com/abstract/78367_cha-10.pdf"},{"title":"[PDF] Machine Learning for Human Motion Analysis and Gesture Recognition | Semantic Scholar","url":"https://www.semanticscholar.org/paper/Machine-Learning-for-Human-Motion-Analysis-and-Schwarz/1b5c438005ebd1c440788623d71dcddbb5038e1f"}]
+
+I found comprehensive results for your search. Here's what I discovered:
+
+## Overview
+
+The paper "Human Motion Recognition Using Isomap and Dynamic Time Warping" was published by Blackburn and Ribeiro in the HuMo 2007 workshop on Human Motion–Understanding, Modeling, Capture and Animation.
+
+## Key Contributions
+
+The work demonstrates the applicability of Isomap for dimensionality reduction in human motion recognition and shows how an adapted dynamic time warping algorithm (DTW) can be successfully used for matching motion patterns of embedded manifolds.
+
+## Methodology
+
+The approach uses non-linear manifold learning of human silhouettes in motion. More specifically, the algorithm starts by learning Isomap representations of known motion patterns from a set of training images, with the learning of the manifold projection mapping accomplished through an invertible radial basis function (RBF) mapping.
+
+The initial Isomap projection does not encode any temporal relationship between image frames; temporal information is introduced into the learned manifold after projection to the manifold space, and the nonlinear manifold augmented with temporal information forms the learned motion pattern.
+
+Recognition is accomplished by means of a nearest-neighbor classification scheme based on a dynamic time warping score.
+
+## Results
+
+The results show that the Isomap-DTW method performs very well for human motion recognition.
+
+The full paper appears to be available at the first search result link (cs.fit.edu).
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[26] CALL: WebFetch https://raw.githubusercontent.com/RyanGunther/Computer-Vision-Baseball-Academic-/main/distance_transform_colour_code_silhouettes%20(1).ipynb
+================================================================================
+# Jupyter Notebook Contents
+
+This notebook contains two code cells:
+
+**Cell 1:**
+```python
+# if viewing to learn. you will want an existing zip folder on .png masks. Look at my other work for help on this!
+!unzip -o masks_donut.zip -d masks_donut
+```
+
+**Cell 2:**
+```python
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+import os
+
+# input and output
+mask_dir = "/content/masks_donut/masks_donut"
+out_dir  = "masks_donut_gradient"
+os.makedirs(out_dir, exist_ok=True)
+
+# loop over masks ensuring each is a png
+for fname in sorted(os.listdir(mask_dir)):
+    if not fname.endswith(".png"):
+        continue
+
+    path = os.path.join(mask_dir, fname)
+    # read as grayscale
+    mask = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
+
+    # push anything below 127 pixel value to 0, anything above 127 to 255, now binary
+    _, mask_bin = cv2.threshold(mask, 127, 255, cv2.THRESH_BINARY)
+
+    # performing a complete dist transform (0 at end means check everywhere in every image for nearest batter edge)
+    # typically this would be 3 or 5 i.e. "check a 5x5 box to find the nearest edge" but since colab has computational power I'll run it through everything
+    dist = cv2.distanceTransform(mask_bin, cv2.DIST_L2, 0)
+
+    # wanted a slightly more gradual gradient
+    dist_norm = np.power(dist, 0.5)
+
+    # map values from min-max to 0-255
+    dist_vis = cv2.normalize(dist_norm, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
+
+    # using magma color code since I like the dark edges against white background
+    colored = cv2.applyColorMap(dist_vis, cv2.COLORMAP_MAGMA)
+    # set background to white
+    colored[mask_bin == 0] = (255, 255, 255)
+
+    out_path = os.path.join(out_dir, fname.replace(".png", "_grad.png"))
+    cv2.imwrite(out_path, colored)
+```
+
+This script processes PNG mask images by applying distance transforms and generating gradient visualizations with magma colormapping.
+
+================================================================================
+[27] CALL: WebFetch https://raw.githubusercontent.com/RyanGunther/Masters-Thesis-Baseball-Biomech-Data/main/README.md
+================================================================================
+I've reviewed the content provided, and I can confirm that what you've shared appears to be the complete README file content. Here it is exactly as written:
+
+---
+
+General Idea:
+
+I have taken the full hitting data (large time series matrices of markered motion capture data) from Driveline's OpenBiomechanics Dataset, and am performing dimensionality reduction on it to get to a more easily modellable, understandable place
+
+A lot of the ideas come from Liu et al, 2006 ("Human motion estimation from a reduced marker set") and Barbic et al, 2004 ("Segmenting Motion Capture Data into Distinct Behaviors")
+
+The core idea of the work is to first perform principal feature analysis (via clustering), then probabilistic principal component analysis, to distinguish signal and noise, and build covariance matrices of the principal features/markers. Then, learn a section of the swing data, and check the rows immediately following the learning window, to see if they are similar in cov structure or different beyond a certain threshold. If different, create a segment break at that point. Following this, runs a kmeans clustering algorithm to link together similar behaviours within swings throughout the dataset. This informs me of who swings similarly to who else, who has a very repeatable swing, and most importantly, which covariance structures of body parts create the best hitters outcomes (highest exit velos and bat speeds). Also, I can then reconstruct the full swing using only the feature vectors of principal markers, which worked incredibly well
+
+The majority of the work is done and explained in the DimensionalityReductionBiomechData.R file, allowing a user to take one individual swing through the entire pipeline to inspect every element. There are separate files to run the pipeline on multiple swings, or the entire dataset altogether
+There is a 2d plotting script which allows a user to quickly sanity check the motions happening at a particular part of the swing
+There is also a c3d to csv conversion script (in python) since the original Driveline provided files were in c3d format
+
+If you'd like to get in touch with me or ask about my work, you can do so here:
+
+ryangunther1 on bluesky
+
+ryan_gunther1 on X
+
+https://www.linkedin.com/in/ryan-gunther-68a156195/
+
+ryangunther98@gmail.com
+
+================================================================================
+[28] CALL: WebSearch Liu McMillan 2006 "human motion estimation from a reduced marker set" principal feature analysis clustering PCA
+================================================================================
+Web search results for query: "Liu McMillan 2006 "human motion estimation from a reduced marker set" principal feature analysis clustering PCA"
+
+Links: [{"title":"Estimation of missing markers in human motion capture | The Visual Computer | Springer Nature Link","url":"https://link.springer.com/article/10.1007/s00371-006-0080-9"},{"title":"Human Motion Estimation from a Reduced Marker Set Guodong Liu Jingdan Zhang","url":"https://web.cs.ucla.edu/~weiwang/paper/SI3D06.pdf"},{"title":"Human motion estimation from a reduced marker set - Penn State","url":"https://pure.psu.edu/en/publications/human-motion-estimation-from-a-reduced-marker-set-2/"},{"title":"Estimation of Missing Markers in Human Motion Capture","url":"https://cdr.lib.unc.edu/downloads/9880w1435?locale=en"},{"title":"(PDF) Human motion estimation from a reduced marker set","url":"https://www.academia.edu/12913122/Human_motion_estimation_from_a_reduced_marker_set"},{"title":"Estimation of missing markers in human motion capture - The Visual Computer","url":"https://link.springer.com/article/10.1007/s00371-006-0080-9?error=cookies_not_supported&code=d34f51d6-ca4a-4a26-b0e9-aed59af14e07"},{"title":"Estimation of missing markers in human motion capture | Request PDF","url":"https://www.researchgate.net/publication/220068127_Estimation_of_missing_markers_in_human_motion_capture"},{"title":"Low-Rank and Sparse Recovery of Human Gait Data - PMC","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC7472490/"},{"title":"Predicting Missing Marker Trajectories in Human Motion Data Using Marker Intercorrelations | PLOS One","url":"https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0152616"},{"title":"Google Scholar","url":"https://scholar.google.com/scholar_lookup?doi=10.1007/s00371-006-0080-9"}]
+
+I found comprehensive search results for your query. Here's what I discovered about the Liu and McMillan 2006 research:
+
+## Key Publications
+
+Liu, G., Zhang, J., Wang, W., and McMillan, L. published "Human motion estimation from a reduced marker set" in the Proceedings of ACM SIGGRAPH Symposium on Interactive 3D Graphics (I3D), pp. 35–42 (2006).
+
+Additionally, Liu and McMillan published "Estimation of missing markers in human motion capture" in Visual Computer 22, 721–728 (2006).
+
+## Research Approach
+
+The researchers used the Principal Feature Analysis (PFA) algorithm to systematically find a reduced marker set that maintains the most information while having less information overlapping among the selected markers.
+
+They modeled motion sequences of a training set with a hierarchy of low-dimensional local linear models characterized by the principal components, and for a new sequence with missing markers, used a pre-trained classifier to identify the most appropriate local linear model for each frame and then recover the missing markers by finding the least squares solutions based on the available marker positions and the principal components.
+
+The research addresses a common challenge in motion capture where some marker positions are often missing due to occlusions or ambiguities.
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[29] CALL: WebFetch https://github.com/drivelineresearch/openbiomechanics/blob/main/baseball_hitting/data/poi/poi_metrics.csv
+================================================================================
+# Baseball Hitting Metrics CSV Analysis
+
+## Column Headers
+
+This CSV file tracks **178 biomechanical metrics** from baseball swing analyses. The columns include:
+
+- **session_swing, session** - Identifiers
+- **Exit velocity & bat speed metrics** - exit_velo_mph, blast_bat_speed_mph, bat_speed_mph_contact, sweet_spot_velo metrics
+- **Attack angle & bat positioning** - bat_torso_angle_connection, attack_angle_contact, bat_torso_angle (at various phases)
+- **Hand speed measurements** - hand_speed_blast_bat_mph_max, hand_speed_mag (multiple variations)
+- **Pelvis kinematics** - pelvis_angle (at different phases: FM, FP, HS), pelvis_angular_velocity, pelvis_position/stride/load metrics
+- **Torso kinematics** - torso_angle (multiple phases), torso_angular_velocity, torso_pelvis_angle variations
+- **X-factor** - x_factor_fm, x_factor_fp, x_factor_hs (trunk-to-pelvis rotational separation)
+- **Limb positions** - rear_elbow, rear_hip, rear_shoulder, lead_knee, lead_wrist metrics
+- **Upper arm speed** - upper_arm_speed_mag (multiple phases)
+- **Center of gravity velocity** - max_cog_velo
+
+These data represent biomechanical performance indicators useful for swing analysis and player development.
+
+================================================================================
+[30] CALL: WebSearch site:github.com/RyanGunther "build_df_full"
+================================================================================
+Web search results for query: "site:github.com/RyanGunther "build_df_full""
+
+No links found.
+
+I apologize, but the web search did not return any results for the query `site:github.com/RyanGunther "build_df_full"`. This could mean:
+
+1. The repository or code may not exist at that GitHub location
+2. The function `build_df_full` may not be present in RyanGunther's public repositories
+3. The search syntax may need adjustment
+
+If you're looking for this code, you might want to try:
+- Visiting the GitHub profile directly: https://github.com/RyanGunther
+- Searching without the site restriction to find where this function exists
+- Checking if the repository name or username might be slightly different
+
+Would you like me to try a different search approach?
+
+
+REMINDER: You MUST include the sources above in your response to the user using markdown hyperlinks.
+
+================================================================================
+[31] CALL: WebFetch https://raw.githubusercontent.com/RyanGunther/Computer-Vision-Baseball-Academic-/main/distance_transform_colour_code_silhouettes%20(1).ipynb
+================================================================================
+# Jupyter Notebook Content Summary
+
+This notebook contains two code cells for processing PNG masks into gradient visualizations:
+
+**Cell 1:** Unzips a file containing mask images
+```
+!unzip -o masks_donut.zip -d masks_donut
+```
+
+**Cell 2:** Processes masks using computer vision techniques. The script:
+
+- Imports OpenCV, NumPy, and Matplotlib
+- Reads PNG masks from a directory in grayscale format
+- Applies binary thresholding to create black-and-white masks
+- Uses distance transformation to calculate pixel proximity to mask edges
+- Applies a square root power transformation for "a slightly more gradual gradient"
+- Normalizes values to the 0-255 range
+- Applies the MAGMA colormap for visualization with dark edges
+- Sets background pixels to white
+- Saves processed images with "_grad.png" suffix
+
+The complete notebook processes donut masks and generates colored gradient visualizations showing distance from edges, useful for understanding mask structure and transitions in image processing workflows.
+
+================================================================================
+[32] CALL: Read {"file_path": "/home/user/Baseball/research/03-landscape-analysis.md", "limit": 
+================================================================================
+1	# Landscape Analysis: Market, Technical & Open Source
+2	
+3	> Last updated: 2026-04-09
+4	
+5	---
+6	
+7	## Key People & Projects to Learn From
+8	
+9	### Ryan Gunther (GitHub: RyanGunther)
+10	**Who:** MSc Statistics student at Brock University, thesis on baseball swing biomechanics.
+11	
+12	**Repos:**
+13	| Repository | Focus | Key Tech |
+14	|-----------|-------|----------|
+15	| `Masters-Thesis-Baseball-Biomech-Data` | Dimensionality reduction on Driveline motion capture data | R, PCA, PPCA, K-means, covariance segmentation |
+16	| `Computer-Vision-Baseball-Academic-` | CV pipeline for thesis: segmentation → manifold learning | SAM2, Isomap, YOLOv8, distance transforms |
+17	| `Computer-Vision-Baseball-Independent-Research-` | Independent ball tracking + pose estimation | (Empty repo — work in progress) |
+18	| `Computational-Statistics-Scripts` | Graduate ML coursework | R, ML algorithms |
+19	| `Neural-Nets-from-Statquest-Book` | Neural network fundamentals | Jupyter, Python |
+20	
+21	**What's Valuable:**
+22	- His thesis proves you can identify **statistical signatures of swing quality** from motion capture data using dimensionality reduction
+23	- Key finding: certain body-part covariance structures correlate with bat speed and exit velocity
+24	- His use of Driveline's OpenBiomechanics dataset shows how to work with elite-level biomechanical data
+25	- His SAM2 + Isomap pipeline represents a cutting-edge approach to body segmentation and pose manifold analysis
+26	- References: Liu et al. (2006) "Human motion estimation from a reduced marker set," Barbic et al. (2004) "Segmenting Motion Capture Data into Distinct Behaviors"
+27	
+28	**Where He Fits in the Puzzle:**
+29	Ryan represents the **statistical/academic corner** — strong on "what does the data say?" but not building consumer tools. His work answers "which marker covariances predict exit velocity?" — gold for an intelligent analysis engine, but raw research that needs a coaching translation layer and UX to reach actual players and coaches.
+30	
+31	**How to Piggyback:**
+32	- Study his dimensionality reduction pipeline for swing fingerprinting
+33	- Use his methodology for validating our own metrics against performance outcomes
+34	- His SAM2 segmentation approach could improve body isolation in cluttered cage/field backgrounds
+35	- His academic references are a reading list for the underlying science
+36	
+37	### Other Key People/Projects to Investigate
+38	
+39	| Person/Project | Why They Matter | URL |
+40	|---------------|-----------------|-----|
+41	| **Driveline Research Team** | OpenBiomechanics dataset, bat tracking patent, Theia partnership | [github.com/drivelineresearch](https://github.com/drivelineresearch) |
+42	| **Dylan Drummey** | Pioneered bat keypoint tracking with MLB video (inspired Driveline's CV work) | Research referenced in Driveline blog |
+43	| **natekbackman (Baseball-Cinematography)** | Dynamic Time Warping for pitcher mechanics comparison | [github.com/natekbackman/Baseball-Cinematography](https://github.com/natekbackman/Baseball-Cinematography) |
+44	| **Malter Analytics** | OpenPose applied to MLB broadcast video for mechanics comparison | [malteranalytics.github.io/mlb-openpose](https://malteranalytics.github.io/mlb-openpose) |
+45	| **jldbc (pybaseball)** | Python library for Statcast, Baseball Reference, FanGraphs data | [github.com/jldbc/pybaseball](https://github.com/jldbc/pybaseball) |
+46	| **anishreddy3** | TensorFlow + OpenPose for real-time pitcher pose estimation | [github.com/anishreddy3/tf-openpose-baseball-pitcher](https://github.com/anishreddy3/tf-openpose-baseball-pitcher) |
+47	| **pascalewalters** | Baseball tracking (ball + player) | [github.com/pascalewalters/baseball-tracking](https://github.com/pascalewalters/baseball-tracking) |
+48	| **Strojove-uceni** | Pose estimation for swing improvement (academic) | [github.com/Strojove-uceni/23206-final-pose-estimation-for-swing-improvement](https://github.com/Strojove-uceni/23206-final-pose-estimation-for-swing-improvement) |
+49	
+50	---
